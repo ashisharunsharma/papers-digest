@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papers Digest — 2026-06-14</title>
+<style>
+  :root{
+    --bg:#0f1419; --card:#1a212b; --card2:#202a36; --ink:#e8edf2; --muted:#9bb0c3;
+    --accent:#5cc8ff; --line:#2c3a49;
+    --c-imm:#36c98f; --c-imet:#f4c95d; --c-hiv:#ff5d73; --c-can:#b66cff; --c-tb:#c98a4b;
+    --c-age:#5cc8ff; --c-neuro:#ff9e57; --c-neo:#ff8ad0; --c-bioinf:#57d4c9; --c-ai:#9fd356;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;font-size:15px}
+  header{padding:34px 28px 22px;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#141b24,#0f1419)}
+  header h1{margin:0;font-size:26px;letter-spacing:.2px}
+  header p{margin:6px 0 0;color:var(--muted);font-size:14px}
+  .wrap{max-width:1080px;margin:0 auto;padding:8px 22px 60px}
+
+  /* index */
+  .index{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 24px;margin-top:22px}
+  .index h2{margin:0 0 14px;font-size:13px;text-transform:uppercase;letter-spacing:1.6px;color:var(--muted)}
+  .index .grp{margin-bottom:14px}
+  .index .grp:last-child{margin-bottom:0}
+  .index .ghead{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;margin-bottom:5px}
+  .index .ghead .n{color:var(--muted);font-weight:400;font-size:12px}
+  .index ol{margin:0 0 0 26px;padding:0;color:#cdd6e0}
+  .index ol li{margin:3px 0;font-size:13.5px}
+  .index .src{color:var(--muted);font-size:12px}
+  .index a{color:#cdd6e0;text-decoration:none;border-bottom:1px solid transparent}
+  .index a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .index .none{color:var(--muted);font-style:italic;font-size:13px;margin-left:20px}
+
+  .section{margin-top:34px;scroll-margin-top:16px}
+  .section h2{font-size:15px;text-transform:uppercase;letter-spacing:1.4px;
+    display:flex;align-items:center;gap:10px;margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
+  .count{color:var(--muted);font-size:12px;font-weight:400;letter-spacing:.5px;margin-left:auto}
+  .empty{color:var(--muted);font-size:13px;font-style:italic;padding:12px 4px 2px}
+  .card{display:grid;grid-template-columns:300px 1fr;gap:20px;background:var(--card);
+    border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:16px;scroll-margin-top:16px}
+  .card .gfx{background:var(--card2);border-radius:9px;display:flex;align-items:center;
+    justify-content:center;padding:10px;min-height:160px}
+  .card .gfx svg{width:100%;height:auto;display:block}
+  .card h3{margin:0 0 6px;font-size:16.5px;line-height:1.35}
+  .card h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+  .card h3 a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .meta{color:var(--muted);font-size:12.5px;margin:0 0 10px}
+  .meta .date{color:var(--accent)}
+  .kf-label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:0 0 4px}
+  ul.kf{margin:0;padding-left:18px;font-size:14px;color:#d4dde6}
+  ul.kf li{margin:4px 0}
+  .toplink{display:block;margin-top:8px;font-size:11.5px;color:var(--muted);text-decoration:none}
+  .toplink:hover{color:var(--accent)}
+  @media(max-width:720px){.card{grid-template-columns:1fr}}
+  footer{color:var(--muted);font-size:12px;text-align:center;padding:24px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body id="top">
+<header>
+  <h1>Papers Digest — 14 June 2026</h1>
+  <p>28 papers · sourced from PubMed &amp; Nature. Organized into Ashish's standing interest areas.</p>
+</header>
+<div class="wrap">
+
+<!-- ===================== INDEX ===================== -->
+<nav class="index" aria-label="Index">
+  <h2>Index</h2>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-imm)"></span>1 · Basic Immunology <span class="n">(7)</span></div>
+    <ol>
+      <li><a href="#p1">Atlas of human gut-associated lymphoid tissue &amp; B-cell interactions</a> <span class="src">(Science Immunology; Vossenkamper, Gibbons, Spencer)</span></li>
+      <li><a href="#p2">Tissue-specific regulation of immunobiology by IL-17 signaling</a> <span class="src">(Science Immunology; Draber, Bechara, Gaffen)</span></li>
+      <li><a href="#p3">Human vaccine responses regulated by parallel cytokine pathways</a> <span class="src">(Nature Immunology; Maecker, Chien, Davis)</span></li>
+      <li><a href="#p4">Longitudinal atlas of psoriatic skin &amp; anti-IL-23 mechanism</a> <span class="src">(Immunity; Photowala, Ehst, Gudjonsson)</span></li>
+      <li><a href="#p5">Glucocorticoid circuit maintains homeostatic Th17 state</a> <span class="src">(Immunity; Sobel, Kuchroo, Anderson)</span></li>
+      <li><a href="#p6">IL-23 promotes pro-inflammatory Th17 via RORγt / GR</a> <span class="src">(Immunity; Yosef, Anderson, Kuchroo)</span></li>
+      <li><a href="#p7">mRNA vaccines engage unconventional CD8⁺ T-cell priming</a> <span class="src">(Nature; T.L. Murphy, Gillanders, K.M. Murphy)</span></li>
+    </ol>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-imet)"></span>2 · Basic Immuno-metabolism <span class="n">(2)</span></div>
+    <ol>
+      <li><a href="#p8">Cysteine's metabolic fork: sulfur partitioning shapes T cells</a> <span class="src">(Cell; Grusdat, Brenner)</span></li>
+      <li><a href="#p9">Metabolites as signalling molecules in the tumour immune microenvironment</a> <span class="src">(Nature Reviews Immunology; Mao, Xia, Jiang)</span></li>
+    </ol>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-hiv)"></span>3 · HIV <span class="n">(5)</span></div>
+    <ol>
+      <li><a href="#p10">Clinical management of HIV-1 persistent low-level viraemia (consensus)</a> <span class="src">(The Lancet HIV; Castagna, Brusselaers, Wensing)</span></li>
+      <li><a href="#p11">Systematic discovery of pro- and anti-HIV host factors</a> <span class="src">(Cell; Malik, Krogan, Marson)</span></li>
+      <li><a href="#p12">Mechanisms of HIV-1 assembly, release and maturation</a> <span class="src">(Nature Reviews Microbiology; Kleinpeter, Freed)</span></li>
+      <li><a href="#p13">NKG2A⁺CD8⁺ T cells distinguish HIV-2 from HIV-1</a> <span class="src">(Med; Ghosn, Huot, Müller-Trutwin)</span></li>
+      <li><a href="#p14">5′ leader defects drive persistent HIV-1 viremia (CLAWS)</a> <span class="src">(Nature Communications; Maldarelli, Kovacs, Simonetti)</span></li>
+    </ol>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-can)"></span>4 · Cancer <span class="n">(9)</span></div>
+    <ol>
+      <li><a href="#p15">Leukemic stem cell subtypes &amp; venetoclax resistance in AML</a> <span class="src">(Cell Stem Cell; Cabezas-Wallscheid, Müller-Tidow, Trumpp)</span></li>
+      <li><a href="#p16">Ketogenesis-ferroptosis axis sustains leukemic stem cells</a> <span class="src">(Cell Stem Cell; Tian, Zhao, Jiang)</span></li>
+      <li><a href="#p17">STING unlocks CD4⁺ T-cell immunity in pancreatic cancer</a> <span class="src">(Cancer Cell; Kruse, Leonhardt, Böttcher)</span></li>
+      <li><a href="#p18">Immunoediting restricts clonal neoantigens in human tumors</a> <span class="src">(Immunity; Buetow, Wilson, Hastings)</span></li>
+      <li><a href="#p19">CD39⁺ tumor-associated NK cells respond to NKG2A blockade</a> <span class="src">(Science Immunology; Vivier, Romagnani, Zippelius)</span></li>
+      <li><a href="#p20">MAPK- vs WNT-driven states in intestinal cancer &amp; therapy</a> <span class="src">(Nature Genetics; Malek, Melo, de Sauvage)</span></li>
+      <li><a href="#p21">Adverse events of CD3 bispecific antibodies (meta-analysis)</a> <span class="src">(The Lancet Oncology; Rosen, W. Liu, H. Zhu)</span></li>
+      <li><a href="#p22">Tumor ICB resistance via efferocytosis fatty-acid recycling</a> <span class="src">(Cancer Cell; J. Sung, Chan, Cheng)</span></li>
+      <li><a href="#p23">Spatial single-cell glioblastoma microenvironment atlas</a> <span class="src">(Nature Neuroscience; Cheng, Tang, Qu)</span></li>
+    </ol>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-tb)"></span>5 · Tuberculosis <span class="n">(0)</span></div>
+    <div class="none">No papers in today's selection.</div>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-age)"></span>6 · Aging <span class="n">(3)</span></div>
+    <ol>
+      <li><a href="#p24">Charting human cellular senescence in aging and disease</a> <span class="src">(Cell; Anerillas, Robbins, Fan)</span></li>
+      <li><a href="#p25">p16ʰⁱᵍʰ immune cells control disease tolerance &amp; healthspan</a> <span class="src">(Immunity; Trompouki, Seitz-Polski, Bulavin)</span></li>
+      <li><a href="#p26">NF-κB fibroblasts orchestrate inflammaging &amp; GZMK⁺ T cells</a> <span class="src">(Immunity; Calfee, Molofsky, Peng)</span></li>
+    </ol>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-neuro)"></span>7 · Neuroimmunology <span class="n">(1)</span></div>
+    <ol>
+      <li><a href="#p27">Single-cell proteome atlas of aging mouse microglia</a> <span class="src">(Neuron; Ye, Shi, Li)</span></li>
+    </ol>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-neo)"></span>8 · Neonatal / Pediatric Immunology <span class="n">(0)</span></div>
+    <div class="none">No papers in today's selection.</div>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-bioinf)"></span>9 · Innovations in Bioinformatics <span class="n">(1)</span></div>
+    <ol>
+      <li><a href="#p28">XomicsToModel: thermodynamically consistent metabolic models</a> <span class="src">(Nature Protocols; Thiele, Hankemeier, Fleming)</span></li>
+    </ol>
+  </div>
+
+  <div class="grp">
+    <div class="ghead"><span class="dot" style="background:var(--c-ai)"></span>10 · AI Applications in Basic Science Research <span class="n">(0)</span></div>
+    <div class="none">No papers squarely in this category today.</div>
+  </div>
+</nav>
+
+<!-- ===================== 1. BASIC IMMUNOLOGY ===================== -->
+<div class="section" id="imm">
+  <h2><span class="dot" style="background:var(--c-imm)"></span>Basic Immunology <span class="count">7 papers</span></h2>
+
+  <div class="card" id="p1">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="8.5" fill="#9bb0c3" text-anchor="middle">human gut-associated lymphoid tissue</text>
+        <path d="M30 120 Q60 60 100 70 Q140 80 150 50" stroke="#3a4a59" fill="none" stroke-width="6"/>
+        <circle cx="70" cy="74" r="9" fill="#23303d" stroke="#36c98f"/>
+        <text x="70" y="77" font-size="5.5" fill="#36c98f" text-anchor="middle">DN2</text>
+        <circle cx="108" cy="66" r="8" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="108" y="69" font-size="5.5" fill="#5cc8ff" text-anchor="middle">MZ B</text>
+        <circle cx="138" cy="96" r="8" fill="#23303d" stroke="#f4c95d"/>
+        <text x="138" y="99" font-size="5" fill="#f4c95d" text-anchor="middle">IgA PC</text>
+        <rect x="186" y="50" width="82" height="24" rx="5" fill="#23303d" stroke="#36c98f"/>
+        <text x="227" y="65" font-size="6.5" fill="#36c98f" text-anchor="middle">homeostasis</text>
+        <rect x="186" y="82" width="82" height="24" rx="5" fill="#2e2230" stroke="#ff7a59"/>
+        <text x="227" y="97" font-size="6.5" fill="#ff7a59" text-anchor="middle">distorted in UC</text>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1126/sciimmunol.ady8948">Atlas of human gut-associated lymphoid tissue reveals immunomodulatory interactions of B cells</a></h3>
+      <p class="meta">Pitcher, Sun, Dionisi, … Spencer et al. · <span class="date">Science Immunology, 5 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Integrated multiomics builds a spatially resolved atlas of human gut-associated lymphoid tissue (GALT) and its B-cell subsets.</li>
+        <li>Double-negative-2 (DN2) B cells show broad regulatory features with potential to maintain homeostasis in microbe-rich mucosa.</li>
+        <li>In ulcerative colitis, GALT B-cell composition and spatial distribution are distorted with altered immunomodulatory potential.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p2">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="16" y="66" width="48" height="30" rx="6" fill="#23303d" stroke="#ff7a59"/>
+        <text x="40" y="85" font-size="8" fill="#ff7a59" text-anchor="middle">IL-17</text>
+        <path d="M64 81 H92" stroke="#5b6b7b" marker-end="url(#r)"/>
+        <circle cx="112" cy="81" r="14" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="112" y="84" font-size="6.5" fill="#5cc8ff" text-anchor="middle">IL-17R</text>
+        <text x="170" y="40" font-size="7.5" fill="#cdd6e0">skin</text>
+        <text x="210" y="40" font-size="7.5" fill="#cdd6e0">gut</text>
+        <text x="170" y="60" font-size="7.5" fill="#cdd6e0">CNS</text>
+        <text x="210" y="60" font-size="7.5" fill="#cdd6e0">cancer</text>
+        <text x="170" y="80" font-size="7.5" fill="#cdd6e0">metabolism</text>
+        <text x="170" y="118" font-size="7.5" fill="#9bb0c3">tissue-specific transcriptional</text>
+        <text x="170" y="130" font-size="7.5" fill="#9bb0c3">&amp; post-transcriptional outputs</text>
+        <path d="M126 75 Q150 60 165 50 M126 81 Q150 75 165 75 M126 88 Q150 100 165 95" stroke="#5b6b7b" fill="none"/>
+        <defs><marker id="r" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1126/sciimmunol.adq6406">The tissue-specific regulation of immunobiology by IL-17 signaling</a></h3>
+      <p class="meta">Li, Vyas, Draber, Bechara &amp; Gaffen · <span class="date">Science Immunology (review), 12 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Reviews cell- and tissue-specific activities of IL-17 family cytokines and the signaling engaged by IL-17R complexes.</li>
+        <li>Highlights intersecting transcriptional and post-transcriptional mechanisms that generate functional diversity across tissues.</li>
+        <li>Surveys emerging roles in immunometabolism, neuroimmune interactions and cancer, plus targeted-therapy approaches.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p3">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="8" fill="#9bb0c3" text-anchor="middle">inactivated flu vaccine response</text>
+        <text x="48" y="44" font-size="7.5" fill="#f4c95d">baseline</text>
+        <text x="48" y="56" font-size="7.5" fill="#f4c95d">IL-18 · IFN-β</text>
+        <path d="M44 62 V96" stroke="#3a4a59"/><path d="M44 96 H120" stroke="#3a4a59"/>
+        <text x="84" y="110" font-size="6.5" fill="#9bb0c3" text-anchor="middle">day-28 Ab</text>
+        <rect x="150" y="38" width="116" height="30" rx="5" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="208" y="50" font-size="6.5" fill="#5cc8ff" text-anchor="middle">type I IFN pathway</text>
+        <text x="208" y="61" font-size="6.5" fill="#9bb0c3" text-anchor="middle">organoid-validated</text>
+        <rect x="150" y="74" width="116" height="30" rx="5" fill="#23303d" stroke="#36c98f"/>
+        <text x="208" y="86" font-size="6.5" fill="#36c98f" text-anchor="middle">IL-12 → IL-21 pathway</text>
+        <text x="208" y="97" font-size="6.5" fill="#9bb0c3" text-anchor="middle">long-lived plasma cells</text>
+        <text x="140" y="128" font-size="7" fill="#9bb0c3" text-anchor="middle">parallel cytokine programs → adjuvant leads</text>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1038/s41590-026-02547-x">Human vaccine responses regulated by parallel cytokine pathways</a></h3>
+      <p class="meta">Chen, Guo, Heath, … Davis et al. · <span class="date">Nature Immunology, 12 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Across four influenza-vaccine cohorts over five seasons (n=581), baseline serum IL-18 and IFN-β correlated with day-28 antibody responses.</li>
+        <li>In human tonsil/spleen organoids, type I IFNs, IL-21 and IL-12 (not IL-18 or IFNγ) enhanced antibody production; IL-12 induced IL-21 in humans, unlike mice.</li>
+        <li>mRNA-LNP delivery of IL-21 or IFN-β promoted long-lived plasma cells — a human-centric platform for adjuvant discovery.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p4">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="8" fill="#9bb0c3" text-anchor="middle">psoriatic skin, anti-IL-23, 36 wk</text>
+        <rect x="20" y="40" width="46" height="80" rx="5" fill="#2e2230" stroke="#ff7a59"/>
+        <text x="43" y="34" font-size="6.5" fill="#ff7a59" text-anchor="middle">pre</text>
+        <circle cx="43" cy="58" r="4" fill="#ff7a59"/><circle cx="43" cy="74" r="4" fill="#ff7a59"/>
+        <circle cx="43" cy="90" r="4" fill="#ff7a59"/><circle cx="43" cy="106" r="4" fill="#ff7a59"/>
+        <path d="M70 80 H104" stroke="#5cc8ff" marker-end="url(#t)"/>
+        <text x="87" y="72" font-size="6" fill="#5cc8ff" text-anchor="middle">IL-23 block</text>
+        <rect x="110" y="40" width="46" height="80" rx="5" fill="#1e2a22" stroke="#36c98f"/>
+        <text x="133" y="34" font-size="6.5" fill="#36c98f" text-anchor="middle">post</text>
+        <circle cx="133" cy="92" r="4" fill="#36c98f"/>
+        <text x="216" y="50" font-size="6.5" fill="#cdd6e0">↓ IL-17 Trm (c-MAF–IL-7)</text>
+        <text x="216" y="68" font-size="6.5" fill="#cdd6e0">↓ APOE⁺/IL34⁺ fibro</text>
+        <text x="216" y="86" font-size="6.5" fill="#cdd6e0">↓ pro-inflam DC</text>
+        <text x="216" y="104" font-size="6.5" fill="#cdd6e0">↓ CCL19/21 homing</text>
+        <defs><marker id="t" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.immuni.2026.05.002">A longitudinal atlas of human psoriatic skin reveals the mechanisms of anti-IL-23 therapy in disrupting the type 17 inflammatory circuit</a></h3>
+      <p class="meta">Jiang, Blauvelt, Shi, … Gudjonsson et al. · <span class="date">Immunity, 28 May 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>scRNA-seq and spatial transcriptomics on matched pre/post psoriatic skin, tracked 36 weeks after IL-23 blockade was stopped.</li>
+        <li>IL-23 blockade durably reduces IL-17⁺ CD8 tissue-resident memory T cells via a c-MAF–IL-7 axis and lowers APOE⁺/IL34⁺ fibroblasts, cutting monocyte-to-DC differentiation.</li>
+        <li>Reduced vascular CCL19/CCL21 attenuates immune-cell infiltration — mapping how IL-23 inhibition breaks the type-17 loop for lasting remission.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p5">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="140" cy="80" r="40" fill="#23303d" stroke="#36c98f"/>
+        <text x="140" y="60" font-size="8" fill="#36c98f" text-anchor="middle">Th17ʰᵒᵐᵉᵒ</text>
+        <rect x="108" y="70" width="64" height="18" rx="4" fill="#2e3a47" stroke="#f4c95d"/>
+        <text x="140" y="83" font-size="7.5" fill="#f4c95d" text-anchor="middle">CYP11A1</text>
+        <path d="M140 88 V104" stroke="#5b6b7b" marker-end="url(#k)"/>
+        <text x="140" y="116" font-size="8" fill="#e8edf2" text-anchor="middle">glucocorticoid → GR</text>
+        <path d="M118 110 A40 40 0 0 1 118 50" stroke="#5cc8ff" fill="none" marker-end="url(#k)"/>
+        <text x="56" y="44" font-size="7.5" fill="#5cc8ff">TGF-β1 · IL-6</text>
+        <text x="56" y="56" font-size="7.5" fill="#9bb0c3">amplify loop</text>
+        <defs><marker id="k" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.immuni.2026.05.015">A cell-intrinsic glucocorticoid biosynthesis and sensing circuit maintains a homeostatic Th17 cell state</a></h3>
+      <p class="meta">Yang, Huang, Cheng, … Anderson et al. · <span class="date">Immunity, 12 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Homeostatic vs pathogenic Th17 cells are distinguished by differential glucocorticoid (GC) production downstream of the steroidogenic enzyme CYP11A1.</li>
+        <li>TCR signaling opens the <i>Cyp11a1</i> locus; TGF-β1 and IL-6 maintain it, and Th17-derived GC signals through a highly expressed GR in a self-reinforcing loop.</li>
+        <li>Multi-omics defines the gene network, and TGF-β1 can restore GC sensing — relevant to treating Th17-mediated autoimmunity.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p6">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="18" y="62" width="50" height="36" rx="6" fill="#23303d" stroke="#ff7a59"/>
+        <text x="43" y="84" font-size="9" fill="#ff7a59" text-anchor="middle">IL-23</text>
+        <path d="M68 80 H100" stroke="#5b6b7b" marker-end="url(#l)"/>
+        <text x="150" y="50" font-size="8" fill="#e8edf2">CHD1 + STAT3</text>
+        <text x="150" y="64" font-size="7.5" fill="#9bb0c3">→ stabilize RORγt</text>
+        <text x="150" y="92" font-size="8" fill="#e8edf2">GR phosphor.↓</text>
+        <text x="150" y="106" font-size="7.5" fill="#9bb0c3">→ block GR nuclear entry</text>
+        <circle cx="120" cy="80" r="14" fill="#23303d" stroke="#ff7a59"/>
+        <text x="120" y="83" font-size="7" fill="#ff7a59" text-anchor="middle">Th17ᵖʳᵒ</text>
+        <defs><marker id="l" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.immuni.2026.05.016">Interleukin 23 promotes a pro-inflammatory Th17 cell state by stabilizing RORγt and suppressing glucocorticoid receptor activity</a></h3>
+      <p class="meta">Yang, Huang, Yang, … Kuchroo et al. · <span class="date">Immunity, 12 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Phosphoproteomic + transcriptomic profiling downstream of IL-23R (vs the subunit-sharing IL-12R) reveals two pathogenic-Th17 mechanisms.</li>
+        <li>The epigenetic regulator CHD1 partners with STAT3 to co-bind the RORγt locus, locking in the pro-inflammatory state.</li>
+        <li>IL-23R signaling alters GR phosphorylation, blocking its nuclear entry and relieving GR suppression of inflammatory genes (companion to the homeostatic-Th17 paper above).</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p7">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="16" y="64" width="60" height="34" rx="6" fill="#23303d" stroke="#f4c95d"/>
+        <text x="46" y="80" font-size="7.5" fill="#f4c95d" text-anchor="middle">mRNA-LNP</text>
+        <text x="46" y="92" font-size="7" fill="#9bb0c3" text-anchor="middle">vaccine</text>
+        <circle cx="120" cy="56" r="16" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="120" y="59" font-size="7" fill="#5cc8ff" text-anchor="middle">cDC1</text>
+        <circle cx="120" cy="104" r="16" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="120" y="107" font-size="7" fill="#5cc8ff" text-anchor="middle">cDC2</text>
+        <path d="M76 74 L104 60" stroke="#36c98f" marker-end="url(#o)"/>
+        <path d="M76 88 L104 100" stroke="#36c98f" marker-end="url(#o)"/>
+        <text x="118" y="20" font-size="7" fill="#9bb0c3" text-anchor="middle">redundant · no WDFY4</text>
+        <circle cx="210" cy="80" r="24" fill="#23303d" stroke="#36c98f"/>
+        <text x="210" y="78" font-size="7.5" fill="#36c98f" text-anchor="middle">CD8⁺ T</text>
+        <text x="210" y="90" font-size="6.5" fill="#9bb0c3" text-anchor="middle">cross-dressing</text>
+        <path d="M136 56 Q175 60 188 72" stroke="#5b6b7b" fill="none" marker-end="url(#o)"/>
+        <path d="M136 104 Q175 100 188 88" stroke="#5b6b7b" fill="none" marker-end="url(#o)"/>
+        <defs><marker id="o" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1038/s41586-026-10353-6">mRNA vaccines engage unconventional pathways in CD8⁺ T cell priming</a></h3>
+      <p class="meta">Jo, Li, Thakur, … Murphy et al. · <span class="date">Nature, 15 Apr 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>mRNA-LNP vaccines do not require cDC1 cells or the WDFY4-dependent cross-presentation pathway for CD8⁺ priming — cDC1 and cDC2 cells act redundantly.</li>
+        <li>CD8⁺ T cells primed by either subset differ phenotypically but both drive anti-tumor responses and memory.</li>
+        <li>"Cross-dressing" — cDCs acquiring peptide–MHC-I from non-hematopoietic cells (type-I-IFN-dependent) — contributes substantially, possibly explaining responses to non-encoded antigens.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 2. BASIC IMMUNO-METABOLISM ===================== -->
+<div class="section" id="imet">
+  <h2><span class="dot" style="background:var(--c-imet)"></span>Basic Immuno-metabolism <span class="count">2 papers</span></h2>
+
+  <div class="card" id="p8">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="18" font-size="9" fill="#9bb0c3" text-anchor="middle">cysteine sulfur partitioning</text>
+        <text x="140" y="38" font-size="10" fill="#e8edf2" text-anchor="middle">Cys</text>
+        <path d="M134 44 L96 78" stroke="#36c98f" marker-end="url(#g)"/>
+        <path d="M146 44 L184 78" stroke="#f4c95d" marker-end="url(#g)"/>
+        <text x="88" y="94" font-size="8" fill="#36c98f" text-anchor="middle">glutathione</text>
+        <text x="190" y="94" font-size="8" fill="#f4c95d" text-anchor="middle">Fe-S clusters</text>
+        <rect x="84" y="116" width="116" height="26" rx="6" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="142" y="133" font-size="8" fill="#5cc8ff" text-anchor="middle">CD8⁺ effector &amp; anti-tumor</text>
+        <path d="M96 100 Q120 112 130 116" stroke="#5b6b7b" fill="none"/>
+        <path d="M184 100 Q160 112 154 116" stroke="#5b6b7b" fill="none"/>
+        <defs><marker id="g" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.cell.2026.05.011">Cysteine's metabolic fork: Sulfur partitioning shapes T cell function</a></h3>
+      <p class="meta">Grusdat &amp; Brenner · <span class="date">Cell (preview), 11 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Preview of Kelly et al.: cysteine's sulfur is divided between glutathione and iron–sulfur cluster synthesis.</li>
+        <li>How that sulfur is routed governs CD8⁺ T-cell proliferation, effector function and anti-tumor immunity.</li>
+        <li>The same nutrient serves very different metabolic ends depending on its partitioning.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p9">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="70" cy="80" r="30" fill="#23303d" stroke="#ff7a59"/>
+        <text x="70" y="78" font-size="7.5" fill="#ff7a59" text-anchor="middle">tumor cell</text>
+        <text x="70" y="90" font-size="7" fill="#9bb0c3" text-anchor="middle">metabolites</text>
+        <circle cx="106" cy="50" r="4" fill="#f4c95d"/><circle cx="120" cy="66" r="4" fill="#f4c95d"/>
+        <circle cx="114" cy="90" r="4" fill="#f4c95d"/><circle cx="128" cy="104" r="4" fill="#f4c95d"/>
+        <text x="150" y="44" font-size="8" fill="#f4c95d">signalling</text>
+        <text x="150" y="56" font-size="7" fill="#9bb0c3">molecules</text>
+        <circle cx="206" cy="80" r="30" fill="#23303d" stroke="#36c98f"/>
+        <text x="206" y="78" font-size="7.5" fill="#36c98f" text-anchor="middle">immune cell</text>
+        <text x="206" y="90" font-size="7" fill="#9bb0c3" text-anchor="middle">fate / function</text>
+        <path d="M100 72 Q150 80 176 80" stroke="#5b6b7b" fill="none" marker-end="url(#q)"/>
+        <defs><marker id="q" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1038/s41577-025-01258-y">Metabolites as signalling molecules in the tumour immune microenvironment</a></h3>
+      <p class="meta">Mao, Xia &amp; Jiang · <span class="date">Nature Reviews Immunology (review), 12 Jan 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Reviews how tumor-derived metabolites act as signalling molecules beyond their metabolic roles.</li>
+        <li>Dysregulated metabolites are central to building the immunosuppressive tumor microenvironment.</li>
+        <li>Surveys metabolite–antitumor-immunity interactions and therapeutic strategies targeting metabolites and their sensing.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 3. HIV ===================== -->
+<div class="section" id="hiv">
+  <h2><span class="dot" style="background:var(--c-hiv)"></span>HIV <span class="count">5 papers</span></h2>
+
+  <div class="card" id="p10">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="18" font-size="8.5" fill="#9bb0c3" text-anchor="middle">HIV-1 low-level viraemia on ART</text>
+        <line x1="30" y1="120" x2="250" y2="120" stroke="#3a4a59"/>
+        <line x1="30" y1="40" x2="30" y2="120" stroke="#3a4a59"/>
+        <rect x="40" y="96" width="40" height="24" fill="#23303d" stroke="#36c98f"/>
+        <text x="60" y="112" font-size="6.5" fill="#36c98f" text-anchor="middle">50–200</text>
+        <rect x="100" y="64" width="40" height="56" fill="#23303d" stroke="#ff7a59"/>
+        <text x="120" y="112" font-size="6.5" fill="#ff7a59" text-anchor="middle">200–1000</text>
+        <text x="120" y="58" font-size="6.5" fill="#ff7a59" text-anchor="middle">↑risk</text>
+        <text x="60" y="138" font-size="6.5" fill="#9bb0c3" text-anchor="middle">copies/mL strata</text>
+        <rect x="158" y="56" width="96" height="56" rx="6" fill="#202a36" stroke="#5cc8ff"/>
+        <text x="206" y="72" font-size="7.5" fill="#5cc8ff" text-anchor="middle">Delphi consensus</text>
+        <text x="206" y="86" font-size="6.5" fill="#cdd6e0" text-anchor="middle">confirm · adherence</text>
+        <text x="206" y="97" font-size="6.5" fill="#cdd6e0" text-anchor="middle">resistance testing</text>
+        <text x="206" y="108" font-size="6.5" fill="#cdd6e0" text-anchor="middle">individualise ART</text>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/S2352-3018(26)00107-4">Guidance on the clinical management of HIV-1 persistent low-level viraemia on antiretroviral treatment: a scoping review and international Delphi consensus</a></h3>
+      <p class="meta">Clemente, Stam, Elvstam, … Wensing et al. · <span class="date">The Lancet HIV, 11 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Scoping review + modified Delphi consensus on managing persistent HIV-1 low-level viraemia (LLV), most often 50–1000 copies/mL.</li>
+        <li>Evidence for risk at 50–200 copies/mL is inconsistent, whereas 200–1000 copies/mL carries stronger risk of failure/resistance.</li>
+        <li>Proposes a viral-load-stratified framework: confirm, assess adherence/interactions, resistance testing (especially 200–1000), and individualized regimen optimization.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p11">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="80" r="34" fill="#23303d" stroke="#36c98f"/>
+        <text x="60" y="58" font-size="8" fill="#9bb0c3" text-anchor="middle">CD4⁺ T cell</text>
+        <text x="60" y="84" font-size="8" fill="#36c98f" text-anchor="middle">genome-wide</text>
+        <text x="60" y="95" font-size="8" fill="#36c98f" text-anchor="middle">CRISPRa / KO</text>
+        <path d="M100 64 H150" stroke="#ff7a59" marker-end="url(#b)"/>
+        <text x="125" y="58" font-size="7.5" fill="#ff7a59" text-anchor="middle">anti-HIV</text>
+        <text x="200" y="50" font-size="9" fill="#e8edf2">PI16</text>
+        <text x="200" y="64" font-size="9" fill="#e8edf2">PPID (Cyp40)</text>
+        <text x="200" y="78" font-size="9" fill="#e8edf2">SHISA3 · ITM2A</text>
+        <path d="M100 100 H150" stroke="#5cc8ff" marker-end="url(#b)"/>
+        <text x="125" y="114" font-size="7.5" fill="#5cc8ff" text-anchor="middle">pro-HIV</text>
+        <text x="200" y="104" font-size="8" fill="#9bb0c3">entry / nuclear</text>
+        <text x="200" y="116" font-size="8" fill="#9bb0c3">import blocks</text>
+        <defs><marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.cell.2026.03.046">Systematic discovery of pro- and anti-HIV host factors in primary human CD4⁺ T cells</a></h3>
+      <p class="meta">Rathore, Dugan, Thornton, … Marson et al. · <span class="date">Cell, 20 Apr 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Orthogonal genome-wide CRISPR activation and knockout screens in primary CD4⁺ T cells map the functional HIV host-factor landscape.</li>
+        <li>CRISPRa uncovered potent antivirals PI16, PPID, SHISA3 and ITM2A; PI16 blocks entry, while PPID (Cyp40) binds capsid and reduces nuclear import.</li>
+        <li>Structural modeling and evolutionary analysis pinpoint the domains and residues required for PPID-mediated restriction.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p12">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="18" font-size="8.5" fill="#9bb0c3" text-anchor="middle">HIV-1 late replication cycle</text>
+        <circle cx="60" cy="80" r="24" fill="none" stroke="#5cc8ff" stroke-width="2"/>
+        <text x="60" y="83" font-size="7" fill="#5cc8ff" text-anchor="middle">assembly</text>
+        <path d="M86 80 H114" stroke="#5b6b7b" marker-end="url(#p)"/>
+        <circle cx="140" cy="80" r="22" fill="none" stroke="#36c98f" stroke-width="2"/>
+        <text x="140" y="83" font-size="7" fill="#36c98f" text-anchor="middle">release</text>
+        <path d="M162 80 H190" stroke="#5b6b7b" marker-end="url(#p)"/>
+        <circle cx="218" cy="80" r="24" fill="none" stroke="#f4c95d" stroke-width="2"/>
+        <circle cx="218" cy="80" r="11" fill="#23303d" stroke="#f4c95d"/>
+        <text x="218" y="112" font-size="7" fill="#f4c95d" text-anchor="middle">maturation</text>
+        <text x="140" y="140" font-size="7.5" fill="#9bb0c3" text-anchor="middle">cryo-EM · single-molecule · maturation inhibitors</text>
+        <defs><marker id="p" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1038/s41579-026-01327-6">Mechanisms of HIV-1 assembly, release and maturation</a></h3>
+      <p class="meta">Kleinpeter &amp; Freed · <span class="date">Nature Reviews Microbiology (review), 11 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Synthesizes a decade of cryo-EM, single-molecule and live-cell imaging advances on HIV-1 assembly, release and maturation.</li>
+        <li>Clarifies how late replication events prime newly formed virions for infecting the next host cell.</li>
+        <li>Underpins potent maturation inhibitors and highlights the virology–host-cell-biology–drug-development interplay.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p13">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="70" y="18" font-size="8" fill="#9bb0c3" text-anchor="middle">HIV-2 vs HIV-1</text>
+        <circle cx="70" cy="74" r="32" fill="#23303d" stroke="#36c98f"/>
+        <text x="70" y="68" font-size="7.5" fill="#36c98f" text-anchor="middle">NKG2A⁺</text>
+        <text x="70" y="80" font-size="7.5" fill="#36c98f" text-anchor="middle">CD8⁺ T</text>
+        <text x="70" y="92" font-size="6.5" fill="#9bb0c3" text-anchor="middle">IL-22 · regulatory</text>
+        <path d="M106 70 H150" stroke="#5cc8ff" marker-end="url(#h)"/>
+        <text x="200" y="58" font-size="8" fill="#e8edf2">↑ gut integrity</text>
+        <text x="200" y="74" font-size="8" fill="#e8edf2">↓ inflammation</text>
+        <text x="200" y="90" font-size="8" fill="#f4c95d">IL-15 drives them</text>
+        <text x="70" y="120" font-size="7.5" fill="#9bb0c3" text-anchor="middle">expanded in PLWH2</text>
+        <defs><marker id="h" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.medj.2026.101143">Expansion of NKG2A⁺CD8⁺ T cells with regulatory signatures distinguishes individuals living with HIV-2 from those with HIV-1</a></h3>
+      <p class="meta">Orta Resendiz, Petitdemange, Lazzerini, … Müller-Trutwin et al. · <span class="date">Med, 15 May 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>HIV-2 (minimal gut inflammation despite untreated replication) shows expanded NKG2A⁺ and NKG2C⁺ CD8⁺ T cells versus HIV-1.</li>
+        <li>NKG2A⁺ cells express regulatory molecules, homing receptors and IL-22, correlating with gut integrity and reduced chronic immune activation.</li>
+        <li>Higher plasma IL-15 in HIV-2 boosts their activity and CD39/DNAM-1 expression — implicating them in gut homeostasis.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p14">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="9" fill="#9bb0c3" text-anchor="middle">HIV-1 5′ Leader RNA</text>
+        <line x1="20" y1="40" x2="260" y2="40" stroke="#3a4a59"/>
+        <rect x="40" y="33" width="24" height="14" rx="3" fill="#36c98f"/>
+        <text x="52" y="44" font-size="7" fill="#0f1419" text-anchor="middle">MSD</text>
+        <text x="140" y="60" font-size="8" fill="#36c98f" text-anchor="middle">intact 5′L (minor)</text>
+        <line x1="20" y1="92" x2="260" y2="92" stroke="#3a4a59"/>
+        <path d="M44 92 l8 -8 m0 8 l-8 -8" stroke="#ff7a59" stroke-width="2"/>
+        <path d="M58 92 l8 -8 m0 8 l-8 -8" stroke="#ff7a59" stroke-width="2"/>
+        <text x="140" y="112" font-size="8" fill="#ff7a59" text-anchor="middle">5′L-defective clones near MSD (dominant)</text>
+        <rect x="86" y="128" width="108" height="24" rx="6" fill="#23303d" stroke="#7c5cff"/>
+        <text x="140" y="143" font-size="9" fill="#7c5cff" text-anchor="middle">CLAWS digital PCR</text>
+        <path d="M140 116 V128" stroke="#5b6b7b"/>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1038/s41467-026-73475-5">5′ leader defects drive persistent HIV-1 viremia on long-term ART</a></h3>
+      <p class="meta">Box, Camilo-Contreras, Dragoni, … Simonetti et al. · <span class="date">Nature Communications, 2026 (17:4725)</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>In &gt;50 participants, nonsuppressible plasma viremia on ART is driven by highly clonal HIV-1 RNA carrying 5′-leader defects clustered near the major splice donor.</li>
+        <li>The new CLAWS digital-PCR assay distinguishes intact vs defective 5′L RNA and recapitulates sequencing-based estimates.</li>
+        <li>Defective genomes emerge early after ART initiation and dominate over long-term therapy — making CLAWS a practical clinical/cure monitoring tool.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 4. CANCER ===================== -->
+<div class="section" id="can">
+  <h2><span class="dot" style="background:var(--c-can)"></span>Cancer <span class="count">9 papers</span></h2>
+
+  <div class="card" id="p15">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="8" fill="#9bb0c3" text-anchor="middle">4 LSC subtypes · MAC-score</text>
+        <circle cx="58" cy="62" r="18" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="58" y="65" font-size="6.5" fill="#5cc8ff" text-anchor="middle">BCL-2</text>
+        <circle cx="58" cy="110" r="18" fill="#23303d" stroke="#ff7a59"/>
+        <text x="58" y="108" font-size="6" fill="#ff7a59" text-anchor="middle">MEP-LSC</text>
+        <text x="58" y="118" font-size="5.5" fill="#9bb0c3" text-anchor="middle">BCL-xL</text>
+        <text x="140" y="52" font-size="7" fill="#36c98f" text-anchor="middle">venetoclax sensitive</text>
+        <text x="140" y="100" font-size="7" fill="#ff7a59" text-anchor="middle">resistance via plasticity</text>
+        <rect x="186" y="44" width="80" height="22" rx="5" fill="#23303d" stroke="#36c98f"/>
+        <text x="226" y="59" font-size="6.5" fill="#36c98f" text-anchor="middle">BCL-xL inhibitor</text>
+        <rect x="186" y="100" width="80" height="22" rx="5" fill="#23303d" stroke="#f4c95d"/>
+        <text x="226" y="115" font-size="6.5" fill="#f4c95d" text-anchor="middle">MEK1/2 (MoDe)</text>
+        <path d="M76 110 Q150 110 184 111" stroke="#5b6b7b" fill="none" marker-end="url(#s)"/>
+        <defs><marker id="s" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.stem.2026.04.012">Leukemic stem cell subtypes determine venetoclax resistance and therapeutic vulnerabilities in AML</a></h3>
+      <p class="meta">Waclawiczek, Leppä, Renders, … Trumpp et al. · <span class="date">Cell Stem Cell, 7 May 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>LSC profiling from &gt;150 AML patients defines four subtypes mirroring hematopoietic lineage stages, with a BCL-2 vs MCL-1/BCL-xL "MAC-score."</li>
+        <li>Venetoclax resistance usually arises via plasticity to a MEP-LSC state that switches survival to BCL-xL; rare MoDe-LSCs in LAMP5⁺ AML also resist.</li>
+        <li>Subtyping improves risk stratification and points to subtype-specific therapy — BCL-xL inhibitors for MEP-LSCs, MEK1/2 inhibition for MoDe-LSCs.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p16">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="60" y="22" font-size="8" fill="#9bb0c3" text-anchor="middle">FAO → ketogenesis</text>
+        <rect x="30" y="30" width="60" height="22" rx="4" fill="#23303d" stroke="#f4c95d"/>
+        <text x="60" y="45" font-size="8" fill="#f4c95d" text-anchor="middle">HMGCS2</text>
+        <path d="M60 52 V70" stroke="#5b6b7b" marker-end="url(#c)"/>
+        <text x="60" y="84" font-size="9" fill="#e8edf2" text-anchor="middle">β-hydroxybutyrate</text>
+        <path d="M60 90 V108" stroke="#5b6b7b" marker-end="url(#c)"/>
+        <text x="60" y="122" font-size="8" fill="#9bb0c3" text-anchor="middle">↓ FADS2 remodeling</text>
+        <circle cx="200" cy="80" r="40" fill="#23303d" stroke="#36c98f"/>
+        <text x="200" y="70" font-size="9" fill="#36c98f" text-anchor="middle">LSC</text>
+        <text x="200" y="84" font-size="7.5" fill="#9bb0c3" text-anchor="middle">ferroptosis</text>
+        <text x="200" y="94" font-size="7.5" fill="#ff7a59" text-anchor="middle">SUPPRESSED</text>
+        <path d="M100 108 Q150 130 175 100" stroke="#ff7a59" fill="none" marker-end="url(#c)"/>
+        <defs><marker id="c" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.stem.2026.04.013">A ketogenesis-ferroptosis axis maintains leukemic stem cell survival and leukemia progression</a></h3>
+      <p class="meta">Han, Wang, Ma, … Jiang et al. · <span class="date">Cell Stem Cell, 11 May 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>AML leukemic stem cells run autonomous ketogenesis (fatty-acid oxidation + high HMGCS2) to produce β-hydroxybutyrate (BHB).</li>
+        <li>Deleting <i>Hmgcs2</i> collapses BHB, disrupts LSC function and impairs leukemia progression while largely sparing normal hematopoiesis.</li>
+        <li>BHB suppresses ferroptosis by limiting pro-ferroptotic phospholipid remodeling via epigenetic FADS2 regulation — a targetable metabolic vulnerability.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p17">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="56" width="56" height="48" rx="6" fill="#23303d" stroke="#f4c95d"/>
+        <text x="36" y="76" font-size="8" fill="#f4c95d" text-anchor="middle">STING</text>
+        <text x="36" y="90" font-size="7" fill="#9bb0c3" text-anchor="middle">+ ICB</text>
+        <path d="M64 80 H100" stroke="#5b6b7b" marker-end="url(#f)"/>
+        <circle cx="126" cy="80" r="22" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="126" y="83" font-size="7.5" fill="#5cc8ff" text-anchor="middle">cDC2</text>
+        <path d="M148 80 H184" stroke="#5b6b7b" marker-end="url(#f)"/>
+        <circle cx="210" cy="80" r="24" fill="#23303d" stroke="#36c98f"/>
+        <text x="210" y="78" font-size="8" fill="#36c98f" text-anchor="middle">CD4⁺ T</text>
+        <text x="210" y="90" font-size="7" fill="#9bb0c3" text-anchor="middle">PDAC control</text>
+        <text x="140" y="132" font-size="8" fill="#9bb0c3" text-anchor="middle">innate stimulation unlocks adaptive immunity</text>
+        <defs><marker id="f" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.ccell.2026.05.009">STING unlocks CD4⁺ T cell immunity in pancreatic cancer</a></h3>
+      <p class="meta">Kruse, Leonhardt &amp; Böttcher · <span class="date">Cancer Cell (preview), 11 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Preview of Kureshi et al.: checkpoint blockade + STING innate stimulation unlocks cDC2-driven CD4⁺ T-cell immunity in mouse PDAC.</li>
+        <li>The axis enables immune control of an otherwise immunotherapy-resistant tumor.</li>
+        <li>Points to a cDC2→CD4⁺ T-cell circuit that could be exploited therapeutically.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p18">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="18" font-size="8.5" fill="#9bb0c3" text-anchor="middle">clonal → subclonal cancer cells</text>
+        <circle cx="60" cy="80" r="26" fill="#23303d" stroke="#ff7a59"/>
+        <text x="60" y="78" font-size="7.5" fill="#e8edf2" text-anchor="middle">clonal</text>
+        <text x="60" y="90" font-size="7" fill="#ff7a59" text-anchor="middle">low neoAg</text>
+        <circle cx="150" cy="70" r="9" fill="#36c98f"/><circle cx="172" cy="92" r="7" fill="#36c98f"/>
+        <circle cx="138" cy="100" r="6" fill="#36c98f"/><circle cx="190" cy="68" r="6" fill="#36c98f"/>
+        <text x="165" y="120" font-size="7.5" fill="#36c98f" text-anchor="middle">subclonal: immunogenic neoAg retained</text>
+        <path d="M88 74 H128" stroke="#5cc8ff" marker-end="url(#d)"/>
+        <text x="108" y="64" font-size="7" fill="#5cc8ff" text-anchor="middle">T cell editing</text>
+        <text x="60" y="124" font-size="7" fill="#9bb0c3" text-anchor="middle">high-immune tumors</text>
+        <defs><marker id="d" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.immuni.2026.05.005">Immunoediting restricts clonal neoantigens in primary, treatment-naive human tumors</a></h3>
+      <p class="meta">Borden, Castellano, Kantzos, … Hastings et al. · <span class="date">Immunity, 11 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>In treatment-naive cutaneous SCC, high-immune-infiltrate tumors from immunocompetent patients carry lower overall and clonal mutational burdens (even after adjusting for purity and growth rate).</li>
+        <li>Predicted neoantigen–MHC-I binding affinity falls as variant allele frequency rises — restriction of MHC-binding neoantigens.</li>
+        <li>Immunogenic neoantigens are depleted in clonal vs subclonal cells: direct evidence of immunoediting in primary human cancer.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p19">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="8.5" fill="#9bb0c3" text-anchor="middle">NSCLC intratumoral NK trajectory</text>
+        <circle cx="46" cy="80" r="20" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="46" y="83" font-size="7" fill="#5cc8ff" text-anchor="middle">early NK</text>
+        <path d="M68 80 H110" stroke="#36c98f" marker-end="url(#e)"/>
+        <text x="89" y="72" font-size="7" fill="#36c98f" text-anchor="middle">ISG / inflammation</text>
+        <circle cx="140" cy="80" r="24" fill="#23303d" stroke="#36c98f"/>
+        <text x="140" y="78" font-size="7.5" fill="#e8edf2" text-anchor="middle">CD39⁺ taNK</text>
+        <text x="140" y="90" font-size="7" fill="#36c98f" text-anchor="middle">cytotoxic</text>
+        <rect x="196" y="62" width="70" height="36" rx="6" fill="#2e2230" stroke="#ff7a59"/>
+        <text x="231" y="78" font-size="8" fill="#ff7a59" text-anchor="middle">NKG2A</text>
+        <text x="231" y="90" font-size="8" fill="#ff7a59" text-anchor="middle">blockade ↑kill</text>
+        <path d="M164 80 H196" stroke="#5b6b7b" marker-end="url(#e)"/>
+        <defs><marker id="e" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1126/sciimmunol.aeb6645">Cytotoxic CD39⁺ tumor-associated NK cells respond to NKG2A blockade in lung cancer</a></h3>
+      <p class="meta">Serger, Rebuffet, Sandholzer, … Zippelius et al. · <span class="date">Science Immunology, 5 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Matched snRNA + ATAC sequencing of NSCLC resolves two tumor-associated NK subsets (CD103⁺, CD49a⁺): tissue-resident and dysfunctional yet still cytotoxic.</li>
+        <li>Trajectory analysis reveals an inflammation-driven shift to a CD39⁺ effector state marked by interferon-stimulated gene programs.</li>
+        <li>CD39⁺ taNK cells are the dominant killers and are further potentiated by NKG2A blockade — a targetable effector population.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p20">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="60" r="28" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="80" y="58" font-size="7.5" fill="#5cc8ff" text-anchor="middle">WNT-driven</text>
+        <text x="80" y="69" font-size="7" fill="#9bb0c3" text-anchor="middle">stem-like</text>
+        <text x="80" y="98" font-size="7" fill="#9bb0c3" text-anchor="middle">tumor initiation</text>
+        <circle cx="195" cy="60" r="28" fill="#23303d" stroke="#ff7a59"/>
+        <text x="195" y="58" font-size="7.5" fill="#ff7a59" text-anchor="middle">MAPK-driven</text>
+        <text x="195" y="69" font-size="7" fill="#9bb0c3" text-anchor="middle">TA-like</text>
+        <text x="195" y="98" font-size="7" fill="#9bb0c3" text-anchor="middle">tumor growth</text>
+        <path d="M108 54 H167" stroke="#36c98f" marker-end="url(#m)"/>
+        <path d="M167 70 H108" stroke="#36c98f" marker-end="url(#m)"/>
+        <text x="138" y="44" font-size="7" fill="#36c98f" text-anchor="middle">plastic transitions</text>
+        <text x="138" y="128" font-size="7.5" fill="#9bb0c3" text-anchor="middle">shapes KRAS-G12C inhibitor response</text>
+        <defs><marker id="m" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1038/s41588-026-02611-0">Dynamic transitioning between MAPK-driven and WNT-driven cell states drives intestinal cancer and shapes therapy response</a></h3>
+      <p class="meta">Moore, Biehs, Kljavin, … de Sauvage et al. · <span class="date">Nature Genetics, 11 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>In an allele-specific RAS mouse model, KRAS drives a regenerative state but antagonizes Lgr5⁺ stem cells and cannot initiate intestinal tumors alone.</li>
+        <li>Initiation needs WNT activation (a stem-like state); growth uses a MAPK-driven transit-amplifying-like state.</li>
+        <li>This plasticity shapes drug response — explaining weaker KRAS-G12C-inhibitor effect in CRC vs NSCLC and arguing for dual targeting.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p21">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="8" fill="#9bb0c3" text-anchor="middle">CD3 bispecifics · 104 trials · n=10,353</text>
+        <text x="70" y="40" font-size="7" fill="#cdd6e0" text-anchor="middle">heme</text>
+        <rect x="40" y="46" width="60" height="58" rx="4" fill="#23303d" stroke="#ff7a59"/>
+        <rect x="40" y="46" width="60" height="56" fill="#3a2630"/>
+        <text x="70" y="76" font-size="7" fill="#ff7a59" text-anchor="middle">70% G≥3</text>
+        <text x="70" y="116" font-size="6" fill="#9bb0c3" text-anchor="middle">CRS 43%</text>
+        <text x="200" y="40" font-size="7" fill="#cdd6e0" text-anchor="middle">solid</text>
+        <rect x="170" y="46" width="60" height="58" rx="4" fill="#23303d" stroke="#f4c95d"/>
+        <rect x="170" y="76" width="60" height="28" fill="#3a3526"/>
+        <text x="200" y="94" font-size="7" fill="#f4c95d" text-anchor="middle">45% G≥3</text>
+        <text x="200" y="116" font-size="6" fill="#9bb0c3" text-anchor="middle">CRS 46%</text>
+        <text x="140" y="138" font-size="7" fill="#9bb0c3" text-anchor="middle">treatment-related death ~1.0%</text>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/S1470-2045(26)00086-0">Treatment-related adverse events of CD3-based T cell-engaging bispecific antibodies in patients with cancer: a meta-analysis of clinical trials</a></h3>
+      <p class="meta">Zhu, Liu, Rosen, Liu &amp; Zhu · <span class="date">The Lancet Oncology, 12 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Meta-analysis of 104 trials (10,353 patients) of CD3-based T-cell-engaging bispecific antibodies.</li>
+        <li>All-grade AEs were near-universal (~97–98%); grade ≥3 reached 70.3% in hematologic vs 45.3% in solid tumors; CRS was the most common all-grade event (43–46%).</li>
+        <li>Most frequent grade ≥3 events: neutropenia (heme) and raised γ-GT (solid); treatment-related death ~1.0%, mostly infections/organ failure.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p22">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="70" cy="80" r="28" fill="#23303d" stroke="#f4c95d"/>
+        <text x="70" y="76" font-size="7.5" fill="#f4c95d" text-anchor="middle">TREM2⁺</text>
+        <text x="70" y="88" font-size="7.5" fill="#f4c95d" text-anchor="middle">LAM</text>
+        <path d="M98 74 C130 64 150 64 168 70" stroke="#36c98f" fill="none" marker-end="url(#n)"/>
+        <text x="134" y="56" font-size="7" fill="#36c98f" text-anchor="middle">EV fatty-acid recycling</text>
+        <circle cx="196" cy="80" r="28" fill="#23303d" stroke="#ff7a59"/>
+        <text x="196" y="76" font-size="7.5" fill="#ff7a59" text-anchor="middle">tumor cell</text>
+        <text x="196" y="88" font-size="7" fill="#9bb0c3" text-anchor="middle">ICB-resistant</text>
+        <text x="140" y="130" font-size="7.5" fill="#9bb0c3" text-anchor="middle">anti-TREM2 → re-sensitize to checkpoint blockade</text>
+        <defs><marker id="n" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.ccell.2026.05.005">Tumor cells metabolically resist immune-checkpoint therapy by macrophage efferocytosis-mediated fatty acid recycling</a></h3>
+      <p class="meta">Liang, Long, Xiong, … Cheng et al. · <span class="date">Cancer Cell, 8 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>In checkpoint-blockade-resistant hepatocellular carcinoma, tumor cells exploit macrophage efferocytosis to counteract immunotherapy.</li>
+        <li>TREM2⁺ lipid-associated macrophages recycle fatty acids to tumor cells via efferocytosis-derived extracellular vesicles, driving H3K36-acetylation-linked MYC and TGF-β.</li>
+        <li>Myeloid <i>Trem2</i> deletion or anti-TREM2 antibody abolishes the fuel supply and re-sensitizes tumors to ICB — a pan-cancer vulnerability.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p23">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="8.5" fill="#9bb0c3" text-anchor="middle">GBM · 100 patients · multi-omic</text>
+        <rect x="30" y="34" width="80" height="80" rx="6" fill="#11181f" stroke="#3a4a59"/>
+        <circle cx="52" cy="56" r="9" fill="#ff7a59" opacity=".8"/>
+        <text x="52" y="59" font-size="5" fill="#0f1419" text-anchor="middle">Hyp</text>
+        <circle cx="86" cy="60" r="9" fill="#5cc8ff" opacity=".8"/>
+        <text x="86" y="63" font-size="5" fill="#0f1419" text-anchor="middle">Ast</text>
+        <circle cx="60" cy="92" r="9" fill="#36c98f" opacity=".8"/>
+        <circle cx="92" cy="92" r="9" fill="#f4c95d" opacity=".8"/>
+        <text x="70" y="128" font-size="6.5" fill="#9bb0c3" text-anchor="middle">4 malignant communities</text>
+        <text x="200" y="48" font-size="6.5" fill="#cdd6e0">MES-Hyp ↔ macrophage</text>
+        <text x="200" y="64" font-size="6.5" fill="#cdd6e0">MES-Ast ↔ vasculature</text>
+        <text x="200" y="80" font-size="6.5" fill="#cdd6e0">OPC-like ↔ neuron synapse</text>
+        <text x="200" y="100" font-size="6.5" fill="#9bb0c3">spatial + scRNA + ATAC + patch</text>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1038/s41593-026-02265-5">Spatial and single-cell characterization of human glioblastoma tumor microenvironment reveals malignant cellular communities</a></h3>
+      <p class="meta">Lin, Chen, Li, … Qu et al. · <span class="date">Nature Neuroscience, 16 Apr 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Integrates 121 spatial-transcriptomic, scRNA-seq, scATAC-seq and patch-seq profiles from 100 glioblastoma patients.</li>
+        <li>Four recurrent malignant cellular communities emerge, including MES-Hyp (hypoxic, with macrophages) and MES-Ast (vascular) subtypes.</li>
+        <li>Patch-seq shows neuron–tumor synapses form mainly with oligodendrocyte-progenitor-like cells, nominating therapeutic targets.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 5. TUBERCULOSIS ===================== -->
+<div class="section" id="tb">
+  <h2><span class="dot" style="background:var(--c-tb)"></span>Tuberculosis <span class="count">0 papers</span></h2>
+  <p class="empty">No papers in today's selection.</p>
+</div>
+
+<!-- ===================== 6. AGING ===================== -->
+<div class="section" id="age">
+  <h2><span class="dot" style="background:var(--c-age)"></span>Aging <span class="count">3 papers</span></h2>
+
+  <div class="card" id="p24">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="18" font-size="8.5" fill="#9bb0c3" text-anchor="middle">human senescence "senotypes"</text>
+        <rect x="24" y="34" width="44" height="22" rx="4" fill="#2e3a47" stroke="#5cc8ff"/>
+        <text x="46" y="49" font-size="7" fill="#cdd6e0" text-anchor="middle">scRNA</text>
+        <rect x="24" y="62" width="44" height="22" rx="4" fill="#2e3a47" stroke="#5cc8ff"/>
+        <text x="46" y="77" font-size="6.5" fill="#cdd6e0" text-anchor="middle">spatial-omics</text>
+        <path d="M68 45 L108 64 M68 73 L108 70" stroke="#5b6b7b"/>
+        <circle cx="150" cy="70" r="26" fill="#23303d" stroke="#7c5cff"/>
+        <text x="150" y="68" font-size="7" fill="#7c5cff" text-anchor="middle">AI mapping</text>
+        <text x="150" y="79" font-size="6.5" fill="#9bb0c3" text-anchor="middle">heterogeneity</text>
+        <rect x="200" y="44" width="64" height="22" rx="5" fill="#23303d" stroke="#36c98f"/>
+        <text x="232" y="59" font-size="7" fill="#36c98f" text-anchor="middle">biomarkers</text>
+        <rect x="200" y="76" width="64" height="22" rx="5" fill="#23303d" stroke="#ff7a59"/>
+        <text x="232" y="91" font-size="6.5" fill="#ff7a59" text-anchor="middle">senotherapy</text>
+        <path d="M176 64 L200 56 M176 76 L200 86" stroke="#5b6b7b"/>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.cell.2026.05.028">Charting human cellular senescence in aging and disease</a></h3>
+      <p class="meta">Suryadevara, Farzad, Yang, … Fan et al. · <span class="date">Cell (review), 11 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Frames cellular senescence as diverse "senotype" cell states emerging across human tissues in aging and disease.</li>
+        <li>Single-cell + spatial multi-omics with AI-driven analysis maps senescent-cell heterogeneity and tissue-specific programs.</li>
+        <li>The frameworks support biomarker discovery and the development of targeted senotherapeutic strategies.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p25">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="18" y="60" width="64" height="40" rx="6" fill="#23303d" stroke="#f4c95d"/>
+        <text x="50" y="76" font-size="7.5" fill="#f4c95d" text-anchor="middle">BNT162b2</text>
+        <text x="50" y="88" font-size="7" fill="#9bb0c3" text-anchor="middle">TLR7/STING</text>
+        <path d="M82 80 H116" stroke="#5b6b7b" marker-end="url(#i)"/>
+        <circle cx="146" cy="80" r="26" fill="#23303d" stroke="#36c98f"/>
+        <text x="146" y="78" font-size="8" fill="#36c98f" text-anchor="middle">p16ʰⁱ</text>
+        <text x="146" y="90" font-size="7" fill="#9bb0c3" text-anchor="middle">immune cells</text>
+        <text x="232" y="60" font-size="7.5" fill="#e8edf2">disease</text>
+        <text x="232" y="72" font-size="7.5" fill="#e8edf2">tolerance</text>
+        <text x="232" y="88" font-size="7" fill="#9bb0c3">sepsis · IR</text>
+        <text x="232" y="100" font-size="7" fill="#9bb0c3">healthspan↑</text>
+        <path d="M172 80 H206" stroke="#36c98f" marker-end="url(#i)"/>
+        <defs><marker id="i" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.immuni.2026.02.013">p16ʰⁱᵍʰ immune cells control disease tolerance as a defense and health span-extending strategy</a></h3>
+      <p class="meta">Triana-Martinez, Pierantoni, Graca, … Bulavin et al. · <span class="date">Immunity, 26 Mar 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>p16ʰⁱᵍʰ immune cells are critical mediators of disease tolerance — limiting tissue damage without changing pathogen burden.</li>
+        <li>The BNT162b2 mRNA COVID vaccine rapidly induces them in mice and humans; they are required for protection against endotoxin shock, sepsis and irradiation.</li>
+        <li>TLR7/low STING signaling drives induction and cuts adenosine via NNMT; <i>Ifih1</i> deletion expands them and delays age-related organ decline.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+
+  <div class="card" id="p26">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="60" y="20" font-size="8" fill="#9bb0c3" text-anchor="middle">aged tissue fibroblast</text>
+        <circle cx="60" cy="78" r="28" fill="#23303d" stroke="#ff7a59"/>
+        <text x="60" y="76" font-size="8" fill="#ff7a59" text-anchor="middle">NF-κB</text>
+        <text x="60" y="88" font-size="7" fill="#9bb0c3" text-anchor="middle">activated</text>
+        <path d="M90 70 C120 60 130 60 150 64" stroke="#5cc8ff" fill="none" marker-end="url(#j)"/>
+        <text x="120" y="52" font-size="7" fill="#5cc8ff" text-anchor="middle">macrophage</text>
+        <path d="M150 70 C170 78 180 86 196 86" stroke="#36c98f" fill="none" marker-end="url(#j)"/>
+        <circle cx="218" cy="86" r="22" fill="#23303d" stroke="#36c98f"/>
+        <text x="218" y="84" font-size="7.5" fill="#36c98f" text-anchor="middle">GZMK⁺</text>
+        <text x="218" y="95" font-size="7" fill="#9bb0c3" text-anchor="middle">exhausted T</text>
+        <text x="140" y="138" font-size="8" fill="#9bb0c3" text-anchor="middle">TLS · inflammaging · lung-injury risk↑</text>
+        <defs><marker id="j" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#7d8b99"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.immuni.2026.02.016">NF-κB-activated fibroblasts orchestrate inflammaging and emergence of pro-inflammatory granzyme K⁺ T cells</a></h3>
+      <p class="meta">Allen, Ringler, Woo, … Peng et al. · <span class="date">Immunity, 27 Mar 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Age-dependent NF-κB activation in tissue fibroblasts remodels immune architecture, driving exhausted GZMK⁺CD8⁺ T cells seen in aging, autoimmunity and cancer.</li>
+        <li>A fibroblast–macrophage–T-cell circuit forms tertiary lymphoid structures in the lung.</li>
+        <li>It raises acute-lung-injury susceptibility (mimicking elderly pneumonia); depleting GZMK⁺ T cells alleviates it — a structural basis for inflammaging.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 7. NEUROIMMUNOLOGY ===================== -->
+<div class="section" id="neuro">
+  <h2><span class="dot" style="background:var(--c-neuro)"></span>Neuroimmunology <span class="count">1 paper</span></h2>
+
+  <div class="card" id="p27">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <text x="140" y="16" font-size="8.5" fill="#9bb0c3" text-anchor="middle">3,085 single microglia · proteome</text>
+        <circle cx="60" cy="60" r="6" fill="#5cc8ff"/><circle cx="84" cy="50" r="6" fill="#5cc8ff"/>
+        <circle cx="76" cy="76" r="6" fill="#36c98f"/><circle cx="100" cy="66" r="6" fill="#36c98f"/>
+        <circle cx="120" cy="54" r="6" fill="#f4c95d"/><circle cx="112" cy="82" r="6" fill="#f4c95d"/>
+        <circle cx="64" cy="96" r="6" fill="#7c5cff"/><circle cx="92" cy="100" r="6" fill="#7c5cff"/>
+        <text x="92" y="124" font-size="7" fill="#9bb0c3" text-anchor="middle">young · mid · aged states</text>
+        <rect x="166" y="44" width="98" height="22" rx="5" fill="#23303d" stroke="#5cc8ff"/>
+        <text x="215" y="59" font-size="7" fill="#5cc8ff" text-anchor="middle">Astral MS · label-free</text>
+        <rect x="166" y="74" width="98" height="22" rx="5" fill="#23303d" stroke="#f4c95d"/>
+        <text x="215" y="89" font-size="6.5" fill="#f4c95d" text-anchor="middle">"phagoproteome" map</text>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1016/j.neuron.2026.05.014">Single-cell proteome atlas of aging mouse microglia reveals subpopulation-specific phagoproteome</a></h3>
+      <p class="meta">Zhang, Liu, Chen, … Li et al. · <span class="date">Neuron, 11 Jun 2026</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>Label-free single-cell proteomics (Orbitrap Astral) profiled 3,085 microglia from young/middle-aged/aged mouse hippocampus and PFC (~1,153 proteins/cell) — one of the largest such datasets to date.</li>
+        <li>Higher expression completeness than transcriptomics with only moderate cross-modality correlation; reveals spatiotemporal proteomic heterogeneity during aging.</li>
+        <li>Defines a microglial "phagoproteome" with state-specific phagocytic preferences — a resource for studying microglial state transitions.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 8. NEONATAL / PEDIATRIC IMMUNOLOGY ===================== -->
+<div class="section" id="neo">
+  <h2><span class="dot" style="background:var(--c-neo)"></span>Neonatal / Pediatric Immunology <span class="count">0 papers</span></h2>
+  <p class="empty">No papers in today's selection.</p>
+</div>
+
+<!-- ===================== 9. INNOVATIONS IN BIOINFORMATICS ===================== -->
+<div class="section" id="bioinf">
+  <h2><span class="dot" style="background:var(--c-bioinf)"></span>Innovations in Bioinformatics <span class="count">1 paper</span></h2>
+
+  <div class="card" id="p28">
+    <div class="gfx">
+      <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="14" width="60" height="20" rx="4" fill="#2e3a47" stroke="#7c5cff"/>
+        <rect x="8" y="42" width="60" height="20" rx="4" fill="#2e3a47" stroke="#7c5cff"/>
+        <rect x="8" y="70" width="60" height="20" rx="4" fill="#2e3a47" stroke="#7c5cff"/>
+        <rect x="8" y="98" width="60" height="20" rx="4" fill="#2e3a47" stroke="#7c5cff"/>
+        <text x="38" y="28" font-size="8" fill="#cdd6e0" text-anchor="middle">bibliomic</text>
+        <text x="38" y="56" font-size="8" fill="#cdd6e0" text-anchor="middle">transcript.</text>
+        <text x="38" y="84" font-size="8" fill="#cdd6e0" text-anchor="middle">proteomic</text>
+        <text x="38" y="112" font-size="8" fill="#cdd6e0" text-anchor="middle">metabolic</text>
+        <path d="M68 24 H110 M68 52 H110 M68 80 H110 M68 108 H110 M110 24 V108" stroke="#5b6b7b" fill="none"/>
+        <path d="M110 66 H140" stroke="#5b6b7b" fill="none"/>
+        <circle cx="170" cy="66" r="30" fill="none" stroke="#7c5cff" stroke-width="2"/>
+        <circle cx="158" cy="58" r="4" fill="#36c98f"/><circle cx="182" cy="56" r="4" fill="#36c98f"/>
+        <circle cx="176" cy="78" r="4" fill="#36c98f"/><circle cx="152" cy="74" r="4" fill="#36c98f"/>
+        <path d="M158 58 L182 56 L176 78 L152 74 Z" fill="none" stroke="#36c98f"/>
+        <text x="170" y="112" font-size="9" fill="#cdd6e0" text-anchor="middle">context model</text>
+        <rect x="214" y="50" width="58" height="34" rx="5" fill="#23303d" stroke="#f4c95d"/>
+        <text x="243" y="64" font-size="7.5" fill="#f4c95d" text-anchor="middle">thermo-</text>
+        <text x="243" y="74" font-size="7.5" fill="#f4c95d" text-anchor="middle">dynamically</text>
+        <text x="243" y="83" font-size="7.5" fill="#f4c95d" text-anchor="middle">consistent</text>
+        <path d="M200 66 H214" stroke="#5b6b7b" fill="none" marker-end="url(#a)"/>
+        <defs><marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#5b6b7b"/></marker></defs>
+      </svg>
+    </div>
+    <div>
+      <h3><a href="https://doi.org/10.1038/s41596-025-01288-9">XomicsToModel: omics data integration and generation of thermodynamically consistent metabolic models</a></h3>
+      <p class="meta">Preciat, Wegrzyn, Luo, Thiele, Hankemeier &amp; Fleming · <span class="date">Nature Protocols, 1 Dec 2025</span></p>
+      <p class="kf-label">Key findings</p>
+      <ul class="kf">
+        <li>A semi-automated pipeline that fuses bibliomic, transcriptomic, proteomic and metabolomic data with a generic genome-scale reconstruction to extract context-specific models.</li>
+        <li>Unlike prior extraction algorithms, it guarantees the output is stoichiometrically, thermodynamically and flux consistent.</li>
+        <li>Runs in MATLAB with basic constraint-based-modeling skills; applications span systems biology, drug development and personalized medicine.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Back to index</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 10. AI APPLICATIONS IN BASIC SCIENCE RESEARCH ===================== -->
+<div class="section" id="ai">
+  <h2><span class="dot" style="background:var(--c-ai)"></span>AI Applications in Basic Science Research <span class="count">0 papers</span></h2>
+  <p class="empty">No papers squarely in this category today. (The senescence "senotype" review under Aging and the GBM atlas under Cancer both lean on AI-/computational-driven analysis, if you'd like either reassigned here.)</p>
+</div>
+
+<footer>
+  Papers Digest · 14 June 2026 · 28 papers (1 duplicate link consolidated). Findings sourced from PubMed and Nature; titles link to canonical DOIs.
+</footer>
+
+</div>
+</body>
+</html>
