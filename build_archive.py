@@ -4,26 +4,68 @@ def label(f):
     d=f[:-5]
     try: return datetime.date.fromisoformat(d).strftime('%-d %B %Y')
     except Exception: return d
-rows = "\n".join(f'    <li><a href="{f}">{label(f)}</a></li>' for f in files) or '    <li>No digests yet.</li>'
-doc = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+rows = "\n".join('    <li><a href="%s">%s</a></li>'%(f,label(f)) for f in files) or '    <li>No digests yet.</li>'
+TEMPLATE = r'''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Papers Digest — Archive</title><style>
-:root{{--bg:#0f1419;--card:#1a212b;--ink:#e8edf2;--muted:#9bb0c3;--accent:#5cc8ff;--line:#2c3a49}}
-body{{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.5}}
-.wrap{{max-width:720px;margin:0 auto;padding:44px 22px 60px}}
-h1{{font-size:24px;margin:0 0 6px}}
-p.sub{{color:var(--muted);margin:0 0 22px;font-size:14px}}
-a.latest{{display:inline-block;margin-bottom:18px;color:var(--accent);text-decoration:none;font-size:14px}}
-ul{{list-style:none;padding:0;margin:0}}
-li{{border:1px solid var(--line);border-radius:10px;margin:8px 0;background:var(--card)}}
-li a{{display:block;padding:13px 18px;color:var(--ink);text-decoration:none;font-size:16px}}
-li a:hover{{color:var(--accent)}}
+<title>Papers Digest - Archive &amp; Search</title><style>
+:root{--bg:#0f1419;--card:#1a212b;--ink:#e8edf2;--muted:#9bb0c3;--accent:#5cc8ff;--line:#2c3a49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto;padding:40px 22px 60px}
+h1{font-size:24px;margin:0 0 4px}
+p.sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+a.latest{display:inline-block;margin-bottom:20px;color:var(--accent);text-decoration:none;font-size:14px}
+.searchbox{position:relative;margin-bottom:6px}
+#q{width:100%;padding:13px 16px;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--ink);outline:none}
+#q:focus{border-color:var(--accent)}
+.hint{color:var(--muted);font-size:12px;margin:6px 2px 18px}
+#count{color:var(--muted);font-size:12.5px;margin:0 2px 10px}
+.r{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:13px 16px;margin:9px 0}
+.r a.t{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;border-bottom:1px solid transparent}
+.r a.t:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.r .m{color:var(--muted);font-size:12.5px;margin:5px 0 7px}
+.r .sec{display:inline-block;font-size:11px;color:#0f1419;background:var(--accent);border-radius:10px;padding:1px 8px;margin-right:6px}
+.r a.p{color:var(--accent);font-size:12.5px;text-decoration:none}
+.r a.p:hover{text-decoration:underline}
+.none{color:var(--muted);font-style:italic;font-size:14px;padding:18px 2px}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);margin:34px 0 8px;border-top:1px solid var(--line);padding-top:22px}
+ul{list-style:none;padding:0;margin:0}
+ul li{border:1px solid var(--line);border-radius:10px;margin:8px 0;background:var(--card)}
+ul li a{display:block;padding:13px 18px;color:var(--ink);text-decoration:none;font-size:16px}
+ul li a:hover{color:var(--accent)}
+mark{background:#3a4a2a;color:#dff0c0;padding:0 1px;border-radius:2px}
 </style></head><body><div class="wrap">
-<h1>Papers Digest — Archive</h1>
-<p class="sub">{len(files)} digest(s) · newest first</p>
-<a class="latest" href="index.html">→ Latest digest</a>
+<h1>Papers Digest - Archive &amp; Search</h1>
+<p class="sub">Search every article across all digests by title, author, journal, or key message.</p>
+<a class="latest" href="index.html">&#8594; Latest digest</a>
+<div class="searchbox"><input id="q" type="search" placeholder="Search articles (e.g. CRISPR, Kuchroo, Immunity, ferroptosis)" autocomplete="off"></div>
+<div class="hint">Tip: multiple words are combined (all must match). Searches title, authors, journal, section and key findings.</div>
+<div id="count"></div>
+<div id="results"></div>
+<h2>Digests by date</h2>
 <ul>
-{rows}
-</ul></div></body></html>"""
-open("archive.html","w",encoding="utf-8").write(doc)
-print("archive.html built:", len(files), "entries")
+@@ROWS@@
+</ul>
+<script>
+var IDX=[];
+function esc(s){return s.replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+function hl(s,toks){var o=esc(s);toks.forEach(function(t){if(t.length<2)return;try{o=o.replace(new RegExp('('+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark>$1</mark>');}catch(e){}});return o;}
+function render(){
+  var q=document.getElementById('q').value.trim().toLowerCase();
+  var toks=q?q.split(/\s+/):[];
+  var res=IDX.filter(function(a){var blob=(a.title+' '+a.authors+' '+a.journal+' '+a.section+' '+a.keys+' '+a.date).toLowerCase();return toks.every(function(t){return blob.indexOf(t)>=0;});});
+  document.getElementById('count').textContent=q?(res.length+' of '+IDX.length+' articles'):(IDX.length+' articles indexed');
+  var c=document.getElementById('results');
+  if(!res.length){c.innerHTML='<div class="none">No articles match - try fewer or different words.</div>';return;}
+  c.innerHTML=res.map(function(a){
+    return '<div class="r"><a class="t" href="'+a.doi+'" target="_blank" rel="noopener">'+hl(a.title,toks)+'</a>'+
+    '<div class="m"><span class="sec">'+esc(a.section)+'</span>'+hl(a.authors,toks)+' &middot; '+hl(a.journal,toks)+' &middot; '+esc(a.date)+'</div>'+
+    '<a class="p" href="'+a.permalink+'">&#8594; open in digest ('+esc(a.digest)+')</a></div>';
+  }).join('');
+}
+fetch('search-index.json').then(function(r){return r.json();}).then(function(d){IDX=d;render();}).catch(function(){document.getElementById('count').textContent='Search index unavailable.';});
+document.getElementById('q').addEventListener('input',render);
+</script>
+</div></body></html>'''
+open("archive.html","w",encoding="utf-8").write(TEMPLATE.replace("@@ROWS@@",rows))
+print("archive.html (search-enabled) built:", len(files), "dated digests")

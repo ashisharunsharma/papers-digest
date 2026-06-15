@@ -43,9 +43,9 @@
   .dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
   .count{color:var(--muted);font-size:12px;font-weight:400;letter-spacing:.5px;margin-left:auto}
   .empty{color:var(--muted);font-size:13px;font-style:italic;padding:12px 4px 2px}
-  .card{display:grid;grid-template-columns:300px 1fr;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:16px;scroll-margin-top:16px}
-  .card .gfx{background:#f5f8fc;border:1px solid #e4ebf3;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:8px;min-height:168px}
-  .card .gfx svg{width:100%;height:auto;display:block}
+  .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px 18px;margin-top:16px;scroll-margin-top:16px}
+  .card .gfx{background:#f5f8fc;border:1px solid #e4ebf3;border-radius:10px;padding:8px 10px;margin-bottom:14px}
+  .card .gfx svg{width:100%;height:auto;display:block;max-width:860px;margin:0 auto}
   .card h3{margin:0 0 6px;font-size:16.5px;line-height:1.35}
   .card h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
   .card h3 a:hover{color:var(--accent);border-bottom-color:var(--accent)}
@@ -179,16 +179,23 @@
   <h2><span class="dot" style="background:var(--c-imm)"></span>Basic Immunology <span class="count">7 papers</span></h2>
 
   <div class="card" id="p1">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Gut-associated lymphoid tissue</text>
-      <path d="M22 120 Q70 70 150 86 Q230 102 280 70" fill="none" stroke="#cfe0d6" stroke-width="10" stroke-linecap="round"/>
-      <use href="#g-cell" x="58" y="60" width="42" height="42" style="color:#36c98f"/>
-      <use href="#g-cell" x="120" y="48" width="38" height="38" style="color:#f6b73c"/>
-      <use href="#g-cell" x="176" y="78" width="34" height="34" style="color:#f6b73c"/>
-      <text x="79" y="116" font-size="9" fill="#3f7d5d" text-anchor="middle">DN2 B cell</text>
-      <text x="200" y="42" font-size="9" fill="#5a6b7b">IgA plasma cells</text>
-      <text x="150" y="150" font-size="9.5" fill="#51606f" text-anchor="middle">homeostasis ✓ · distorted in ulcerative colitis</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Gut-associated lymphoid tissue: B-cell zones and IgA output</text>
+<rect x="20" y="40" width="430" height="20" rx="4" fill="#fdeede"/><text x="235" y="54" font-size="9" fill="#b07a3a" text-anchor="middle">gut lumen (microbiota)</text>
+<g fill="#caa46a"><circle cx="60" cy="50" r="3"/><circle cx="120" cy="51" r="3"/><circle cx="190" cy="49" r="3"/><circle cx="300" cy="51" r="3"/><circle cx="380" cy="50" r="3"/></g>
+<rect x="20" y="60" width="430" height="14" fill="#e9d8c2"/><text x="235" y="71" font-size="8" fill="#8a6a3a" text-anchor="middle">epithelium · M cells sample antigen</text>
+<ellipse cx="150" cy="135" rx="78" ry="48" fill="#eef6ef" stroke="#bfe3cc"/><text x="150" y="190" font-size="9" fill="#3f7d5d" text-anchor="middle">lymphoid follicle / germinal center</text>
+<use href="#g-cell" x="92" y="110" width="32" height="32" style="color:#36c98f"/><text x="108" y="158" font-size="8" fill="#3f7d5d" text-anchor="middle">DN2 B (regulatory)</text>
+<use href="#g-cell" x="150" y="104" width="28" height="28" style="color:#f6b73c"/><text x="164" y="100" font-size="8" fill="#a9791a" text-anchor="middle">MZ B</text>
+<use href="#g-cell" x="178" y="138" width="26" height="26" style="color:#8b7bf0"/><text x="191" y="172" font-size="8" fill="#6b54d6" text-anchor="middle">IgA plasma</text>
+<use href="#g-antibody" x="236" y="92" width="26" height="26" style="color:#36c98f"/><use href="#g-antibody" x="262" y="100" width="22" height="22" style="color:#36c98f"/>
+<line x1="210" y1="120" x2="240" y2="80" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><text x="300" y="100" font-size="8.5" fill="#3f7d5d">secretory IgA → lumen</text>
+<line x1="470" y1="115" x2="500" y2="115" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="506" y="56" width="234" height="118" rx="10" fill="#fdecec" stroke="#f3c7c2"/><text x="623" y="74" font-size="9.5" font-weight="700" fill="#c25a4d" text-anchor="middle">Ulcerative colitis: distorted GALT</text>
+<use href="#g-cell" x="528" y="92" width="30" height="30" style="color:#ff7a6b"/><use href="#g-cell" x="566" y="110" width="26" height="26" style="color:#ff7a6b"/><use href="#g-cell" x="600" y="92" width="24" height="24" style="color:#ff9e8c"/>
+<text x="623" y="150" font-size="8.5" fill="#a25247" text-anchor="middle">altered subset composition + spatial layout</text>
+<text x="623" y="164" font-size="8.5" fill="#a25247" text-anchor="middle">→ altered immunomodulatory potential</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1126/sciimmunol.ady8948">Atlas of human gut-associated lymphoid tissue reveals immunomodulatory interactions of B cells</a></h3>
       <p class="meta">Pitcher, Sun, Dionisi, … Spencer et al. · <span class="date">Science Immunology, 5 Jun 2026</span></p>
@@ -203,19 +210,26 @@
   </div>
 
   <div class="card" id="p2">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">IL-17 signaling, tissue by tissue</text>
-      <use href="#g-burst" x="18" y="60" width="40" height="40" style="color:#ff7a6b"/>
-      <text x="38" y="112" font-size="9" fill="#c25a4d" text-anchor="middle">IL-17</text>
-      <line x1="60" y1="80" x2="96" y2="80" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-cell" x="98" y="58" width="44" height="44" style="color:#36c98f"/>
-      <text x="120" y="116" font-size="8.5" fill="#5a6b7b" text-anchor="middle">IL-17R</text>
-      <line x1="146" y1="80" x2="178" y2="80" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <text x="232" y="58" font-size="9.5" fill="#33414f" text-anchor="middle">skin · gut</text>
-      <text x="232" y="76" font-size="9.5" fill="#33414f" text-anchor="middle">CNS · cancer</text>
-      <text x="232" y="94" font-size="9.5" fill="#33414f" text-anchor="middle">immunometabolism</text>
-      <text x="150" y="152" font-size="9" fill="#51606f" text-anchor="middle">transcriptional + post-transcriptional outputs</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">IL-17 receptor signaling drives tissue-specific programs</text>
+<use href="#g-burst" x="20" y="70" width="40" height="40" style="color:#ff7a6b"/><text x="40" y="124" font-size="8.5" fill="#c25a4d" text-anchor="middle">IL-17A/F</text>
+<rect x="92" y="64" width="14" height="56" rx="4" fill="#9fc0e8"/><rect x="110" y="64" width="14" height="56" rx="4" fill="#7fb0e0"/><text x="108" y="134" font-size="8" fill="#3a5a86" text-anchor="middle">IL-17RA / RC</text>
+<line x1="64" y1="90" x2="88" y2="90" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="150" y="80" width="58" height="22" rx="6" fill="#efeaff" stroke="#b9a9f5"/><text x="179" y="95" font-size="8.5" fill="#6b54d6" text-anchor="middle">Act1 · TRAF6</text>
+<line x1="126" y1="92" x2="148" y2="92" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<line x1="210" y1="92" x2="234" y2="92" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="236" y="74" width="70" height="18" rx="5" fill="#fff4d6" stroke="#e6c97f"/><text x="271" y="87" font-size="8" fill="#a9791a" text-anchor="middle">NF-kB / MAPK</text>
+<rect x="236" y="96" width="70" height="18" rx="5" fill="#e8f1ff" stroke="#bcd4f2"/><text x="271" y="109" font-size="8" fill="#3a5a86" text-anchor="middle">mRNA stability</text>
+<text x="271" y="132" font-size="8" font-style="italic" fill="#7c8a99" text-anchor="middle">transcriptional + post-transcriptional</text>
+<line x1="308" y1="94" x2="336" y2="94" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<g font-size="9" fill="#33414f">
+<rect x="346" y="46" width="180" height="30" rx="7" fill="#f3f7fb" stroke="#dde7f0"/><text x="356" y="65">skin · antimicrobial peptides, neutrophils</text>
+<rect x="346" y="82" width="180" height="30" rx="7" fill="#f3f7fb" stroke="#dde7f0"/><text x="356" y="101">gut · barrier defense, dysbiosis</text>
+<rect x="346" y="118" width="180" height="30" rx="7" fill="#f3f7fb" stroke="#dde7f0"/><text x="356" y="137">CNS · neuroimmune crosstalk</text>
+<rect x="540" y="64" width="200" height="30" rx="7" fill="#fbf1f5" stroke="#f0d6e0"/><text x="550" y="83">cancer · tumor-promoting inflammation</text>
+<rect x="540" y="100" width="200" height="30" rx="7" fill="#fbf6ee" stroke="#efe1cc"/><text x="550" y="119">immunometabolism · emerging targets</text>
+</g>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1126/sciimmunol.adq6406">The tissue-specific regulation of immunobiology by IL-17 signaling</a></h3>
       <p class="meta">Li, Vyas, Draber, Bechara &amp; Gaffen · <span class="date">Science Immunology (review), 12 Jun 2026</span></p>
@@ -230,21 +244,24 @@
   </div>
 
   <div class="card" id="p3">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Parallel cytokine pathways → antibody</text>
-      <text x="40" y="50" font-size="9" fill="#c9a227">baseline</text>
-      <use href="#g-burst" x="22" y="54" width="30" height="30" style="color:#f4b740"/>
-      <use href="#g-burst" x="52" y="58" width="26" height="26" style="color:#f4b740"/>
-      <text x="46" y="96" font-size="8.5" fill="#5a6b7b" text-anchor="middle">IL-18 · IFN-β</text>
-      <line x1="86" y1="64" x2="120" y2="52" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <line x1="86" y1="74" x2="120" y2="92" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <text x="170" y="48" font-size="8.5" fill="#4a78c4" text-anchor="middle">type I IFN</text>
-      <text x="170" y="100" font-size="8.5" fill="#3f7d5d" text-anchor="middle">IL-12 → IL-21</text>
-      <line x1="200" y1="70" x2="226" y2="70" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-antibody" x="232" y="46" width="40" height="40" style="color:#8b7bf0"/>
-      <text x="252" y="100" font-size="8.5" fill="#5a6b7b" text-anchor="middle">plasma cells</text>
-      <text x="150" y="152" font-size="9" fill="#51606f" text-anchor="middle">organoid + cohort platform → adjuvant leads</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Two parallel cytokine pathways set the antibody response</text>
+<rect x="20" y="44" width="120" height="44" rx="8" fill="#eef4fb" stroke="#cfe0f1"/><text x="80" y="62" font-size="8.5" fill="#3a5a86" text-anchor="middle">4 IIV cohorts, 5 seasons</text><text x="80" y="76" font-size="8.5" fill="#3a5a86" text-anchor="middle">n = 581</text>
+<line x1="142" y1="66" x2="166" y2="66" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<use href="#g-burst" x="168" y="48" width="34" height="34" style="color:#f4b740"/><text x="185" y="96" font-size="8" fill="#a9791a" text-anchor="middle">baseline IL-18 · IFN-b</text>
+<line x1="206" y1="66" x2="232" y2="66" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="234" y="50" width="96" height="34" rx="8" fill="#f3eefb" stroke="#d9c9f3"/><text x="282" y="64" font-size="8" fill="#6b54d6" text-anchor="middle">tonsil/spleen</text><text x="282" y="76" font-size="8" fill="#6b54d6" text-anchor="middle">organoid test</text>
+<line x1="332" y1="67" x2="360" y2="50" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<line x1="332" y1="67" x2="360" y2="120" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="362" y="36" width="170" height="28" rx="7" fill="#e8f1ff" stroke="#bcd4f2"/><text x="447" y="54" font-size="8.5" fill="#3a5a86" text-anchor="middle">type I IFN pathway</text>
+<rect x="362" y="106" width="170" height="28" rx="7" fill="#eaf6ee" stroke="#bfe3cc"/><text x="447" y="124" font-size="8.5" fill="#3f7d5d" text-anchor="middle">IL-12 → IL-21 (human-specific)</text>
+<line x1="534" y1="50" x2="560" y2="80" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<line x1="534" y1="120" x2="560" y2="90" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<use href="#g-cell" x="562" y="58" width="40" height="40" style="color:#8b7bf0"/><text x="582" y="110" font-size="8" fill="#6b54d6" text-anchor="middle">GC B cell</text>
+<line x1="604" y1="78" x2="628" y2="78" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<use href="#g-antibody" x="632" y="48" width="34" height="34" style="color:#36c98f"/><text x="690" y="74" font-size="8.5" fill="#3f7d5d">long-lived</text><text x="690" y="86" font-size="8.5" fill="#3f7d5d">plasma cells</text>
+<text x="380" y="174" font-size="8.5" fill="#5a6b7b">mRNA-LNP delivery of IL-21 or IFN-b acts as an adjuvant → durable antibody</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1038/s41590-026-02547-x">Human vaccine responses regulated by parallel cytokine pathways</a></h3>
       <p class="meta">Chen, Guo, Heath, … Davis et al. · <span class="date">Nature Immunology, 12 Jun 2026</span></p>
@@ -259,22 +276,23 @@
   </div>
 
   <div class="card" id="p4">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Anti-IL-23 clears type-17 circuit</text>
-      <rect x="20" y="42" width="78" height="92" rx="10" fill="#fdeceb" stroke="#f3c7c2"/>
-      <text x="59" y="58" font-size="8.5" fill="#c25a4d" text-anchor="middle">pre · inflamed</text>
-      <use href="#g-tcell" x="26" y="64" width="26" height="26" style="color:#ff7a6b"/>
-      <use href="#g-tcell" x="52" y="74" width="26" height="26" style="color:#ff7a6b"/>
-      <use href="#g-tcell" x="38" y="96" width="26" height="26" style="color:#ff7a6b"/>
-      <line x1="104" y1="88" x2="138" y2="88" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <text x="121" y="80" font-size="8" fill="#5a6b7b" text-anchor="middle">IL-23 block</text>
-      <rect x="144" y="42" width="78" height="92" rx="10" fill="#eaf6ee" stroke="#bfe3cc"/>
-      <text x="183" y="58" font-size="8.5" fill="#3f7d5d" text-anchor="middle">post · cleared</text>
-      <use href="#g-tcell" x="170" y="84" width="26" height="26" style="color:#36c98f"/>
-      <text x="262" y="78" font-size="8" fill="#5a6b7b" text-anchor="middle">↓ IL-17 Trm</text>
-      <text x="262" y="92" font-size="8" fill="#5a6b7b" text-anchor="middle">↓ IL34⁺ fibro</text>
-      <text x="262" y="106" font-size="8" fill="#5a6b7b" text-anchor="middle">↓ CCL19/21</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Anti-IL-23 breaks the type-17 inflammatory circuit</text>
+<use href="#g-dc" x="40" y="44" width="40" height="40" style="color:#8b7bf0"/><text x="60" y="98" font-size="8" fill="#6b54d6" text-anchor="middle">DC</text>
+<text x="96" y="58" font-size="8.5" fill="#c25a4d">IL-23</text><line x1="80" y1="64" x2="132" y2="64" stroke="#ff7a6b" stroke-width="2.2" marker-end="url(#ar)"/>
+<use href="#g-tcell" x="132" y="40" width="44" height="44" style="color:#ff7a6b"/><text x="154" y="98" font-size="8" fill="#c25a4d" text-anchor="middle">IL-17 Trm</text>
+<text x="190" y="58" font-size="8.5" fill="#5a6b7b">IL-17</text><line x1="178" y1="64" x2="228" y2="64" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="230" y="46" width="56" height="36" rx="6" fill="#fdeede" stroke="#e6c39a"/><text x="258" y="68" font-size="8" fill="#a9791a" text-anchor="middle">keratinocyte</text>
+<use href="#g-fibro" x="300" y="44" width="44" height="44" style="color:#d08a6a"/><text x="322" y="98" font-size="8" fill="#b06a48" text-anchor="middle">IL34+ fibroblast</text>
+<line x1="286" y1="64" x2="300" y2="64" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M322 92 q-90 40 -180 -10" fill="none" stroke="#cbb" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#ar)"/><text x="230" y="120" font-size="8" fill="#9a8" >IL-34 → moDC (feeds loop)</text>
+<g stroke="#e0556b" stroke-width="2"><line x1="92" y1="70" x2="116" y2="58"/><line x1="246" y1="40" x2="270" y2="56"/></g>
+<rect x="470" y="40" width="270" height="120" rx="10" fill="#eef6ef" stroke="#bfe3cc"/><text x="605" y="60" font-size="9.5" font-weight="700" fill="#3f7d5d" text-anchor="middle">IL-23 blockade (risankizumab)</text>
+<text x="488" y="82" font-size="8.5" fill="#33414f">• ↓ IL-17 CD8 Trm via c-MAF–IL-7 axis</text>
+<text x="488" y="100" font-size="8.5" fill="#33414f">• ↓ APOE+/IL34+ fibroblasts → ↓ moDC</text>
+<text x="488" y="118" font-size="8.5" fill="#33414f">• ↓ vascular CCL19 / CCL21 homing</text>
+<text x="488" y="140" font-size="8.5" font-style="italic" fill="#3f7d5d">durable remission 36 wk after stopping</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.immuni.2026.05.002">A longitudinal atlas of human psoriatic skin reveals the mechanisms of anti-IL-23 therapy in disrupting the type 17 inflammatory circuit</a></h3>
       <p class="meta">Jiang, Blauvelt, Shi, … Gudjonsson et al. · <span class="date">Immunity, 28 May 2026</span></p>
@@ -289,18 +307,20 @@
   </div>
 
   <div class="card" id="p5">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Self-reinforcing homeostatic Th17</text>
-      <use href="#g-tcell" x="118" y="50" width="64" height="64" style="color:#2bb3a3"/>
-      <text x="150" y="128" font-size="9" fill="#2a8c80" text-anchor="middle">Th17 (homeostatic)</text>
-      <rect x="120" y="74" width="60" height="16" rx="8" fill="#fff4d6" stroke="#e6b53f"/>
-      <text x="150" y="86" font-size="8.5" font-weight="600" fill="#a9791a" text-anchor="middle">CYP11A1</text>
-      <use href="#g-burst" x="196" y="60" width="30" height="30" style="color:#f4b740"/>
-      <text x="234" y="70" font-size="8.5" fill="#5a6b7b">glucocorticoid</text>
-      <text x="234" y="84" font-size="8.5" fill="#5a6b7b">→ GR</text>
-      <path d="M196 86 q-18 30 -46 30 q-30 0 -36 -28" fill="none" stroke="#5cc8ff" stroke-width="2.2" marker-end="url(#ar)"/>
-      <text x="64" y="56" font-size="8.5" fill="#4a78c4">TGF-β1 · IL-6</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">A cell-intrinsic glucocorticoid circuit keeps Th17 homeostatic</text>
+<ellipse cx="250" cy="118" rx="210" ry="74" fill="#e9f7f4" stroke="#bfe6df"/><text x="250" y="50" font-size="9" fill="#2a8c80" text-anchor="middle">homeostatic Th17 cell</text>
+<text x="60" y="92" font-size="8.5" fill="#3a5a86">TCR → opens Cyp11a1 locus</text>
+<text x="60" y="146" font-size="8.5" fill="#3a5a86">TGF-b1 + IL-6 maintain / amplify</text>
+<rect x="170" y="100" width="64" height="20" rx="6" fill="#fff4d6" stroke="#e6b53f"/><text x="202" y="114" font-size="8.5" font-weight="600" fill="#a9791a" text-anchor="middle">CYP11A1</text>
+<line x1="234" y1="110" x2="262" y2="110" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<use href="#g-burst" x="262" y="92" width="30" height="30" style="color:#f4b740"/><text x="277" y="138" font-size="8" fill="#a9791a" text-anchor="middle">glucocorticoid</text>
+<line x1="294" y1="108" x2="322" y2="108" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<circle cx="346" cy="108" r="18" fill="#cde3f7" stroke="#7fb0e0"/><text x="346" y="111" font-size="8.5" font-weight="600" fill="#3a5a86" text-anchor="middle">GR↑</text>
+<path d="M346 90 q-150 -52 -176 18" fill="none" stroke="#2bb3a3" stroke-width="2.2" marker-end="url(#ar)"/><text x="250" y="74" font-size="8.5" fill="#2a8c80" text-anchor="middle">autocrine loop → homeostatic gene program</text>
+<line x1="468" y1="108" x2="498" y2="108" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="502" y="78" width="240" height="60" rx="10" fill="#f3f8fb" stroke="#dde7f0"/><text x="622" y="100" font-size="9" fill="#33414f" text-anchor="middle">multi-omics gene network defined</text><text x="622" y="120" font-size="9" fill="#33414f" text-anchor="middle">TGF-b1 restores GC sensing → autoimmunity lever</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.immuni.2026.05.015">A cell-intrinsic glucocorticoid biosynthesis and sensing circuit maintains a homeostatic Th17 cell state</a></h3>
       <p class="meta">Yang, Huang, Cheng, … Anderson et al. · <span class="date">Immunity, 12 Jun 2026</span></p>
@@ -315,18 +335,24 @@
   </div>
 
   <div class="card" id="p6">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">IL-23 locks in pathogenic Th17</text>
-      <use href="#g-burst" x="16" y="62" width="38" height="38" style="color:#ff7a6b"/>
-      <text x="35" y="112" font-size="9" fill="#c25a4d" text-anchor="middle">IL-23</text>
-      <line x1="58" y1="80" x2="92" y2="80" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-tcell" x="94" y="52" width="56" height="56" style="color:#ff7a6b"/>
-      <text x="122" y="120" font-size="9" fill="#c25a4d" text-anchor="middle">Th17 (pathogenic)</text>
-      <text x="200" y="60" font-size="8.5" fill="#33414f">CHD1 + STAT3</text>
-      <text x="200" y="74" font-size="8" fill="#5a6b7b">→ stabilize RORγt</text>
-      <text x="200" y="96" font-size="8.5" fill="#33414f">GR phosphor. ↓</text>
-      <text x="200" y="110" font-size="8" fill="#5a6b7b">→ GR nuclear entry blocked</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">IL-23 enforces pathogenic Th17 by two mechanisms</text>
+<use href="#g-burst" x="22" y="84" width="36" height="36" style="color:#ff7a6b"/><text x="40" y="134" font-size="8.5" fill="#c25a4d" text-anchor="middle">IL-23</text>
+<rect x="74" y="86" width="14" height="34" rx="4" fill="#f0a59a"/><text x="81" y="134" font-size="7.5" fill="#c25a4d" text-anchor="middle">IL-23R</text>
+<line x1="58" y1="102" x2="72" y2="102" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<text x="118" y="100" font-size="8" fill="#6b54d6">JAK / STAT3</text><line x1="92" y1="102" x2="112" y2="102" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="176" y="44" width="220" height="96" rx="10" fill="#f6f1ff" stroke="#d9c9f3"/><text x="286" y="62" font-size="8.5" font-weight="700" fill="#6b54d6" text-anchor="middle">nucleus</text>
+<rect x="196" y="74" width="180" height="14" fill="#e7dcfa"/><text x="286" y="85" font-size="8" fill="#6b54d6" text-anchor="middle">RORgt locus (chromatin)</text>
+<circle cx="226" cy="106" r="11" fill="#8b7bf0"/><text x="226" y="109" font-size="7" fill="#fff" text-anchor="middle">CHD1</text>
+<circle cx="262" cy="106" r="11" fill="#b09bf0"/><text x="262" y="109" font-size="7" fill="#fff" text-anchor="middle">STAT3</text>
+<text x="330" y="110" font-size="8" fill="#6b54d6">→ RORgt ON</text>
+<text x="286" y="156" font-size="8.5" fill="#c25a4d" text-anchor="middle">mechanism 1: CHD1+STAT3 lock pro-inflammatory state</text>
+<circle cx="470" cy="100" r="18" fill="#cde3f7" stroke="#7fb0e0"/><text x="470" y="103" font-size="8" font-weight="600" fill="#3a5a86" text-anchor="middle">GR-P</text>
+<rect x="520" y="60" width="14" height="84" fill="#e7dcfa"/><text x="527" y="154" font-size="7.5" fill="#6b54d6" text-anchor="middle">nuclear pore</text>
+<line x1="490" y1="100" x2="516" y2="100" stroke="#e0556b" stroke-width="2.2" marker-end="url(#ar)"/><line x1="498" y1="86" x2="514" y2="114" stroke="#e0556b" stroke-width="2.4"/>
+<text x="556" y="96" font-size="8.5" fill="#c25a4d">GR nuclear entry blocked</text><text x="556" y="112" font-size="8.5" fill="#5a6b7b">→ loses anti-inflammatory brake</text>
+<text x="600" y="156" font-size="8.5" fill="#c25a4d" text-anchor="middle">mechanism 2: GR phosphorylation</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.immuni.2026.05.016">Interleukin 23 promotes a pro-inflammatory Th17 cell state by stabilizing RORγt and suppressing glucocorticoid receptor activity</a></h3>
       <p class="meta">Yang, Huang, Yang, … Kuchroo et al. · <span class="date">Immunity, 12 Jun 2026</span></p>
@@ -341,22 +367,28 @@
   </div>
 
   <div class="card" id="p7">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">mRNA-LNP primes CD8⁺ T cells</text>
-      <use href="#g-lnp" x="14" y="62" width="46" height="46" style="color:#f3b34a"/>
-      <text x="37" y="120" font-size="8.5" fill="#5a6b7b" text-anchor="middle">mRNA-LNP</text>
-      <line x1="62" y1="74" x2="92" y2="60" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <line x1="62" y1="92" x2="92" y2="108" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <use href="#g-dc" x="92" y="36" width="40" height="40" style="color:#8b7bf0"/>
-      <use href="#g-dc" x="92" y="96" width="40" height="40" style="color:#8b7bf0"/>
-      <text x="138" y="56" font-size="8" fill="#5a6b7b">cDC1</text>
-      <text x="138" y="124" font-size="8" fill="#5a6b7b">cDC2</text>
-      <text x="120" y="92" font-size="8" font-style="italic" fill="#7c8a99" text-anchor="middle">redundant</text>
-      <line x1="134" y1="58" x2="206" y2="80" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <line x1="134" y1="116" x2="206" y2="92" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <use href="#g-tcell" x="208" y="54" width="52" height="52" style="color:#57c785"/>
-      <text x="234" y="120" font-size="8.5" fill="#3f7d5d" text-anchor="middle">CD8⁺ T (+ cross-dressing)</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 210" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="22" font-size="12.5" font-weight="700" fill="#1f2d3d">mRNA-LNP CD8 priming: processing, redundant cDCs, cross-dressing</text>
+<circle cx="44" cy="96" r="16" fill="#f3b34a" stroke="#d9911e"/><circle cx="44" cy="96" r="10" fill="none" stroke="#fff" stroke-opacity=".6" stroke-dasharray="3 2"/><text x="44" y="124" font-size="8" fill="#a9791a" text-anchor="middle">LNP</text>
+<g fill="#efeaff" stroke="#b9a9f5" stroke-width="1.5"><path d="M84 60 Q70 120 96 170 Q160 196 250 188 Q350 182 372 120 Q360 60 280 56 Q150 50 84 60 Z"/></g>
+<text x="150" y="74" font-size="8.5" font-weight="700" fill="#6b54d6">cDC1 / cDC2 (redundant)</text>
+<circle cx="78" cy="60" r="8" fill="#7c5cff"/><text x="78" y="63" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<circle cx="116" cy="120" r="16" fill="#fde9c9" stroke="#e0a94f"/><circle cx="111" cy="120" r="6" fill="#f3b34a"/><text x="116" y="148" font-size="7.5" fill="#9a7b3a" text-anchor="middle">endosome escape</text>
+<ellipse cx="172" cy="110" rx="14" ry="10" fill="#9fb0c9"/><ellipse cx="172" cy="100" rx="12" ry="6.5" fill="#7d92b0"/><text x="172" y="134" font-size="7.5" fill="#5a6b7b" text-anchor="middle">ribosome</text>
+<line x1="134" y1="116" x2="156" y2="112" stroke="#e1503f" stroke-width="2" fill="none"/>
+<rect x="214" y="92" width="22" height="34" rx="6" fill="#cdbff0" stroke="#8b7bf0"/><line x1="214" y1="103" x2="236" y2="103" stroke="#8b7bf0"/><line x1="214" y1="116" x2="236" y2="116" stroke="#8b7bf0"/><text x="225" y="138" font-size="7.5" fill="#6b54d6" text-anchor="middle">proteasome</text>
+<line x1="188" y1="110" x2="210" y2="110" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="270" y="104" width="18" height="10" rx="2" fill="#ffd166" stroke="#d9911e"/><circle cx="279" cy="100" r="4" fill="#ff8f6b" stroke="#d9663f"/><text x="279" y="130" font-size="7.5" fill="#a9791a" text-anchor="middle">MHC-I load (ER)</text>
+<line x1="240" y1="110" x2="266" y2="110" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<g><rect x="356" y="96" width="18" height="10" rx="2" fill="#ffd166" stroke="#d9911e"/><circle cx="365" cy="92" r="3.6" fill="#ff8f6b" stroke="#d9663f"/></g><text x="365" y="124" font-size="7.5" fill="#5a6b7b" text-anchor="middle">surface pMHC-I</text>
+<text x="150" y="190" font-size="8" fill="#9aa3ad">WDFY4 cross-presentation — not required</text><line x1="150" y1="186" x2="300" y2="186" stroke="#e0556b" stroke-width="1.6"/>
+<ellipse cx="470" cy="104" rx="44" ry="38" fill="#57c785" stroke="#2f9b57"/><ellipse cx="462" cy="110" rx="15" ry="12" fill="#fff" fill-opacity=".4"/><path d="M428 92 l-14 -4 M428 92 l-10 8 M428 92 l14 4" stroke="#2f6f45" stroke-width="2" fill="none" stroke-linecap="round"/><text x="470" y="158" font-size="8.5" font-weight="600" fill="#2f7d4f" text-anchor="middle">CD8 T cell primed</text>
+<circle cx="404" cy="104" r="8" fill="#2f9b57"/><text x="404" y="107" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+<g filter="" fill="#ff6f61" stroke="#d9533f"><circle cx="556" cy="92" r="8"/><circle cx="568" cy="86" r="6.5"/><circle cx="564" cy="100" r="6"/></g><text x="562" y="120" font-size="8" fill="#c25a4d" text-anchor="middle">↓ anti-tumor</text>
+<ellipse cx="648" cy="98" rx="18" ry="15" fill="#9fdcb8" stroke="#5fb98a"/><text x="648" y="124" font-size="8" fill="#2f7d4f" text-anchor="middle">memory T</text>
+<line x1="514" y1="96" x2="540" y2="92" stroke="#5fb98a" stroke-width="2.2" marker-end="url(#ar)"/><line x1="514" y1="110" x2="624" y2="100" stroke="#5fb98a" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="560" y="150" width="186" height="48" rx="9" fill="#eef3f9" stroke="#dbe3ec" stroke-dasharray="4 3"/><text x="653" y="168" font-size="8.5" font-weight="700" fill="#3d4d5e" text-anchor="middle">cross-dressing (type-I IFN)</text><text x="653" y="186" font-size="8" fill="#5a6b7b" text-anchor="middle">cDC takes intact pMHC-I from tissue cells</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1038/s41586-026-10353-6">mRNA vaccines engage unconventional pathways in CD8⁺ T cell priming</a></h3>
       <p class="meta">Jo, Li, Thakur, … Murphy et al. · <span class="date">Nature, 15 Apr 2026</span></p>
@@ -376,19 +408,22 @@
   <h2><span class="dot" style="background:var(--c-imet)"></span>Basic Immuno-metabolism <span class="count">2 papers</span></h2>
 
   <div class="card" id="p8">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Cysteine's sulfur fork in CD8 T cells</text>
-      <circle cx="60" cy="58" r="16" fill="#f4c95d" stroke="rgba(15,30,50,.22)"/>
-      <text x="60" y="62" font-size="9" font-weight="700" fill="#7a5a12" text-anchor="middle">Cys</text>
-      <line x1="52" y1="72" x2="34" y2="98" stroke="#36c98f" stroke-width="2.4" marker-end="url(#ar)"/>
-      <line x1="70" y1="72" x2="92" y2="98" stroke="#f4b740" stroke-width="2.4" marker-end="url(#ar)"/>
-      <text x="30" y="116" font-size="8.5" fill="#3f7d5d" text-anchor="middle">glutathione</text>
-      <use href="#g-mito" x="86" y="100" width="44" height="44" style="color:#f2a93c"/>
-      <text x="108" y="150" font-size="8.5" fill="#a9791a" text-anchor="middle">Fe-S clusters</text>
-      <line x1="132" y1="78" x2="190" y2="78" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-tcell" x="196" y="50" width="56" height="56" style="color:#57c785"/>
-      <text x="224" y="120" font-size="8.5" fill="#3f7d5d" text-anchor="middle">CD8⁺ effector &amp; anti-tumor</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Cysteine's sulfur is partitioned to set CD8 T-cell fate</text>
+<circle cx="80" cy="100" r="20" fill="#f4c95d" stroke="rgba(15,30,50,.22)"/><text x="80" y="104" font-size="10" font-weight="700" fill="#7a5a12" text-anchor="middle">Cys</text>
+<line x1="98" y1="86" x2="150" y2="58" stroke="#36c98f" stroke-width="2.4" marker-end="url(#ar)"/><line x1="98" y1="114" x2="150" y2="142" stroke="#f4b740" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="152" y="44" width="86" height="28" rx="7" fill="#eaf6ee" stroke="#bfe3cc"/><text x="195" y="62" font-size="8.5" fill="#3f7d5d" text-anchor="middle">GCL/GSS → GSH</text>
+<text x="160" y="86" font-size="8" fill="#5a6b7b">redox buffering</text>
+<rect x="152" y="128" width="86" height="28" rx="7" fill="#fbf3e3" stroke="#e6c97f"/><text x="195" y="146" font-size="8.5" fill="#a9791a" text-anchor="middle">ISC → Fe-S</text>
+<use href="#g-mito" x="252" y="120" width="46" height="46" style="color:#f2a93c"/><text x="275" y="182" font-size="8" fill="#a9791a" text-anchor="middle">ETC complexes</text>
+<line x1="238" y1="58" x2="330" y2="92" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/><line x1="300" y1="142" x2="332" y2="108" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<text x="320" y="74" font-size="8" font-style="italic" fill="#7c8a99">balance of the fork</text>
+<use href="#g-tcell" x="340" y="64" width="60" height="60" style="color:#57c785"/><text x="370" y="138" font-size="8.5" fill="#3f7d5d" text-anchor="middle">CD8 T cell</text>
+<line x1="402" y1="94" x2="430" y2="94" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<g font-size="9" fill="#33414f"><rect x="436" y="58" width="300" height="24" rx="6" fill="#f3f8fb" stroke="#dde7f0"/><text x="450" y="74">proliferation</text>
+<rect x="436" y="88" width="300" height="24" rx="6" fill="#f3f8fb" stroke="#dde7f0"/><text x="450" y="104">effector function</text>
+<rect x="436" y="118" width="300" height="24" rx="6" fill="#eef6ef" stroke="#bfe3cc"/><text x="450" y="134" fill="#3f7d5d">anti-tumor immunity</text></g>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.cell.2026.05.011">Cysteine's metabolic fork: Sulfur partitioning shapes T cell function</a></h3>
       <p class="meta">Grusdat &amp; Brenner · <span class="date">Cell (preview), 11 Jun 2026</span></p>
@@ -403,16 +438,20 @@
   </div>
 
   <div class="card" id="p9">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Metabolites as signals in the TME</text>
-      <use href="#g-tumor" x="26" y="46" width="64" height="64" style="color:#ff6f61"/>
-      <text x="58" y="122" font-size="8.5" fill="#c25a4d" text-anchor="middle">tumor cell</text>
-      <g fill="#f4b740"><circle cx="104" cy="58" r="3.6"/><circle cx="122" cy="74" r="3.6"/><circle cx="112" cy="92" r="3.6"/><circle cx="132" cy="62" r="3.2"/></g>
-      <text x="150" y="48" font-size="8.5" fill="#a9791a" text-anchor="middle">metabolite signals</text>
-      <line x1="96" y1="78" x2="200" y2="78" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)" stroke-dasharray="2 3"/>
-      <use href="#g-tcell" x="206" y="48" width="58" height="58" style="color:#4C9AFF"/>
-      <text x="235" y="120" font-size="8.5" fill="#4a78c4" text-anchor="middle">immune-cell fate</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Tumor metabolites act as immunosuppressive signals</text>
+<use href="#g-tumor" x="28" y="68" width="64" height="64" style="color:#ff6f61"/><text x="60" y="146" font-size="8.5" fill="#c25a4d" text-anchor="middle">tumor cell</text>
+<g font-size="8.5"><rect x="120" y="50" width="120" height="22" rx="6" fill="#fbf6ee" stroke="#efe1cc"/><text x="180" y="65" fill="#a9791a" text-anchor="middle">lactate</text>
+<rect x="120" y="88" width="120" height="22" rx="6" fill="#f3eefb" stroke="#d9c9f3"/><text x="180" y="103" fill="#6b54d6" text-anchor="middle">kynurenine</text>
+<rect x="120" y="126" width="120" height="22" rx="6" fill="#eef4fb" stroke="#cfe0f1"/><text x="180" y="141" fill="#3a5a86" text-anchor="middle">adenosine</text></g>
+<line x1="92" y1="100" x2="116" y2="62" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><line x1="92" y1="100" x2="116" y2="100" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><line x1="92" y1="100" x2="116" y2="138" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<g font-size="7.5" fill="#5a6b7b"><text x="248" y="48">GPR81</text><text x="248" y="120">AhR</text><text x="248" y="158">A2AR</text></g>
+<line x1="240" y1="61" x2="290" y2="80" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><line x1="240" y1="99" x2="290" y2="100" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><line x1="240" y1="137" x2="290" y2="120" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<use href="#g-tcell" x="296" y="58" width="44" height="44" style="color:#4C9AFF"/><text x="318" y="116" font-size="8" fill="#4a78c4" text-anchor="middle">effector T (suppressed)</text>
+<use href="#g-cell" x="300" y="110" width="36" height="36" style="color:#2bb3a3"/><text x="318" y="156" font-size="8" fill="#2a8c80" text-anchor="middle">Treg / macrophage</text>
+<line x1="344" y1="100" x2="372" y2="100" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="378" y="64" width="360" height="74" rx="10" fill="#fbf1f5" stroke="#f0d6e0"/><text x="558" y="86" font-size="9.5" font-weight="700" fill="#a25272" text-anchor="middle">immunosuppressive tumor microenvironment</text><text x="558" y="108" font-size="8.5" fill="#5a6b7b" text-anchor="middle">review: metabolites beyond metabolism = signalling molecules</text><text x="558" y="126" font-size="8.5" fill="#5a6b7b" text-anchor="middle">therapeutic angle: target metabolite sensing</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1038/s41577-025-01258-y">Metabolites as signalling molecules in the tumour immune microenvironment</a></h3>
       <p class="meta">Mao, Xia &amp; Jiang · <span class="date">Nature Reviews Immunology (review), 12 Jan 2026</span></p>
@@ -432,20 +471,21 @@
   <h2><span class="dot" style="background:var(--c-hiv)"></span>HIV <span class="count">5 papers</span></h2>
 
   <div class="card" id="p10">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Low-level viraemia: risk by strata</text>
-      <line x1="30" y1="120" x2="150" y2="120" stroke="#cdd8e2" stroke-width="1.5"/>
-      <rect x="44" y="96" width="34" height="24" rx="3" fill="#36c98f" fill-opacity=".8"/>
-      <text x="61" y="135" font-size="8" fill="#3f7d5d" text-anchor="middle">50–200</text>
-      <rect x="96" y="64" width="34" height="56" rx="3" fill="#ff6f61" fill-opacity=".85"/>
-      <text x="113" y="135" font-size="8" fill="#c25a4d" text-anchor="middle">200–1000</text>
-      <text x="113" y="58" font-size="8" fill="#c25a4d" text-anchor="middle">↑ risk</text>
-      <rect x="166" y="56" width="112" height="64" rx="10" fill="#eef4fb" stroke="#cfe0f1"/>
-      <text x="222" y="74" font-size="9" font-weight="600" fill="#3a5a86" text-anchor="middle">Delphi consensus</text>
-      <text x="222" y="90" font-size="8" fill="#5a6b7b" text-anchor="middle">confirm · adherence</text>
-      <text x="222" y="103" font-size="8" fill="#5a6b7b" text-anchor="middle">resistance test (200–1000)</text>
-      <text x="222" y="115" font-size="8" fill="#5a6b7b" text-anchor="middle">individualise ART</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Managing persistent HIV-1 low-level viraemia: consensus pathway</text>
+<g font-size="8.5" fill="#33414f">
+<rect x="20" y="78" width="96" height="40" rx="8" fill="#eef4fb" stroke="#cfe0f1"/><text x="68" y="95" text-anchor="middle">detectable VL</text><text x="68" y="108" text-anchor="middle">on ART</text>
+<rect x="150" y="78" width="96" height="40" rx="8" fill="#eef4fb" stroke="#cfe0f1"/><text x="198" y="95" text-anchor="middle">confirm +</text><text x="198" y="108" text-anchor="middle">adherence / DDI</text>
+<rect x="280" y="78" width="110" height="40" rx="8" fill="#f3f8fb" stroke="#dde7f0"/><text x="335" y="95" text-anchor="middle">stratify VL</text><text x="335" y="108" text-anchor="middle">(copies/mL)</text>
+</g>
+<line x1="116" y1="98" x2="148" y2="98" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/><line x1="246" y1="98" x2="278" y2="98" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="410" y="52" width="150" height="30" rx="7" fill="#eaf6ee" stroke="#bfe3cc"/><text x="485" y="71" font-size="8.5" fill="#3f7d5d" text-anchor="middle">50–200 · risk uncertain</text>
+<rect x="410" y="112" width="150" height="30" rx="7" fill="#fdecec" stroke="#f3c7c2"/><text x="485" y="131" font-size="8.5" fill="#c25a4d" text-anchor="middle">200–1000 · higher risk</text>
+<line x1="390" y1="90" x2="408" y2="70" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><line x1="390" y1="106" x2="408" y2="126" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="560" y1="127" x2="588" y2="127" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="592" y="100" width="150" height="56" rx="9" fill="#f6f1ff" stroke="#d9c9f3"/><text x="667" y="120" font-size="8.5" fill="#6b54d6" text-anchor="middle">resistance testing</text><text x="667" y="136" font-size="8.5" fill="#6b54d6" text-anchor="middle">+ individualise</text><text x="667" y="150" font-size="8.5" fill="#6b54d6" text-anchor="middle">regimen</text>
+<text x="485" y="170" font-size="8" font-style="italic" fill="#7c8a99" text-anchor="middle">scoping review + modified Delphi → pragmatic framework</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/S2352-3018(26)00107-4">Guidance on the clinical management of HIV-1 persistent low-level viraemia on antiretroviral treatment: a scoping review and international Delphi consensus</a></h3>
       <p class="meta">Clemente, Stam, Elvstam, … Wensing et al. · <span class="date">The Lancet HIV, 11 Jun 2026</span></p>
@@ -460,20 +500,23 @@
   </div>
 
   <div class="card" id="p11">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">CRISPR screens map HIV host factors</text>
-      <use href="#g-tcell" x="22" y="50" width="60" height="60" style="color:#4C9AFF"/>
-      <use href="#g-dna" x="40" y="64" width="26" height="26" style="color:#3a5a86"/>
-      <text x="52" y="124" font-size="8" fill="#4a78c4" text-anchor="middle">CD4⁺ T · CRISPRa/KO</text>
-      <line x1="86" y1="64" x2="150" y2="56" stroke="#ff7a6b" stroke-width="2.4" marker-end="url(#ar)"/>
-      <text x="116" y="48" font-size="8" fill="#c25a4d" text-anchor="middle">anti-HIV</text>
-      <text x="206" y="50" font-size="9" fill="#33414f">PI16 · PPID</text>
-      <text x="206" y="64" font-size="9" fill="#33414f">SHISA3 · ITM2A</text>
-      <line x1="86" y1="96" x2="150" y2="104" stroke="#4C9AFF" stroke-width="2.4" marker-end="url(#ar)"/>
-      <text x="116" y="118" font-size="8" fill="#4a78c4" text-anchor="middle">pro-HIV</text>
-      <text x="206" y="104" font-size="8" fill="#5a6b7b">entry / nuclear-import</text>
-      <text x="206" y="116" font-size="8" fill="#5a6b7b">blocks</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Genome-wide CRISPR screens map HIV host factors in CD4 T cells</text>
+<use href="#g-tcell" x="22" y="58" width="56" height="56" style="color:#4C9AFF"/><use href="#g-dna" x="40" y="72" width="24" height="24" style="color:#3a5a86"/><text x="50" y="126" font-size="8" fill="#4a78c4" text-anchor="middle">primary CD4 T</text>
+<rect x="96" y="56" width="60" height="20" rx="6" fill="#eaf6ee" stroke="#bfe3cc"/><text x="126" y="70" font-size="8" fill="#3f7d5d" text-anchor="middle">CRISPRa</text>
+<rect x="96" y="98" width="60" height="20" rx="6" fill="#fdecec" stroke="#f3c7c2"/><text x="126" y="112" font-size="8" fill="#c25a4d" text-anchor="middle">CRISPR KO</text>
+<line x1="80" y1="80" x2="94" y2="68" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><line x1="80" y1="92" x2="94" y2="106" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<text x="186" y="60" font-size="8.5" font-weight="700" fill="#3f7d5d">anti-HIV hits</text>
+<g font-size="8.5" fill="#33414f"><text x="186" y="80">PI16  ·  SHISA3  ·  ITM2A</text><text x="186" y="98">PPID (Cyp40)</text></g>
+<rect x="360" y="44" width="180" height="64" rx="10" fill="#eef4fb" stroke="#cfe0f1"/><text x="450" y="62" font-size="8.5" font-weight="600" fill="#3a5a86" text-anchor="middle">PI16 → blocks viral entry</text>
+<circle cx="392" cy="86" r="12" fill="#ffd6cf" stroke="#e0907f"/><text x="392" y="89" font-size="7" fill="#c25a4d" text-anchor="middle">env</text>
+<line x1="404" y1="86" x2="420" y2="86" stroke="#e0556b" stroke-width="2.2"/><line x1="412" y1="78" x2="420" y2="94" stroke="#e0556b" stroke-width="2.2"/>
+<rect x="360" y="120" width="380" height="56" rx="10" fill="#f6f1ff" stroke="#d9c9f3"/><text x="550" y="140" font-size="8.5" font-weight="600" fill="#6b54d6" text-anchor="middle">PPID/Cyp40 binds capsid → ↓ nuclear import</text>
+<polygon points="392,150 420,142 416,166 388,170" fill="#cdbff0" stroke="#8b7bf0"/><text x="404" y="160" font-size="6.5" fill="#4b3a7a" text-anchor="middle">capsid</text>
+<rect x="470" y="138" width="10" height="34" fill="#e7dcfa"/><text x="475" y="180" font-size="6.5" fill="#6b54d6" text-anchor="middle">NPC</text>
+<line x1="424" y1="152" x2="466" y2="152" stroke="#e0556b" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="560" y="44" width="180" height="64" rx="10" fill="#f3f8fb" stroke="#dde7f0"/><text x="650" y="68" font-size="8.5" fill="#33414f" text-anchor="middle">structure + evolution</text><text x="650" y="86" font-size="8.5" fill="#33414f" text-anchor="middle">pinpoint restriction</text><text x="650" y="100" font-size="8.5" fill="#33414f" text-anchor="middle">domains / residues</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.cell.2026.03.046">Systematic discovery of pro- and anti-HIV host factors in primary human CD4⁺ T cells</a></h3>
       <p class="meta">Rathore, Dugan, Thornton, … Marson et al. · <span class="date">Cell, 20 Apr 2026</span></p>
@@ -488,18 +531,21 @@
   </div>
 
   <div class="card" id="p12">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">HIV-1 late replication cycle</text>
-      <use href="#g-virus" x="18" y="50" width="56" height="56" style="color:#e2603f"/>
-      <text x="46" y="118" font-size="8.5" fill="#c25a4d" text-anchor="middle">assembly</text>
-      <line x1="80" y1="80" x2="110" y2="80" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-virus" x="116" y="52" width="52" height="52" style="color:#e87a4f"/>
-      <text x="142" y="118" font-size="8.5" fill="#c25a4d" text-anchor="middle">release</text>
-      <line x1="172" y1="80" x2="202" y2="80" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-virus" x="210" y="50" width="56" height="56" style="color:#f4b740"/>
-      <text x="238" y="118" font-size="8.5" fill="#a9791a" text-anchor="middle">maturation</text>
-      <text x="150" y="150" font-size="9" fill="#51606f" text-anchor="middle">cryo-EM · single-molecule · maturation inhibitors</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">HIV-1 assembly → release → maturation (structural detail)</text>
+<line x1="30" y1="70" x2="200" y2="70" stroke="#cdd8e2" stroke-width="3"/><text x="115" y="60" font-size="8" fill="#5a6b7b" text-anchor="middle">plasma membrane</text>
+<g fill="#e2603f"><circle cx="60" cy="84" r="4"/><circle cx="76" cy="84" r="4"/><circle cx="92" cy="84" r="4"/><circle cx="108" cy="84" r="4"/><circle cx="124" cy="84" r="4"/></g><text x="92" y="108" font-size="8" fill="#c25a4d" text-anchor="middle">Gag lattice</text>
+<text x="115" y="128" font-size="8.5" fill="#33414f" text-anchor="middle">1 · assembly</text>
+<path d="M210 84 q20 -18 40 0" fill="none" stroke="#e2603f" stroke-width="2" marker-end="url(#ar)"/>
+<circle cx="290" cy="86" r="26" fill="none" stroke="#e2603f" stroke-width="2"/><circle cx="290" cy="86" r="12" fill="#f6c6b8"/><text x="290" y="128" font-size="8.5" fill="#33414f" text-anchor="middle">2 · ESCRT budding</text>
+<text x="290" y="56" font-size="7.5" fill="#5a6b7b" text-anchor="middle">immature</text>
+<line x1="328" y1="86" x2="360" y2="86" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="364" y="62" width="86" height="20" rx="6" fill="#fff4d6" stroke="#e6b53f"/><text x="407" y="76" font-size="8" fill="#a9791a" text-anchor="middle">protease cleavage</text>
+<line x1="450" y1="86" x2="480" y2="86" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<polygon points="500,60 560,72 548,112 512,108" fill="#f6c6b8" stroke="#e2603f" stroke-width="2"/><text x="528" y="90" font-size="7" fill="#a23c22" text-anchor="middle">conical</text><text x="528" y="100" font-size="7" fill="#a23c22" text-anchor="middle">capsid</text><text x="530" y="132" font-size="8.5" fill="#33414f" text-anchor="middle">3 · mature, infectious</text>
+<rect x="586" y="60" width="154" height="56" rx="9" fill="#fdecec" stroke="#f3c7c2"/><text x="663" y="80" font-size="8.5" fill="#c25a4d" text-anchor="middle">maturation inhibitors</text><text x="663" y="96" font-size="8.5" fill="#c25a4d" text-anchor="middle">block final cleavage</text><text x="663" y="110" font-size="8" fill="#5a6b7b" text-anchor="middle">cryo-EM-guided</text>
+<text x="380" y="172" font-size="8" font-style="italic" fill="#7c8a99">review: a decade of cryo-EM, single-molecule and live-cell imaging</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1038/s41579-026-01327-6">Mechanisms of HIV-1 assembly, release and maturation</a></h3>
       <p class="meta">Kleinpeter &amp; Freed · <span class="date">Nature Reviews Microbiology (review), 11 Jun 2026</span></p>
@@ -514,17 +560,17 @@
   </div>
 
   <div class="card" id="p13">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">NKG2A⁺CD8⁺ T cells in HIV-2</text>
-      <use href="#g-tcell" x="26" y="48" width="64" height="64" style="color:#36c98f"/>
-      <text x="58" y="126" font-size="8.5" fill="#3f7d5d" text-anchor="middle">NKG2A⁺ CD8⁺ T</text>
-      <text x="58" y="138" font-size="8" fill="#5a6b7b" text-anchor="middle">IL-22 · regulatory</text>
-      <line x1="96" y1="78" x2="150" y2="78" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <text x="218" y="62" font-size="9" fill="#33414f">↑ gut integrity</text>
-      <text x="218" y="80" font-size="9" fill="#33414f">↓ inflammation</text>
-      <text x="218" y="98" font-size="9" fill="#a9791a">IL-15 drives them</text>
-      <text x="150" y="156" font-size="9" fill="#51606f" text-anchor="middle">expanded in people living with HIV-2</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">NKG2A+CD8 T cells preserve gut integrity in HIV-2</text>
+<rect x="20" y="44" width="210" height="130" rx="10" fill="#fdecec" stroke="#f3c7c2"/><text x="125" y="62" font-size="9.5" font-weight="700" fill="#c25a4d" text-anchor="middle">HIV-1</text>
+<rect x="36" y="86" width="178" height="10" fill="#e6b6ae"/><g stroke="#c25a4d" stroke-width="1.5"><line x1="60" y1="86" x2="60" y2="74"/><line x1="100" y1="86" x2="100" y2="74"/><line x1="150" y1="86" x2="150" y2="74"/></g><text x="125" y="120" font-size="8.5" fill="#a25247" text-anchor="middle">leaky barrier · chronic activation</text><text x="125" y="138" font-size="8.5" fill="#a25247" text-anchor="middle">systemic inflammation</text>
+<rect x="250" y="44" width="290" height="130" rx="10" fill="#eef6ef" stroke="#bfe3cc"/><text x="395" y="62" font-size="9.5" font-weight="700" fill="#3f7d5d" text-anchor="middle">HIV-2 (untreated, controlled)</text>
+<rect x="266" y="86" width="258" height="10" fill="#bfe0c9"/><text x="395" y="118" font-size="8.5" fill="#3f7d5d" text-anchor="middle">intact epithelium · low inflammation</text>
+<use href="#g-tcell" x="300" y="100" width="48" height="48" style="color:#36c98f"/><text x="324" y="160" font-size="8" fill="#3f7d5d" text-anchor="middle">NKG2A+ CD8 (IL-22, regulatory)</text>
+<use href="#g-burst" x="430" y="104" width="30" height="30" style="color:#f4b740"/><text x="445" y="150" font-size="8" fill="#a9791a" text-anchor="middle">IL-15 drives</text>
+<line x1="560" y1="108" x2="588" y2="108" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<text x="600" y="96" font-size="8.5" fill="#33414f">↑ gut integrity</text><text x="600" y="114" font-size="8.5" fill="#33414f">↓ activation</text><text x="600" y="132" font-size="8.5" fill="#5a6b7b">CD39 / DNAM-1</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.medj.2026.101143">Expansion of NKG2A⁺CD8⁺ T cells with regulatory signatures distinguishes individuals living with HIV-2 from those with HIV-1</a></h3>
       <p class="meta">Orta Resendiz, Petitdemange, Lazzerini, … Müller-Trutwin et al. · <span class="date">Med, 15 May 2026</span></p>
@@ -539,17 +585,17 @@
   </div>
 
   <div class="card" id="p14">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">5′-leader defects drive viremia</text>
-      <use href="#g-rna" x="20" y="34" width="120" height="40" style="color:#36c98f"/>
-      <rect x="64" y="40" width="20" height="11" rx="2" fill="#2bb3a3"/><text x="74" y="49" font-size="6.5" fill="#fff" text-anchor="middle">MSD</text>
-      <text x="150" y="44" font-size="8.5" fill="#3f7d5d" text-anchor="middle">intact 5′L (minor)</text>
-      <use href="#g-rna" x="20" y="78" width="120" height="40" style="color:#ff6f61"/>
-      <path d="M58 96 l8 -8 m0 8 l-8 -8 M74 96 l8 -8 m0 8 l-8 -8" stroke="#c0392b" stroke-width="2"/>
-      <text x="150" y="88" font-size="8.5" fill="#c25a4d" text-anchor="middle">defective clones near MSD (dominant)</text>
-      <rect x="98" y="128" width="104" height="26" rx="8" fill="#efeaff" stroke="#b9a9f5"/>
-      <text x="150" y="145" font-size="9" font-weight="600" fill="#6b54d6" text-anchor="middle">CLAWS digital PCR</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">5' leader defects drive nonsuppressible HIV-1 viremia</text>
+<line x1="30" y1="58" x2="430" y2="58" stroke="#bcd7c6" stroke-width="3"/>
+<g font-size="7" fill="#3f7d5d"><rect x="40" y="50" width="34" height="16" rx="3" fill="#cde0d4"/><text x="57" y="61" text-anchor="middle">TAR</text><rect x="86" y="50" width="34" height="16" rx="3" fill="#cde0d4"/><text x="103" y="61" text-anchor="middle">PBS</text><rect x="132" y="50" width="30" height="16" rx="3" fill="#cde0d4"/><text x="147" y="61" text-anchor="middle">DIS</text><rect x="174" y="50" width="30" height="16" rx="3" fill="#9ed3ad"/><text x="189" y="61" text-anchor="middle">MSD</text><rect x="216" y="50" width="34" height="16" rx="3" fill="#cde0d4"/><text x="233" y="61" text-anchor="middle">psi</text></g>
+<text x="120" y="84" font-size="8.5" fill="#3f7d5d">intact 5' leader (minor population)</text>
+<line x1="30" y1="116" x2="430" y2="116" stroke="#e6b6ae" stroke-width="3"/><g stroke="#c0392b" stroke-width="2"><line x1="178" y1="124" x2="200" y2="108"/><line x1="200" y1="124" x2="178" y2="108"/></g><text x="189" y="100" font-size="7" fill="#c25a4d" text-anchor="middle">defect</text>
+<text x="120" y="142" font-size="8.5" fill="#c25a4d">defective clones near MSD — DOMINANT in plasma</text>
+<rect x="460" y="46" width="280" height="56" rx="10" fill="#efeaff" stroke="#b9a9f5"/><text x="600" y="66" font-size="9" font-weight="700" fill="#6b54d6" text-anchor="middle">CLAWS digital PCR</text><text x="600" y="84" font-size="8.5" fill="#6b54d6" text-anchor="middle">distinguishes intact vs defective 5'L · no sequencing</text>
+<rect x="460" y="118" width="280" height="56" rx="10" fill="#f3f8fb" stroke="#dde7f0"/><text x="600" y="138" font-size="8.5" fill="#33414f" text-anchor="middle">defective genomes emerge early</text><text x="600" y="156" font-size="8.5" fill="#33414f" text-anchor="middle">→ predominate on long-term ART</text>
+<line x1="436" y1="74" x2="456" y2="74" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1038/s41467-026-73475-5">5′ leader defects drive persistent HIV-1 viremia on long-term ART</a></h3>
       <p class="meta">Box, Camilo-Contreras, Dragoni, … Simonetti et al. · <span class="date">Nature Communications, 2026 (17:4725)</span></p>
@@ -569,19 +615,19 @@
   <h2><span class="dot" style="background:var(--c-can)"></span>Cancer <span class="count">9 papers</span></h2>
 
   <div class="card" id="p15">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">AML LSC subtypes set drug response</text>
-      <use href="#g-cell" x="30" y="36" width="44" height="44" style="color:#4C9AFF"/>
-      <text x="52" y="92" font-size="8" fill="#4a78c4" text-anchor="middle">BCL-2 · venetoclax-sens.</text>
-      <use href="#g-cell" x="30" y="98" width="44" height="44" style="color:#ff6f61"/>
-      <text x="52" y="154" font-size="8" fill="#c25a4d" text-anchor="middle">MEP-LSC · BCL-xL</text>
-      <line x1="80" y1="120" x2="120" y2="120" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
-      <text x="100" y="112" font-size="7.5" fill="#7c8a99" text-anchor="middle">plasticity</text>
-      <rect x="170" y="44" width="112" height="22" rx="6" fill="#eaf6ee" stroke="#bfe3cc"/>
-      <text x="226" y="59" font-size="8.5" fill="#3f7d5d" text-anchor="middle">BCL-xL inhibitor</text>
-      <rect x="170" y="100" width="112" height="22" rx="6" fill="#fff4d6" stroke="#e6c97f"/>
-      <text x="226" y="115" font-size="8.5" fill="#a9791a" text-anchor="middle">MEK1/2 (MoDe-LSC)</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">AML leukemic stem cell subtypes set the MAC-score and therapy</text>
+<text x="20" y="48" font-size="8.5" fill="#5a6b7b">lineage hierarchy → 4 LSC subtypes</text>
+<use href="#g-cell" x="30" y="58" width="34" height="34" style="color:#5cc8ff"/><use href="#g-cell" x="70" y="58" width="34" height="34" style="color:#4C9AFF"/><use href="#g-cell" x="110" y="58" width="34" height="34" style="color:#9a6ad6"/><use href="#g-cell" x="150" y="58" width="34" height="34" style="color:#ff6f61"/>
+<rect x="30" y="104" width="160" height="40" rx="8" fill="#f3f8fb" stroke="#dde7f0"/><text x="110" y="120" font-size="8" fill="#33414f" text-anchor="middle">MAC-score =</text><text x="110" y="134" font-size="8" fill="#33414f" text-anchor="middle">BCL-2 vs MCL-1 / BCL-xL</text>
+<line x1="196" y1="98" x2="224" y2="98" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/><text x="240" y="86" font-size="8" fill="#7c8a99">plasticity</text>
+<use href="#g-cell" x="230" y="68" width="50" height="50" style="color:#ff6f61"/><text x="255" y="130" font-size="8" fill="#c25a4d" text-anchor="middle">MEP-LSC → BCL-xL dependent</text>
+<g font-size="8.5"><rect x="300" y="50" width="200" height="24" rx="6" fill="#eaf6ee" stroke="#bfe3cc"/><text x="312" y="66" fill="#3f7d5d">venetoclax · BCL-2 subtype</text>
+<rect x="300" y="82" width="200" height="24" rx="6" fill="#fff4d6" stroke="#e6c97f"/><text x="312" y="98" fill="#a9791a">BCL-xL inhibitor · MEP-LSC</text>
+<rect x="300" y="114" width="200" height="24" rx="6" fill="#f6f1ff" stroke="#d9c9f3"/><text x="312" y="130" fill="#6b54d6">MEK1/2 inhibitor · MoDe-LSC</text></g>
+<line x1="284" y1="92" x2="298" y2="92" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="520" y="62" width="220" height="76" rx="10" fill="#f3f8fb" stroke="#dde7f0"/><text x="630" y="84" font-size="9" font-weight="600" fill="#33414f" text-anchor="middle">&gt;150 patients profiled</text><text x="630" y="104" font-size="8.5" fill="#5a6b7b" text-anchor="middle">subtyping improves risk stratification</text><text x="630" y="122" font-size="8.5" fill="#5a6b7b" text-anchor="middle">+ overcomes venetoclax resistance</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.stem.2026.04.012">Leukemic stem cell subtypes determine venetoclax resistance and therapeutic vulnerabilities in AML</a></h3>
       <p class="meta">Waclawiczek, Leppä, Renders, … Trumpp et al. · <span class="date">Cell Stem Cell, 7 May 2026</span></p>
@@ -596,17 +642,20 @@
   </div>
 
   <div class="card" id="p16">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Ketogenesis shields leukemic stem cells</text>
-      <rect x="22" y="46" width="64" height="20" rx="6" fill="#fff4d6" stroke="#e6b53f"/>
-      <text x="54" y="60" font-size="8.5" font-weight="600" fill="#a9791a" text-anchor="middle">HMGCS2</text>
-      <line x1="54" y1="66" x2="54" y2="86" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <text x="54" y="100" font-size="9" fill="#33414f" text-anchor="middle">β-OHB</text>
-      <line x1="80" y1="100" x2="120" y2="100" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <text x="100" y="92" font-size="7.5" fill="#7c8a99" text-anchor="middle">↓ FADS2</text>
-      <use href="#g-cell" x="150" y="56" width="64" height="64" style="color:#9a6ad6"/>
-      <text x="182" y="132" font-size="8.5" fill="#7a4fb0" text-anchor="middle">LSC: ferroptosis suppressed</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Ketogenesis shields leukemic stem cells from ferroptosis</text>
+<g font-size="8" fill="#33414f">
+<rect x="20" y="80" width="60" height="22" rx="6" fill="#fbf6ee" stroke="#efe1cc"/><text x="50" y="95" text-anchor="middle">FAO</text>
+<rect x="96" y="80" width="74" height="22" rx="6" fill="#fff4d6" stroke="#e6b53f"/><text x="133" y="95" text-anchor="middle">HMGCS2</text>
+<rect x="186" y="80" width="60" height="22" rx="6" fill="#fbf6ee" stroke="#efe1cc"/><text x="216" y="95" text-anchor="middle">BHB</text></g>
+<line x1="80" y1="91" x2="94" y2="91" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><line x1="170" y1="91" x2="184" y2="91" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="216" y1="102" x2="216" y2="124" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><text x="216" y="140" font-size="8" fill="#a9791a" text-anchor="middle">epigenetic ↓ FADS2</text>
+<line x1="246" y1="91" x2="284" y2="91" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="288" y="68" width="150" height="48" rx="8" fill="#f3f8fb" stroke="#dde7f0"/><text x="363" y="86" font-size="8.5" fill="#33414f" text-anchor="middle">↓ PUFA-phospholipids</text><text x="363" y="104" font-size="8.5" fill="#33414f" text-anchor="middle">↓ lipid peroxidation</text>
+<line x1="438" y1="92" x2="466" y2="92" stroke="#e0556b" stroke-width="2.4" marker-end="url(#ar)"/><text x="500" y="78" font-size="8.5" fill="#c25a4d">ferroptosis blocked</text>
+<use href="#g-cell" x="486" y="98" width="56" height="56" style="color:#9a6ad6"/><text x="514" y="166" font-size="8.5" fill="#7a4fb0" text-anchor="middle">LSC survives</text>
+<rect x="560" y="74" width="180" height="60" rx="9" fill="#fdecec" stroke="#f3c7c2"/><text x="650" y="96" font-size="8.5" fill="#c25a4d" text-anchor="middle">Hmgcs2 deletion → collapse</text><text x="650" y="114" font-size="8.5" fill="#5a6b7b" text-anchor="middle">spares normal hematopoiesis</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.stem.2026.04.013">A ketogenesis-ferroptosis axis maintains leukemic stem cell survival and leukemia progression</a></h3>
       <p class="meta">Han, Wang, Ma, … Jiang et al. · <span class="date">Cell Stem Cell, 11 May 2026</span></p>
@@ -621,20 +670,21 @@
   </div>
 
   <div class="card" id="p17">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">STING + ICB unlocks CD4⁺ immunity</text>
-      <use href="#g-pill" x="14" y="62" width="46" height="46" style="color:#f3b34a"/>
-      <text x="37" y="118" font-size="8" fill="#a9791a" text-anchor="middle">STING + αPD-1</text>
-      <line x1="60" y1="84" x2="88" y2="84" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-dc" x="90" y="58" width="48" height="48" style="color:#8b7bf0"/>
-      <text x="114" y="120" font-size="8" fill="#5a6b7b" text-anchor="middle">cDC2</text>
-      <line x1="140" y1="84" x2="168" y2="84" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-tcell" x="170" y="56" width="50" height="50" style="color:#4C9AFF"/>
-      <text x="195" y="120" font-size="8" fill="#4a78c4" text-anchor="middle">CD4⁺ T</text>
-      <line x1="222" y1="84" x2="244" y2="84" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-tumor" x="248" y="60" width="44" height="44" style="color:#ff6f61"/>
-      <text x="270" y="118" font-size="8" fill="#3f7d5d" text-anchor="middle">↓ PDAC</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">STING + checkpoint blockade unlocks CD4 immunity in PDAC</text>
+<use href="#g-pill" x="20" y="76" width="48" height="48" style="color:#f3b34a"/><text x="44" y="132" font-size="8" fill="#a9791a" text-anchor="middle">STING agonist + aPD-1</text>
+<line x1="70" y1="100" x2="96" y2="100" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<use href="#g-dc" x="98" y="74" width="50" height="50" style="color:#8b7bf0"/><text x="123" y="134" font-size="8" fill="#6b54d6" text-anchor="middle">cDC2 · type I IFN</text>
+<rect x="100" y="60" width="46" height="12" rx="3" fill="#ffe1b0" stroke="#d9911e"/><text x="123" y="69" font-size="6.5" fill="#a9791a" text-anchor="middle">MHC-II</text>
+<line x1="150" y1="100" x2="176" y2="100" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<use href="#g-tcell" x="178" y="72" width="52" height="52" style="color:#4C9AFF"/><text x="204" y="134" font-size="8" fill="#4a78c4" text-anchor="middle">CD4 T help</text>
+<line x1="232" y1="92" x2="258" y2="78" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/><line x1="232" y1="108" x2="258" y2="122" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<use href="#g-tcell" x="262" y="50" width="40" height="40" style="color:#57c785"/><text x="282" y="100" font-size="7.5" fill="#3f7d5d" text-anchor="middle">CTL</text>
+<use href="#g-macro" x="262" y="112" width="40" height="40" style="color:#6d83b8"/><text x="282" y="162" font-size="7.5" fill="#4a5a86" text-anchor="middle">repolarized macro</text>
+<line x1="306" y1="100" x2="334" y2="100" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<use href="#g-tumor" x="340" y="72" width="58" height="58" style="color:#ff6f61"/><text x="369" y="142" font-size="8.5" fill="#3f7d5d" text-anchor="middle">↓ pancreatic tumor</text>
+<rect x="420" y="74" width="320" height="56" rx="10" fill="#f3f8fb" stroke="#dde7f0"/><text x="580" y="96" font-size="9" fill="#33414f" text-anchor="middle">preview (Kruse et al.) of Kureshi et al.:</text><text x="580" y="116" font-size="8.5" fill="#5a6b7b" text-anchor="middle">cDC2 → CD4 axis controls an otherwise ICB-resistant tumor</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.ccell.2026.05.009">STING unlocks CD4⁺ T cell immunity in pancreatic cancer</a></h3>
       <p class="meta">Kruse, Leonhardt &amp; Böttcher · <span class="date">Cancer Cell (preview), 11 Jun 2026</span></p>
@@ -649,16 +699,16 @@
   </div>
 
   <div class="card" id="p18">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Immunoediting trims clonal neoantigens</text>
-      <use href="#g-tumor" x="22" y="50" width="56" height="56" style="color:#ff6f61"/>
-      <text x="50" y="118" font-size="8" fill="#c25a4d" text-anchor="middle">clonal · low neoAg</text>
-      <use href="#g-tcell" x="104" y="40" width="34" height="34" style="color:#4C9AFF"/>
-      <text x="121" y="84" font-size="7.5" fill="#4a78c4" text-anchor="middle">T-cell editing</text>
-      <g fill="#36c98f"><circle cx="176" cy="64" r="8"/><circle cx="200" cy="84" r="6.5"/><circle cx="166" cy="92" r="6"/><circle cx="214" cy="62" r="6"/></g>
-      <text x="192" y="120" font-size="8" fill="#3f7d5d" text-anchor="middle">subclonal: immunogenic neoAg kept</text>
-      <line x1="84" y1="76" x2="150" y2="76" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Immunoediting depletes immunogenic clonal neoantigens</text>
+<line x1="60" y1="160" x2="60" y2="50" stroke="#cdd8e2" stroke-width="1.5"/><line x1="60" y1="160" x2="360" y2="160" stroke="#cdd8e2" stroke-width="1.5"/>
+<text x="36" y="100" font-size="8" fill="#5a6b7b" transform="rotate(-90 36 100)">neoAg MHC-I binding</text><text x="210" y="178" font-size="8" fill="#5a6b7b" text-anchor="middle">variant allele frequency (clonality)</text>
+<path d="M70 70 Q200 110 350 150" fill="none" stroke="#4C9AFF" stroke-width="2.5"/><text x="300" y="120" font-size="8" fill="#4a78c4">affinity falls as VAF rises</text>
+<g fill="#36c98f"><circle cx="90" cy="78" r="4"/><circle cx="120" cy="90" r="4"/><circle cx="150" cy="86" r="4"/></g><text x="118" y="64" font-size="7.5" fill="#3f7d5d">subclonal: immunogenic kept</text>
+<g fill="#ff6f61"><circle cx="300" cy="150" r="4"/><circle cx="330" cy="152" r="4"/></g><text x="318" y="146" font-size="7.5" fill="#c25a4d">clonal: depleted</text>
+<use href="#g-tcell" x="380" y="44" width="40" height="40" style="color:#4C9AFF"/><text x="400" y="96" font-size="7.5" fill="#4a78c4" text-anchor="middle">T-cell pressure</text>
+<rect x="446" y="50" width="294" height="116" rx="10" fill="#f3f8fb" stroke="#dde7f0"/><text x="593" y="72" font-size="9" font-weight="600" fill="#33414f" text-anchor="middle">treatment-naive cutaneous SCC</text><text x="593" y="94" font-size="8.5" fill="#5a6b7b" text-anchor="middle">high-immune-infiltrate tumors:</text><text x="593" y="112" font-size="8.5" fill="#5a6b7b" text-anchor="middle">lower overall + clonal mutational burden</text><text x="593" y="134" font-size="8.5" fill="#3f7d5d" text-anchor="middle">→ direct evidence of immunoediting</text><text x="593" y="152" font-size="8" fill="#7c8a99" text-anchor="middle">(holds after purity / growth-rate adjustment)</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.immuni.2026.05.005">Immunoediting restricts clonal neoantigens in primary, treatment-naive human tumors</a></h3>
       <p class="meta">Borden, Castellano, Kantzos, … Hastings et al. · <span class="date">Immunity, 11 Jun 2026</span></p>
@@ -673,19 +723,19 @@
   </div>
 
   <div class="card" id="p19">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">CD39⁺ taNK respond to NKG2A blockade</text>
-      <use href="#g-cell" x="20" y="56" width="44" height="44" style="color:#b06cff"/>
-      <text x="42" y="112" font-size="8" fill="#8a4fd0" text-anchor="middle">early NK</text>
-      <line x1="68" y1="78" x2="104" y2="78" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <text x="86" y="70" font-size="7.5" fill="#7c8a99" text-anchor="middle">ISG</text>
-      <use href="#g-cell" x="106" y="52" width="52" height="52" style="color:#9a6ad6"/>
-      <text x="132" y="116" font-size="8" fill="#7a4fb0" text-anchor="middle">CD39⁺ taNK</text>
-      <line x1="162" y1="78" x2="196" y2="78" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <rect x="200" y="62" width="86" height="34" rx="8" fill="#fdeceb" stroke="#f3c7c2"/>
-      <text x="243" y="78" font-size="8.5" fill="#c25a4d" text-anchor="middle">NKG2A blockade</text>
-      <text x="243" y="90" font-size="8.5" fill="#c25a4d" text-anchor="middle">↑ killing</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Tumor NK differentiation toward a CD39+ effector state</text>
+<use href="#g-cell" x="24" y="74" width="40" height="40" style="color:#b06cff"/><text x="44" y="128" font-size="8" fill="#8a4fd0" text-anchor="middle">circulating NK</text>
+<line x1="66" y1="94" x2="98" y2="94" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/><text x="82" y="84" font-size="7" fill="#7c8a99">residency</text>
+<use href="#g-cell" x="100" y="70" width="46" height="46" style="color:#9a6ad6"/><text x="123" y="130" font-size="8" fill="#7a4fb0" text-anchor="middle">tissue-resident (CD103/CD49a)</text>
+<line x1="148" y1="94" x2="180" y2="94" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/><text x="164" y="84" font-size="7" fill="#7c8a99">ISG / inflammation</text>
+<use href="#g-cell" x="182" y="66" width="54" height="54" style="color:#7c4fcf"/><text x="209" y="134" font-size="8" fill="#5e3aa0" text-anchor="middle">CD39+ taNK · cytotoxic</text>
+<rect x="270" y="70" width="120" height="50" rx="8" fill="#fdecec" stroke="#f3c7c2"/><text x="330" y="90" font-size="8" fill="#c25a4d" text-anchor="middle">NKG2A : HLA-E</text><text x="330" y="106" font-size="8" fill="#c25a4d" text-anchor="middle">inhibitory checkpoint</text>
+<line x1="238" y1="94" x2="268" y2="94" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="392" y1="94" x2="420" y2="94" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="426" y="64" width="160" height="66" rx="9" fill="#eef6ef" stroke="#bfe3cc"/><text x="506" y="86" font-size="8.5" font-weight="600" fill="#3f7d5d" text-anchor="middle">anti-NKG2A blockade</text><text x="506" y="106" font-size="8.5" fill="#3f7d5d" text-anchor="middle">restores / boosts killing</text>
+<rect x="602" y="72" width="138" height="50" rx="9" fill="#f3f8fb" stroke="#dde7f0"/><text x="671" y="92" font-size="8" fill="#5a6b7b" text-anchor="middle">snRNA + ATAC of NSCLC</text><text x="671" y="108" font-size="8" fill="#5a6b7b" text-anchor="middle">trajectory + regulons</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1126/sciimmunol.aeb6645">Cytotoxic CD39⁺ tumor-associated NK cells respond to NKG2A blockade in lung cancer</a></h3>
       <p class="meta">Serger, Rebuffet, Sandholzer, … Zippelius et al. · <span class="date">Science Immunology, 5 Jun 2026</span></p>
@@ -700,19 +750,16 @@
   </div>
 
   <div class="card" id="p20">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Plastic WNT ↔ MAPK states in CRC</text>
-      <use href="#g-cell" x="34" y="48" width="56" height="56" style="color:#4C9AFF"/>
-      <text x="62" y="116" font-size="8" fill="#4a78c4" text-anchor="middle">WNT · stem-like</text>
-      <text x="62" y="128" font-size="7.5" fill="#5a6b7b" text-anchor="middle">tumor initiation</text>
-      <use href="#g-cell" x="210" y="48" width="56" height="56" style="color:#ff6f61"/>
-      <text x="238" y="116" font-size="8" fill="#c25a4d" text-anchor="middle">MAPK · TA-like</text>
-      <text x="238" y="128" font-size="7.5" fill="#5a6b7b" text-anchor="middle">tumor growth</text>
-      <path d="M96 64 H204" stroke="#36c98f" stroke-width="2.2" marker-end="url(#ar)"/>
-      <path d="M204 84 H96" stroke="#36c98f" stroke-width="2.2" marker-end="url(#ar)"/>
-      <text x="150" y="58" font-size="7.5" fill="#3f7d5d" text-anchor="middle">plastic transitions</text>
-      <text x="150" y="150" font-size="8.5" fill="#51606f" text-anchor="middle">shapes KRAS-G12C inhibitor response</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Plastic WNT and MAPK states drive intestinal tumorigenesis</text>
+<ellipse cx="150" cy="110" rx="120" ry="70" fill="#f6f8fb" stroke="#e2e9f1"/><text x="150" y="52" font-size="8.5" fill="#5a6b7b" text-anchor="middle">intestinal crypt</text>
+<use href="#g-cell" x="56" y="86" width="50" height="50" style="color:#4C9AFF"/><text x="81" y="150" font-size="8" fill="#4a78c4" text-anchor="middle">WNT · Lgr5 stem-like</text><text x="81" y="162" font-size="7.5" fill="#3f7d5d" text-anchor="middle">tumor INITIATION</text>
+<use href="#g-cell" x="196" y="86" width="50" height="50" style="color:#ff6f61"/><text x="221" y="150" font-size="8" fill="#c25a4d" text-anchor="middle">MAPK · TA-like</text><text x="221" y="162" font-size="7.5" fill="#5a6b7b" text-anchor="middle">tumor GROWTH</text>
+<path d="M112 100 H192" stroke="#36c98f" stroke-width="2.2" marker-end="url(#ar)"/><path d="M192 122 H112" stroke="#36c98f" stroke-width="2.2" marker-end="url(#ar)"/>
+<text x="150" y="92" font-size="7.5" fill="#3f7d5d" text-anchor="middle">plastic transitions</text>
+<rect x="300" y="50" width="440" height="40" rx="8" fill="#fff4d6" stroke="#e6c97f"/><text x="520" y="68" font-size="8.5" fill="#a9791a" text-anchor="middle">KRAS drives a regenerative state but ANTAGONIZES Lgr5 stem cells</text><text x="520" y="82" font-size="8" fill="#5a6b7b" text-anchor="middle">→ cannot initiate tumors alone; WNT activation required</text>
+<rect x="300" y="104" width="440" height="56" rx="9" fill="#fdecec" stroke="#f3c7c2"/><text x="520" y="126" font-size="8.5" fill="#c25a4d" text-anchor="middle">explains weaker KRAS-G12C inhibitor response in CRC vs NSCLC</text><text x="520" y="146" font-size="8.5" fill="#3f7d5d" text-anchor="middle">→ target BOTH pathways / states</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1038/s41588-026-02611-0">Dynamic transitioning between MAPK-driven and WNT-driven cell states drives intestinal cancer and shapes therapy response</a></h3>
       <p class="meta">Moore, Biehs, Kljavin, … de Sauvage et al. · <span class="date">Nature Genetics, 11 Jun 2026</span></p>
@@ -727,16 +774,21 @@
   </div>
 
   <div class="card" id="p21">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">CD3 bispecifics: 104 trials · n=10,353</text>
-      <text x="74" y="44" font-size="8.5" fill="#5a6b7b" text-anchor="middle">haematologic</text>
-      <use href="#g-bars" x="44" y="50" width="60" height="60" style="color:#ff6f61"/>
-      <text x="74" y="124" font-size="8" fill="#c25a4d" text-anchor="middle">grade ≥3: 70% · CRS 43%</text>
-      <text x="222" y="44" font-size="8.5" fill="#5a6b7b" text-anchor="middle">solid tumour</text>
-      <use href="#g-bars" x="192" y="50" width="60" height="60" style="color:#f4b740"/>
-      <text x="222" y="124" font-size="8" fill="#a9791a" text-anchor="middle">grade ≥3: 45% · CRS 46%</text>
-      <text x="150" y="150" font-size="9" fill="#51606f" text-anchor="middle">treatment-related death ≈ 1.0%</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">CD3 bispecific antibodies: pooled toxicity (104 trials, n=10,353)</text>
+<g><circle cx="60" cy="58" r="9" fill="#57c785"/><rect x="56" y="58" width="8" height="26" fill="#9aa7b6"/><circle cx="60" cy="92" r="9" fill="#ff6f61"/></g><text x="60" y="118" font-size="7.5" fill="#5a6b7b" text-anchor="middle">CD3 x TAA</text>
+<text x="120" y="50" font-size="8.5" font-weight="600" fill="#5a6b7b">haematologic</text>
+<line x1="120" y1="60" x2="120" y2="150" stroke="#cdd8e2"/><line x1="120" y1="150" x2="300" y2="150" stroke="#cdd8e2"/>
+<rect x="134" y="86" width="26" height="64" fill="#ff6f61" fill-opacity=".85"/><text x="147" y="166" font-size="7" fill="#c25a4d" text-anchor="middle">G3+ 70%</text>
+<rect x="172" y="110" width="26" height="40" fill="#f4a85f"/><text x="185" y="166" font-size="7" fill="#a9791a" text-anchor="middle">CRS 43%</text>
+<rect x="210" y="124" width="26" height="26" fill="#9fb0c9"/><text x="223" y="166" font-size="7" fill="#5a6b7b" text-anchor="middle">neutrop</text>
+<text x="360" y="50" font-size="8.5" font-weight="600" fill="#5a6b7b">solid tumour</text>
+<line x1="360" y1="60" x2="360" y2="150" stroke="#cdd8e2"/><line x1="360" y1="150" x2="540" y2="150" stroke="#cdd8e2"/>
+<rect x="374" y="108" width="26" height="42" fill="#f4b740" fill-opacity=".85"/><text x="387" y="166" font-size="7" fill="#a9791a" text-anchor="middle">G3+ 45%</text>
+<rect x="412" y="106" width="26" height="44" fill="#f4a85f"/><text x="425" y="166" font-size="7" fill="#a9791a" text-anchor="middle">CRS 46%</text>
+<rect x="450" y="130" width="26" height="20" fill="#9fb0c9"/><text x="463" y="166" font-size="7" fill="#5a6b7b" text-anchor="middle">gGT</text>
+<rect x="566" y="64" width="178" height="84" rx="10" fill="#fdecec" stroke="#f3c7c2"/><text x="655" y="88" font-size="9" font-weight="700" fill="#c25a4d" text-anchor="middle">all-grade AEs ~97-98%</text><text x="655" y="110" font-size="8.5" fill="#5a6b7b" text-anchor="middle">treatment-related death ~1.0%</text><text x="655" y="128" font-size="8.5" fill="#5a6b7b" text-anchor="middle">mostly infection / organ failure</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/S1470-2045(26)00086-0">Treatment-related adverse events of CD3-based T cell-engaging bispecific antibodies in patients with cancer: a meta-analysis of clinical trials</a></h3>
       <p class="meta">Zhu, Liu, Rosen, Liu &amp; Zhu · <span class="date">The Lancet Oncology, 12 Jun 2026</span></p>
@@ -751,17 +803,19 @@
   </div>
 
   <div class="card" id="p22">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">TREM2 macrophages refuel tumors</text>
-      <use href="#g-macro" x="22" y="50" width="58" height="58" style="color:#6d83b8"/>
-      <text x="51" y="120" font-size="8" fill="#4a5a86" text-anchor="middle">TREM2⁺ LAM</text>
-      <g fill="#f4b740"><circle cx="98" cy="68" r="3.4"/><circle cx="116" cy="78" r="3.4"/><circle cx="134" cy="70" r="3.4"/></g>
-      <text x="118" y="56" font-size="7.5" fill="#a9791a" text-anchor="middle">fatty acids (EV)</text>
-      <line x1="84" y1="80" x2="172" y2="80" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)" stroke-dasharray="2 3"/>
-      <use href="#g-tumor" x="176" y="50" width="58" height="58" style="color:#ff6f61"/>
-      <text x="205" y="120" font-size="8" fill="#c25a4d" text-anchor="middle">ICB-resistant tumor</text>
-      <text x="150" y="150" font-size="8.5" fill="#3f7d5d" text-anchor="middle">anti-TREM2 → re-sensitize to checkpoint blockade</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">TREM2 macrophages recycle fatty acids to resist checkpoint blockade</text>
+<circle cx="120" cy="104" r="14" fill="#ffd0c9" stroke="#e0907f" stroke-dasharray="3 2"/><text x="120" y="134" font-size="7.5" fill="#c25a4d" text-anchor="middle">apoptotic tumor</text>
+<use href="#g-macro" x="178" y="78" width="56" height="56" style="color:#6d83b8"/><text x="206" y="146" font-size="8" fill="#4a5a86" text-anchor="middle">TREM2+ LAM</text>
+<path d="M138 104 q24 -8 38 0" fill="none" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/><text x="150" y="84" font-size="7.5" fill="#7c8a99">efferocytosis</text>
+<g fill="#f4b740"><circle cx="248" cy="92" r="3.4"/><circle cx="266" cy="100" r="3.4"/><circle cx="284" cy="92" r="3.4"/></g><text x="270" y="80" font-size="7.5" fill="#a9791a">fatty acids (EV)</text>
+<use href="#g-tumor" x="300" y="76" width="58" height="58" style="color:#ff6f61"/><text x="329" y="146" font-size="8" fill="#c25a4d" text-anchor="middle">tumor cell · FAO</text>
+<line x1="236" y1="104" x2="298" y2="104" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)" stroke-dasharray="2 3"/>
+<rect x="376" y="62" width="180" height="50" rx="8" fill="#f6f1ff" stroke="#d9c9f3"/><text x="466" y="82" font-size="8.5" fill="#6b54d6" text-anchor="middle">H3K36ac → MYC / TGF-b</text><text x="466" y="100" font-size="8" fill="#5a6b7b" text-anchor="middle">epigenetic immune evasion</text>
+<line x1="358" y1="100" x2="374" y2="92" stroke="#9aa7b6" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="376" y="124" width="364" height="46" rx="9" fill="#eef6ef" stroke="#bfe3cc"/><text x="558" y="143" font-size="8.5" font-weight="600" fill="#3f7d5d" text-anchor="middle">anti-TREM2 (or myeloid Trem2 KO) cuts the fuel supply</text><text x="558" y="160" font-size="8.5" fill="#3f7d5d" text-anchor="middle">→ re-sensitizes tumors to ICB (pan-cancer vulnerability)</text>
+<rect x="576" y="62" width="164" height="50" rx="8" fill="#f3f8fb" stroke="#dde7f0"/><text x="658" y="84" font-size="8" fill="#5a6b7b" text-anchor="middle">ICB-resistant HCC</text><text x="658" y="100" font-size="8" fill="#5a6b7b" text-anchor="middle">serial biopsies</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.ccell.2026.05.005">Tumor cells metabolically resist immune-checkpoint therapy by macrophage efferocytosis-mediated fatty acid recycling</a></h3>
       <p class="meta">Liang, Long, Xiong, … Cheng et al. · <span class="date">Cancer Cell, 8 Jun 2026</span></p>
@@ -776,16 +830,17 @@
   </div>
 
   <div class="card" id="p23">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Glioblastoma multi-omic atlas (n=100)</text>
-      <use href="#g-brain" x="22" y="44" width="72" height="72" style="color:#b66cff"/>
-      <use href="#g-grid" x="120" y="46" width="58" height="58" style="color:#3FB8AF"/>
-      <text x="149" y="118" font-size="8" fill="#2a8c80" text-anchor="middle">4 malignant communities</text>
-      <text x="206" y="58" font-size="8" fill="#5a6b7b">MES-Hyp ↔ macrophage</text>
-      <text x="206" y="74" font-size="8" fill="#5a6b7b">MES-Ast ↔ vasculature</text>
-      <text x="206" y="90" font-size="8" fill="#5a6b7b">OPC-like ↔ neuron synapse</text>
-      <text x="206" y="108" font-size="7.5" fill="#7c8a99">spatial · scRNA · ATAC · patch</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Glioblastoma spatial niches and malignant communities (n=100)</text>
+<rect x="20" y="40" width="250" height="150" rx="12" fill="#11181f"/><text x="145" y="58" font-size="8" fill="#9bb0c3" text-anchor="middle">spatial tumor map</text>
+<circle cx="80" cy="100" r="26" fill="#ff7a6b" fill-opacity=".75"/><text x="80" y="103" font-size="7.5" fill="#3a0f08" text-anchor="middle">MES-Hyp</text>
+<circle cx="160" cy="92" r="24" fill="#5cc8ff" fill-opacity=".7"/><text x="160" y="95" font-size="7.5" fill="#08303f" text-anchor="middle">MES-Ast</text>
+<circle cx="120" cy="150" r="22" fill="#9fd356" fill-opacity=".7"/><text x="120" y="153" font-size="7.5" fill="#1f3008" text-anchor="middle">OPC-like</text>
+<circle cx="200" cy="146" r="20" fill="#f4c95d" fill-opacity=".7"/>
+<text x="145" y="184" font-size="7.5" fill="#9bb0c3" text-anchor="middle">4 recurrent communities</text>
+<g font-size="8.5" fill="#33414f"><text x="296" y="64">• MES-Hyp ↔ monocyte-derived macrophages (hypoxia)</text><text x="296" y="92">• MES-Ast ↔ endothelium / pericytes (perivascular)</text><text x="296" y="120">• OPC-like ↔ neuron–tumor synapses (patch-seq)</text></g>
+<rect x="296" y="138" width="444" height="46" rx="9" fill="#f3f8fb" stroke="#dde7f0"/><text x="518" y="157" font-size="8.5" fill="#5a6b7b" text-anchor="middle">integrates 121 spatial + scRNA + scATAC + patch-seq profiles</text><text x="518" y="174" font-size="8.5" fill="#3f7d5d" text-anchor="middle">→ nominates therapeutic targets</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1038/s41593-026-02265-5">Spatial and single-cell characterization of human glioblastoma tumor microenvironment reveals malignant cellular communities</a></h3>
       <p class="meta">Lin, Chen, Li, … Qu et al. · <span class="date">Nature Neuroscience, 16 Apr 2026</span></p>
@@ -811,18 +866,21 @@
   <h2><span class="dot" style="background:var(--c-age)"></span>Aging <span class="count">3 papers</span></h2>
 
   <div class="card" id="p24">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Mapping human "senotypes"</text>
-      <use href="#g-grid" x="20" y="46" width="56" height="56" style="color:#5cc8ff"/>
-      <text x="48" y="116" font-size="8" fill="#3a78a8" text-anchor="middle">scRNA + spatial-omics</text>
-      <line x1="82" y1="74" x2="116" y2="74" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <circle cx="146" cy="74" r="24" fill="#efeaff" stroke="#b9a9f5"/>
-      <text x="146" y="72" font-size="8" fill="#6b54d6" text-anchor="middle">AI mapping</text>
-      <text x="146" y="84" font-size="7.5" fill="#7c8a99" text-anchor="middle">heterogeneity</text>
-      <line x1="174" y1="74" x2="206" y2="74" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <text x="246" y="64" font-size="8.5" fill="#3f7d5d">biomarkers</text>
-      <text x="246" y="86" font-size="8.5" fill="#c25a4d">senotherapy</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Charting human senescence: from multi-omics to senotypes</text>
+<text x="70" y="46" font-size="8" fill="#5a6b7b" text-anchor="middle">senescent cells across tissues</text>
+<g><use href="#g-cell" x="34" y="54" width="30" height="30" style="color:#5cc8ff"/><use href="#g-cell" x="70" y="58" width="28" height="28" style="color:#36c98f"/><use href="#g-cell" x="50" y="86" width="28" height="28" style="color:#f4b740"/><use href="#g-cell" x="86" y="88" width="26" height="26" style="color:#ff7a6b"/></g>
+<line x1="120" y1="86" x2="150" y2="86" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="154" y="58" width="96" height="56" rx="8" fill="#eef4fb" stroke="#cfe0f1"/><text x="202" y="78" font-size="8" fill="#3a5a86" text-anchor="middle">scRNA · spatial</text><text x="202" y="94" font-size="8" fill="#3a5a86" text-anchor="middle">proteomics</text>
+<line x1="250" y1="86" x2="280" y2="86" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<circle cx="312" cy="86" r="30" fill="#f3eefb" stroke="#d9c9f3"/><text x="312" y="82" font-size="8" fill="#6b54d6" text-anchor="middle">AI-driven</text><text x="312" y="96" font-size="8" fill="#6b54d6" text-anchor="middle">clustering</text>
+<line x1="344" y1="86" x2="374" y2="86" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="378" y="64" width="120" height="44" rx="8" fill="#f6f8fb" stroke="#e2e9f1"/><text x="438" y="82" font-size="9" font-weight="700" fill="#33414f" text-anchor="middle">"senotypes"</text><text x="438" y="98" font-size="7.5" fill="#5a6b7b" text-anchor="middle">tissue-specific states</text>
+<line x1="498" y1="86" x2="528" y2="86" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<g font-size="8.5"><rect x="532" y="58" width="208" height="24" rx="6" fill="#eef6ef" stroke="#bfe3cc"/><text x="544" y="74" fill="#3f7d5d">biomarker discovery</text>
+<rect x="532" y="90" width="208" height="24" rx="6" fill="#fdecec" stroke="#f3c7c2"/><text x="544" y="106" fill="#c25a4d">targeted senotherapeutics</text></g>
+<text x="380" y="170" font-size="8" font-style="italic" fill="#7c8a99">perspective: heterogeneity + microenvironment interactions</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.cell.2026.05.028">Charting human cellular senescence in aging and disease</a></h3>
       <p class="meta">Suryadevara, Farzad, Yang, … Fan et al. · <span class="date">Cell (review), 11 Jun 2026</span></p>
@@ -837,17 +895,17 @@
   </div>
 
   <div class="card" id="p25">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">p16ʰⁱ immune cells → disease tolerance</text>
-      <use href="#g-pill" x="14" y="62" width="46" height="46" style="color:#f3b34a"/>
-      <text x="37" y="118" font-size="8" fill="#a9791a" text-anchor="middle">BNT162b2 · TLR7/STING</text>
-      <line x1="62" y1="84" x2="94" y2="84" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <use href="#g-cell" x="96" y="58" width="50" height="50" style="color:#36c98f"/>
-      <text x="121" y="120" font-size="8" fill="#3f7d5d" text-anchor="middle">p16ʰⁱ immune cells</text>
-      <line x1="150" y1="84" x2="182" y2="84" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
-      <text x="240" y="72" font-size="8.5" fill="#33414f">disease tolerance</text>
-      <text x="240" y="88" font-size="8" fill="#5a6b7b">sepsis · IR · healthspan↑</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">p16-high immune cells mediate disease tolerance</text>
+<use href="#g-pill" x="20" y="78" width="46" height="46" style="color:#f3b34a"/><text x="43" y="134" font-size="8" fill="#a9791a" text-anchor="middle">BNT162b2 · TLR7 / low STING</text>
+<line x1="68" y1="100" x2="96" y2="100" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<use href="#g-cell" x="98" y="74" width="52" height="52" style="color:#36c98f"/><text x="124" y="136" font-size="8" fill="#3f7d5d" text-anchor="middle">p16-high immune cells</text>
+<text x="158" y="86" font-size="7.5" fill="#a9791a">NNMT → ↓ adenosine</text>
+<line x1="152" y1="100" x2="182" y2="100" stroke="#9aa7b6" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="186" y="56" width="206" height="92" rx="10" fill="#eef6ef" stroke="#bfe3cc"/><text x="289" y="76" font-size="9.5" font-weight="700" fill="#3f7d5d" text-anchor="middle">disease tolerance</text><text x="289" y="96" font-size="8.5" fill="#33414f" text-anchor="middle">limit tissue damage (not pathogen load)</text><text x="289" y="116" font-size="8.5" fill="#5a6b7b" text-anchor="middle">protects vs endotoxin shock · sepsis · irradiation</text><text x="289" y="136" font-size="8" fill="#5a6b7b" text-anchor="middle">preserves tissue homeostasis</text>
+<line x1="394" y1="100" x2="422" y2="100" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="426" y="72" width="314" height="56" rx="9" fill="#f3f8fb" stroke="#dde7f0"/><text x="583" y="94" font-size="9" fill="#33414f" text-anchor="middle">Ifih1 deletion expands these cells</text><text x="583" y="114" font-size="8.5" fill="#3f7d5d" text-anchor="middle">→ delays organ aging · extends healthspan</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.immuni.2026.02.013">p16ʰⁱᵍʰ immune cells control disease tolerance as a defense and health span-extending strategy</a></h3>
       <p class="meta">Triana-Martinez, Pierantoni, Graca, … Bulavin et al. · <span class="date">Immunity, 26 Mar 2026</span></p>
@@ -862,18 +920,17 @@
   </div>
 
   <div class="card" id="p26">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Fibroblast NF-κB drives inflammaging</text>
-      <use href="#g-fibro" x="14" y="58" width="56" height="56" style="color:#d08a6a"/>
-      <text x="42" y="122" font-size="8" fill="#b06a48" text-anchor="middle">NF-κB fibroblast</text>
-      <line x1="72" y1="84" x2="100" y2="84" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <use href="#g-macro" x="100" y="58" width="48" height="48" style="color:#6d83b8"/>
-      <text x="124" y="120" font-size="8" fill="#4a5a86" text-anchor="middle">macrophage</text>
-      <line x1="150" y1="84" x2="178" y2="84" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <use href="#g-tcell" x="180" y="56" width="52" height="52" style="color:#ff6f61"/>
-      <text x="206" y="120" font-size="8" fill="#c25a4d" text-anchor="middle">GZMK⁺ exhausted T</text>
-      <text x="260" y="84" font-size="8" fill="#5a6b7b">lung TLS</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">NF-kB fibroblasts orchestrate inflammaging in the lung</text>
+<use href="#g-fibro" x="18" y="78" width="56" height="56" style="color:#d08a6a"/><text x="46" y="146" font-size="8" fill="#b06a48" text-anchor="middle">aged fibroblast</text><text x="46" y="158" font-size="7.5" fill="#5a6b7b" text-anchor="middle">NF-kB (↓TNFAIP3)</text>
+<line x1="76" y1="104" x2="104" y2="104" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<use href="#g-macro" x="106" y="80" width="48" height="48" style="color:#6d83b8"/><text x="130" y="142" font-size="8" fill="#4a5a86" text-anchor="middle">macrophage</text>
+<line x1="154" y1="104" x2="182" y2="104" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<use href="#g-tcell" x="184" y="78" width="52" height="52" style="color:#ff6f61"/><text x="210" y="146" font-size="8" fill="#c25a4d" text-anchor="middle">GZMK+ exhausted CD8 T</text>
+<path d="M210 130 q-80 36 -158 -4" fill="none" stroke="#cbb" stroke-width="2" stroke-dasharray="3 3"/><text x="120" y="178" font-size="7.5" fill="#9a8" text-anchor="middle">fibroblast–macrophage–T circuit → tertiary lymphoid structure</text>
+<rect x="270" y="56" width="470" height="40" rx="8" fill="#fdecec" stroke="#f3c7c2"/><text x="505" y="74" font-size="8.5" fill="#c25a4d" text-anchor="middle">↑ susceptibility to acute lung injury (mimics elderly pneumonia)</text><text x="505" y="88" font-size="8" fill="#5a6b7b" text-anchor="middle">distinct from chronic-viral exhausted T cells</text>
+<rect x="270" y="108" width="470" height="34" rx="8" fill="#eef6ef" stroke="#bfe3cc"/><text x="505" y="130" font-size="8.5" fill="#3f7d5d" text-anchor="middle">depleting GZMK+ T cells alleviates injury → structural basis for inflammaging</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.immuni.2026.02.016">NF-κB-activated fibroblasts orchestrate inflammaging and emergence of pro-inflammatory granzyme K⁺ T cells</a></h3>
       <p class="meta">Allen, Ringler, Woo, … Peng et al. · <span class="date">Immunity, 27 Mar 2026</span></p>
@@ -893,16 +950,19 @@
   <h2><span class="dot" style="background:var(--c-neuro)"></span>Neuroimmunology <span class="count">1 paper</span></h2>
 
   <div class="card" id="p27">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">Single-cell proteome of aging microglia</text>
-      <use href="#g-macro" x="26" y="54" width="60" height="60" style="color:#6f86c9"/>
-      <text x="56" y="124" font-size="8" fill="#4a5a9c" text-anchor="middle">microglia (3,085 cells)</text>
-      <line x1="92" y1="84" x2="124" y2="84" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <g><circle cx="150" cy="62" r="6" fill="#5cc8ff"/><circle cx="170" cy="58" r="6" fill="#36c98f"/><circle cx="160" cy="80" r="6" fill="#f4b740"/><circle cx="182" cy="76" r="6" fill="#b06cff"/><circle cx="148" cy="92" r="5.5" fill="#ff7a6b"/></g>
-      <text x="166" y="116" font-size="8" fill="#5a6b7b" text-anchor="middle">young · mid · aged states</text>
-      <text x="244" y="74" font-size="8" fill="#a9791a" text-anchor="middle">"phago-</text>
-      <text x="244" y="86" font-size="8" fill="#a9791a" text-anchor="middle">proteome"</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">Single-cell proteome atlas of aging microglia</text>
+<use href="#g-brain" x="22" y="66" width="56" height="56" style="color:#6f86c9"/><text x="50" y="134" font-size="8" fill="#4a5a9c" text-anchor="middle">hippocampus + PFC</text>
+<line x1="80" y1="94" x2="106" y2="94" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/><text x="93" y="84" font-size="7" fill="#7c8a99">FACS</text>
+<use href="#g-macro" x="108" y="70" width="46" height="46" style="color:#6f86c9"/><text x="131" y="128" font-size="8" fill="#4a5a9c" text-anchor="middle">microglia (3,085 cells)</text>
+<line x1="156" y1="94" x2="182" y2="94" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="186" y="74" width="96" height="40" rx="8" fill="#eef4fb" stroke="#cfe0f1"/><text x="234" y="90" font-size="8" fill="#3a5a86" text-anchor="middle">Astral MS</text><text x="234" y="104" font-size="8" fill="#3a5a86" text-anchor="middle">label-free SCP</text>
+<line x1="282" y1="94" x2="308" y2="94" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<g><circle cx="332" cy="76" r="6" fill="#5cc8ff"/><circle cx="352" cy="72" r="6" fill="#36c98f"/><circle cx="342" cy="96" r="6" fill="#f4b740"/><circle cx="364" cy="92" r="6" fill="#b06cff"/><circle cx="330" cy="106" r="5.5" fill="#ff7a6b"/></g><text x="346" y="130" font-size="8" fill="#5a6b7b" text-anchor="middle">young · mid · aged states</text>
+<line x1="384" y1="94" x2="410" y2="94" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="414" y="66" width="326" height="60" rx="10" fill="#fbf6ee" stroke="#efe1cc"/><text x="577" y="86" font-size="9" font-weight="700" fill="#a9791a" text-anchor="middle">subpopulation "phagoproteome"</text><text x="577" y="106" font-size="8.5" fill="#5a6b7b" text-anchor="middle">state-specific phagocytic preferences · ~1,153 proteins/cell</text>
+<text x="380" y="172" font-size="8" font-style="italic" fill="#7c8a99">higher completeness than transcriptomics; one of the largest SCP datasets</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1016/j.neuron.2026.05.014">Single-cell proteome atlas of aging mouse microglia reveals subpopulation-specific phagoproteome</a></h3>
       <p class="meta">Zhang, Liu, Chen, … Li et al. · <span class="date">Neuron, 11 Jun 2026</span></p>
@@ -928,23 +988,20 @@
   <h2><span class="dot" style="background:var(--c-bioinf)"></span>Innovations in Bioinformatics <span class="count">1 paper</span></h2>
 
   <div class="card" id="p28">
-    <div class="gfx"><svg viewBox="0 0 300 168" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="150" y="20" font-size="11" font-weight="700" fill="#33414f" text-anchor="middle">XomicsToModel pipeline</text>
-      <g font-size="8" fill="#3a5a86">
-        <rect x="14" y="38" width="64" height="18" rx="4" fill="#eef4fb" stroke="#cfe0f1"/><text x="46" y="50" text-anchor="middle">bibliomic</text>
-        <rect x="14" y="62" width="64" height="18" rx="4" fill="#eef4fb" stroke="#cfe0f1"/><text x="46" y="74" text-anchor="middle">transcriptomic</text>
-        <rect x="14" y="86" width="64" height="18" rx="4" fill="#eef4fb" stroke="#cfe0f1"/><text x="46" y="98" text-anchor="middle">proteomic</text>
-        <rect x="14" y="110" width="64" height="18" rx="4" fill="#eef4fb" stroke="#cfe0f1"/><text x="46" y="122" text-anchor="middle">metabolomic</text>
-      </g>
-      <path d="M80 47 H104 M80 71 H104 M80 95 H104 M80 119 H104 M104 47 V119" stroke="#9aa7b6" fill="none"/>
-      <line x1="104" y1="83" x2="128" y2="83" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <use href="#g-grid" x="132" y="54" width="56" height="56" style="color:#57d4c9"/>
-      <text x="160" y="124" font-size="8" fill="#2a8c80" text-anchor="middle">context model</text>
-      <line x1="190" y1="83" x2="214" y2="83" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
-      <rect x="218" y="64" width="68" height="38" rx="8" fill="#fff4d6" stroke="#e6c97f"/>
-      <text x="252" y="80" font-size="8" fill="#a9791a" text-anchor="middle">thermodynamically</text>
-      <text x="252" y="92" font-size="8" fill="#a9791a" text-anchor="middle">consistent</text>
-    </svg></div>
+    <div class="gfx"><svg viewBox="0 0 760 200" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<text x="20" y="24" font-size="12.5" font-weight="700" fill="#1f2d3d">XomicsToModel: omics → thermodynamically consistent metabolic model</text>
+<g font-size="8" fill="#3a5a86"><rect x="20" y="46" width="92" height="18" rx="4" fill="#eef4fb" stroke="#cfe0f1"/><text x="66" y="59" text-anchor="middle">bibliomic</text><rect x="20" y="70" width="92" height="18" rx="4" fill="#eef4fb" stroke="#cfe0f1"/><text x="66" y="83" text-anchor="middle">transcriptomic</text><rect x="20" y="94" width="92" height="18" rx="4" fill="#eef4fb" stroke="#cfe0f1"/><text x="66" y="107" text-anchor="middle">proteomic</text><rect x="20" y="118" width="92" height="18" rx="4" fill="#eef4fb" stroke="#cfe0f1"/><text x="66" y="131" text-anchor="middle">metabolomic</text></g>
+<path d="M112 55 H140 M112 79 H140 M112 103 H140 M112 127 H140 M140 55 V127" stroke="#9aa7b6" fill="none"/>
+<rect x="150" y="74" width="86" height="34" rx="7" fill="#f3f8fb" stroke="#dde7f0"/><text x="193" y="88" font-size="8" fill="#33414f" text-anchor="middle">+ generic GEM</text><text x="193" y="100" font-size="8" fill="#33414f" text-anchor="middle">reconstruction</text>
+<line x1="140" y1="91" x2="148" y2="91" stroke="#9aa7b6" stroke-width="2"/>
+<line x1="236" y1="91" x2="262" y2="91" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<use href="#g-grid" x="266" y="64" width="54" height="54" style="color:#57d4c9"/><text x="293" y="132" font-size="8" fill="#2a8c80" text-anchor="middle">context extraction</text>
+<line x1="322" y1="91" x2="348" y2="91" stroke="#9aa7b6" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="352" y="60" width="150" height="62" rx="9" fill="#fff4d6" stroke="#e6c97f"/><text x="427" y="80" font-size="8.5" fill="#a9791a" text-anchor="middle">consistency checks:</text><text x="427" y="98" font-size="8" fill="#5a6b7b" text-anchor="middle">stoichiometric · thermodynamic</text><text x="427" y="112" font-size="8" fill="#5a6b7b" text-anchor="middle">· flux</text>
+<line x1="502" y1="91" x2="528" y2="91" stroke="#9aa7b6" stroke-width="2.4" marker-end="url(#ar)"/>
+<rect x="532" y="64" width="208" height="56" rx="10" fill="#eef6ef" stroke="#bfe3cc"/><text x="636" y="86" font-size="9" font-weight="700" fill="#3f7d5d" text-anchor="middle">consistent context model</text><text x="636" y="106" font-size="8" fill="#5a6b7b" text-anchor="middle">systems biology · drug dev · precision med</text>
+<text x="380" y="168" font-size="8" font-style="italic" fill="#7c8a99" text-anchor="middle">MATLAB pipeline · unlike prior methods, guarantees physicochemical consistency</text>
+</svg></div>
     <div>
       <h3><a href="https://doi.org/10.1038/s41596-025-01288-9">XomicsToModel: omics data integration and generation of thermodynamically consistent metabolic models</a></h3>
       <p class="meta">Preciat, Wegrzyn, Luo, Thiele, Hankemeier &amp; Fleming · <span class="date">Nature Protocols, 1 Dec 2025</span></p>
