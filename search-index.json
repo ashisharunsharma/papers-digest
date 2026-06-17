@@ -2,7 +2,7 @@
  {
   "id": "p1",
   "title": "Atlas of human gut-associated lymphoid tissue reveals immunomodulatory interactions of B cells",
-  "authors": "Pitcher, Sun, Dionisi, … Spencer et al.",
+  "authors": "Pitcher, Sun, Dionisi, \u2026 Spencer et al.",
   "journal": "Science Immunology",
   "date": "2026-06-05",
   "section": "Basic Immunology",
@@ -26,7 +26,7 @@
  {
   "id": "p3",
   "title": "Human vaccine responses regulated by parallel cytokine pathways",
-  "authors": "Chen, Guo, Heath, … Davis et al.",
+  "authors": "Chen, Guo, Heath, \u2026 Davis et al.",
   "journal": "Nature Immunology",
   "date": "2026-06-12",
   "section": "Basic Immunology",
@@ -38,7 +38,7 @@
  {
   "id": "p2",
   "title": "A longitudinal atlas of human psoriatic skin reveals the mechanisms of anti-IL-23 therapy in disrupting the type 17 inflammatory circuit",
-  "authors": "Jiang R, Blauvelt A, Shi L, … Photowala H, Ehst BD, Gudjonsson JE",
+  "authors": "Jiang R, Blauvelt A, Shi L, \u2026 Photowala H, Ehst BD, Gudjonsson JE",
   "journal": "Immunity",
   "date": "2026-05-28",
   "section": "Basic Immunology",
@@ -50,7 +50,7 @@
  {
   "id": "p5",
   "title": "A cell-intrinsic glucocorticoid biosynthesis and sensing circuit maintains a homeostatic Th17 cell state",
-  "authors": "Yang, Huang, Cheng, … Anderson et al.",
+  "authors": "Yang, Huang, Cheng, \u2026 Anderson et al.",
   "journal": "Immunity",
   "date": "2026-06-12",
   "section": "Basic Immunology",
@@ -62,7 +62,7 @@
  {
   "id": "p6",
   "title": "Interleukin 23 promotes a pro-inflammatory Th17 cell state by stabilizing RORgt and suppressing glucocorticoid receptor activity",
-  "authors": "Yang, Huang, Yang, … Kuchroo et al.",
+  "authors": "Yang, Huang, Yang, \u2026 Kuchroo et al.",
   "journal": "Immunity",
   "date": "2026-06-12",
   "section": "Basic Immunology",
@@ -74,7 +74,7 @@
  {
   "id": "p7",
   "title": "mRNA vaccines engage unconventional pathways in CD8 T cell priming",
-  "authors": "Jo, Li, Thakur, … Murphy et al.",
+  "authors": "Jo, Li, Thakur, \u2026 Murphy et al.",
   "journal": "Nature",
   "date": "2026-04-15",
   "section": "Basic Immunology",
@@ -110,7 +110,7 @@
  {
   "id": "p10",
   "title": "Guidance on the clinical management of HIV-1 persistent low-level viraemia on antiretroviral treatment: a scoping review and international Delphi consensus",
-  "authors": "Clemente, Stam, Elvstam, … Wensing et al.",
+  "authors": "Clemente, Stam, Elvstam, \u2026 Wensing et al.",
   "journal": "The Lancet HIV",
   "date": "2026-06-11",
   "section": "HIV",
@@ -122,7 +122,7 @@
  {
   "id": "p11",
   "title": "Systematic discovery of pro- and anti-HIV host factors in primary human CD4 T cells",
-  "authors": "Rathore, Dugan, Thornton, … Marson et al.",
+  "authors": "Rathore, Dugan, Thornton, \u2026 Marson et al.",
   "journal": "Cell",
   "date": "2026-04-20",
   "section": "HIV",
@@ -146,7 +146,7 @@
  {
   "id": "p13",
   "title": "Expansion of NKG2A CD8 T cells with regulatory signatures distinguishes individuals living with HIV-2 from those with HIV-1",
-  "authors": "Orta Resendiz, Petitdemange, Lazzerini, … Müller-Trutwin et al.",
+  "authors": "Orta Resendiz, Petitdemange, Lazzerini, \u2026 M\u00fcller-Trutwin et al.",
   "journal": "Med",
   "date": "2026-05-15",
   "section": "HIV",
@@ -158,7 +158,7 @@
  {
   "id": "p14",
   "title": "5' leader defects drive persistent HIV-1 viremia on long-term ART",
-  "authors": "Box, Camilo-Contreras, Dragoni, … Simonetti et al.",
+  "authors": "Box, Camilo-Contreras, Dragoni, \u2026 Simonetti et al.",
   "journal": "Nature Communications",
   "date": "2026",
   "section": "HIV",
@@ -170,7 +170,7 @@
  {
   "id": "p15",
   "title": "Leukemic stem cell subtypes determine venetoclax resistance and therapeutic vulnerabilities in AML",
-  "authors": "Waclawiczek, Leppä, Renders, … Trumpp et al.",
+  "authors": "Waclawiczek, Lepp\u00e4, Renders, \u2026 Trumpp et al.",
   "journal": "Cell Stem Cell",
   "date": "2026-05-07",
   "section": "Cancer",
@@ -182,7 +182,7 @@
  {
   "id": "p16",
   "title": "A ketogenesis-ferroptosis axis maintains leukemic stem cell survival and leukemia progression",
-  "authors": "Han, Wang, Ma, … Jiang et al.",
+  "authors": "Han, Wang, Ma, \u2026 Jiang et al.",
   "journal": "Cell Stem Cell",
   "date": "2026-05-11",
   "section": "Cancer",
@@ -194,7 +194,7 @@
  {
   "id": "p17",
   "title": "STING unlocks CD4 T cell immunity in pancreatic cancer",
-  "authors": "Kruse, Leonhardt & Böttcher",
+  "authors": "Kruse, Leonhardt & B\u00f6ttcher",
   "journal": "Cancer Cell",
   "date": "2026-06-11",
   "section": "Cancer",
@@ -206,7 +206,7 @@
  {
   "id": "p18",
   "title": "Immunoediting restricts clonal neoantigens in primary, treatment-naive human tumors",
-  "authors": "Borden, Castellano, Kantzos, … Hastings et al.",
+  "authors": "Borden, Castellano, Kantzos, \u2026 Hastings et al.",
   "journal": "Immunity",
   "date": "2026-06-11",
   "section": "Cancer",
@@ -218,7 +218,7 @@
  {
   "id": "p19",
   "title": "Cytotoxic CD39 tumor-associated NK cells respond to NKG2A blockade in lung cancer",
-  "authors": "Serger, Rebuffet, Sandholzer, … Zippelius et al.",
+  "authors": "Serger, Rebuffet, Sandholzer, \u2026 Zippelius et al.",
   "journal": "Science Immunology",
   "date": "2026-06-05",
   "section": "Cancer",
@@ -230,7 +230,7 @@
  {
   "id": "p20",
   "title": "Dynamic transitioning between MAPK-driven and WNT-driven cell states drives intestinal cancer and shapes therapy response",
-  "authors": "Moore, Biehs, Kljavin, … de Sauvage et al.",
+  "authors": "Moore, Biehs, Kljavin, \u2026 de Sauvage et al.",
   "journal": "Nature Genetics",
   "date": "2026-06-11",
   "section": "Cancer",
@@ -254,7 +254,7 @@
  {
   "id": "p22",
   "title": "Tumor cells metabolically resist immune-checkpoint therapy by macrophage efferocytosis-mediated fatty acid recycling",
-  "authors": "Liang, Long, Xiong, … Cheng et al.",
+  "authors": "Liang, Long, Xiong, \u2026 Cheng et al.",
   "journal": "Cancer Cell",
   "date": "2026-06-08",
   "section": "Cancer",
@@ -266,7 +266,7 @@
  {
   "id": "p23",
   "title": "Spatial and single-cell characterization of human glioblastoma tumor microenvironment reveals malignant cellular communities",
-  "authors": "Lin, Chen, Li, … Qu et al.",
+  "authors": "Lin, Chen, Li, \u2026 Qu et al.",
   "journal": "Nature Neuroscience",
   "date": "2026-04-16",
   "section": "Cancer",
@@ -278,7 +278,7 @@
  {
   "id": "p24",
   "title": "Charting human cellular senescence in aging and disease",
-  "authors": "Suryadevara, Farzad, Yang, … Fan et al.",
+  "authors": "Suryadevara, Farzad, Yang, \u2026 Fan et al.",
   "journal": "Cell",
   "date": "2026-06-11",
   "section": "Aging",
@@ -290,7 +290,7 @@
  {
   "id": "p25",
   "title": "p16high immune cells control disease tolerance as a defense and health span-extending strategy",
-  "authors": "Triana-Martinez, Pierantoni, Graca, … Bulavin et al.",
+  "authors": "Triana-Martinez, Pierantoni, Graca, \u2026 Bulavin et al.",
   "journal": "Immunity",
   "date": "2026-03-26",
   "section": "Aging",
@@ -302,7 +302,7 @@
  {
   "id": "p26",
   "title": "NF-kB-activated fibroblasts orchestrate inflammaging and emergence of pro-inflammatory granzyme K T cells",
-  "authors": "Allen, Ringler, Woo, … Peng et al.",
+  "authors": "Allen, Ringler, Woo, \u2026 Peng et al.",
   "journal": "Immunity",
   "date": "2026-03-27",
   "section": "Aging",
@@ -314,7 +314,7 @@
  {
   "id": "p27",
   "title": "Single-cell proteome atlas of aging mouse microglia reveals subpopulation-specific phagoproteome",
-  "authors": "Zhang, Liu, Chen, … Li et al.",
+  "authors": "Zhang, Liu, Chen, \u2026 Li et al.",
   "journal": "Neuron",
   "date": "2026-06-11",
   "section": "Neuroimmunology",
@@ -338,7 +338,7 @@
  {
   "id": "p1",
   "title": "Enteropathy in STAT3 GOF syndrome: Insights into the role of the JAK-STAT pathway",
-  "authors": "Caranfil C, Crepaldi M, Marzollo A, … Scarpa R, Cinetto F, Zingone F",
+  "authors": "Caranfil C, Crepaldi M, Marzollo A, \u2026 Scarpa R, Cinetto F, Zingone F",
   "journal": "Autoimmunity Reviews",
   "date": "2026-05-19",
   "section": "Basic Immunology",
@@ -350,7 +350,7 @@
  {
   "id": "p3",
   "title": "Secondary bile acids as immune and metabolic mediators",
-  "authors": "Fiorucci S, Biagioli M, Marchianò S, Zampella A, Distrutti E",
+  "authors": "Fiorucci S, Biagioli M, Marchian\u00f2 S, Zampella A, Distrutti E",
   "journal": "Trends in Immunology",
   "date": "2026-03-03",
   "section": "Basic Immuno-metabolism",
@@ -361,8 +361,8 @@
  },
  {
   "id": "p4",
-  "title": "TGF-β mediates epigenetic control of innate antiviral responses and SIV reservoir size",
-  "authors": "Ghneim K, Ten-Caten F, Santana AC, … Sharma AA, Paiardini M, Pereira Ribeiro S, Soudeyns H, Sekaly RP",
+  "title": "TGF-\u03b2 mediates epigenetic control of innate antiviral responses and SIV reservoir size",
+  "authors": "Ghneim K, Ten-Caten F, Santana AC, \u2026 Sharma AA, Paiardini M, Pereira Ribeiro S, Soudeyns H, Sekaly RP",
   "journal": "Nature Immunology",
   "date": "2026-03-20",
   "section": "HIV",
@@ -386,7 +386,7 @@
  {
   "id": "p6",
   "title": "CytoSignal detects locations and dynamics of ligand-receptor signaling at cellular resolution from spatial transcriptomic data",
-  "authors": "Liu J, Manabe H, Qian W, … Lama VN, Ono N, Welch JD",
+  "authors": "Liu J, Manabe H, Qian W, \u2026 Lama VN, Ono N, Welch JD",
   "journal": "Nature Genetics",
   "date": "2026-06-10",
   "section": "Innovations in Bioinformatics",
@@ -394,5 +394,137 @@
   "keys": "CytoSignal, ligand-receptor, cell-cell communication, spatial transcriptomics, signaling dynamics, contact-dependent diffusible, proximity ligation assay, cellular resolution",
   "digest": "2026-06-15",
   "permalink": "2026-06-15.html#p6"
+ },
+ {
+  "id": "p1",
+  "title": "Organ injury in systemic autoimmunity is mediated by stem-like CD8 T cells arising from tissue-draining lymph nodes",
+  "authors": "Al Souz, Wei, Cui, \u2026 Arazi, Ho, Craft",
+  "journal": "Immunity",
+  "date": "2026-06-17",
+  "section": "Basic Immunology",
+  "doi": "https://doi.org/10.1016/j.immuni.2026.03.022",
+  "keys": "lupus nephritis SLE TCF-1 stem-like CD8 T cell renal-draining lymph node AP-1 IL-21 IL-15 cytotoxic autoimmunity kidney",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p2",
+  "title": "Single-cell RNA sequencing of terminal ileal biopsies identifies signatures of Crohn's disease pathogenesis",
+  "authors": "Krzak, Alegbe, Taylor, \u2026 McIntyre, Raine, Anderson",
+  "journal": "Nature Genetics",
+  "date": "2026-06-17",
+  "section": "Basic Immunology",
+  "doi": "https://doi.org/10.1038/s41588-026-02634-7",
+  "keys": "IBDverse scRNA-seq Crohn's disease terminal ileum ITGA4 macrophage MHC-I interferon JAK-STAT IL-6 IL-12 IL-23 heritability",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p3",
+  "title": "Interleukin-10 Autoantibodies and HLA-DRB1*01:03 in Inflammatory Bowel Disease",
+  "authors": "Gharahdaghi, Yeh, Ceron-Gutierrez, \u2026 Hambleton, Doffinger, Uhlig",
+  "journal": "N Engl J Med",
+  "date": "2026-06-17",
+  "section": "Basic Immunology",
+  "doi": "https://doi.org/10.1056/NEJMoa2513654",
+  "keys": "IL-10 neutralizing autoantibodies HLA-DRB1*01:03 IBD ulcerative colitis proinflammatory cytokine IL-23 TNF IL-6 phenocopy",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p4",
+  "title": "Neutrophil regulation of immunotherapy for cancer is controlled by type II interferon",
+  "authors": "Pei, Pan, Liang, \u2026 Ravetch, Soehnlein, Karlsson",
+  "journal": "Immunity",
+  "date": "2026-06-17",
+  "section": "Cancer",
+  "doi": "https://doi.org/10.1016/j.immuni.2026.05.014",
+  "keys": "neutrophil PD-L1 cd274 IFN-gamma type II interferon IFNGR1 immunotherapy checkpoint myeloid suppression tumor",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p5",
+  "title": "H3K27me3 spreading organizes canonical PRC1 chromatin architecture to regulate developmental programs",
+  "authors": "Krug, Hu, Chen, \u2026 Majewski, Jabado, Lu",
+  "journal": "Nature Genetics",
+  "date": "2026-06-17",
+  "section": "Cancer",
+  "doi": "https://doi.org/10.1038/s41588-026-02586-y",
+  "keys": "H3K27me3 PRC2 canonical PRC1 cPRC1 chromatin looping 3D Polycomb H3K27M glioma pluripotency differentiation tumor regression epigenetics",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p6",
+  "title": "Inflammatory cytokines induce new cancer dependencies",
+  "authors": "Cheruiyot, Kim, Dubrot, \u2026 Bardeesy, Yates, Manguso",
+  "journal": "Nature Genetics",
+  "date": "2026-06-17",
+  "section": "Cancer",
+  "doi": "https://doi.org/10.1038/s41588-026-02614-x",
+  "keys": "CRISPR screen interferon IFN-gamma TNF GPI transamidase FITM2 cancer dependency ER stress oxidative paraptosis immune checkpoint blockade ICB",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p7",
+  "title": "Plasma proteomic signatures of cellular aging predict human disease",
+  "authors": "Ding, Bot, Chen, \u2026 Isakova, Schott, Wyss-Coray",
+  "journal": "Nature Medicine",
+  "date": "2026-06-17",
+  "section": "Aging",
+  "doi": "https://doi.org/10.1038/s41591-026-04446-y",
+  "keys": "plasma proteomics cellular aging machine learning cell-type age clock APOE astrocyte Alzheimer ALS myocyte lung cancer mortality polycellular risk score",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p8",
+  "title": "The gut microbiome in preterm infants: development, dysbiosis, and disease implications",
+  "authors": "Tao, Wang & Yuan",
+  "journal": "Clinical Microbiology Reviews",
+  "date": "2026-06-17",
+  "section": "Neonatal/Pediatric Immunology",
+  "doi": "https://doi.org/10.1128/cmr.00088-26",
+  "keys": "preterm infant gut microbiome dysbiosis necrotizing enterocolitis NEC TLR4 bile acid Enterobacteriaceae probiotics postbiotics phage FMT gut-organ axis NICU review",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p9",
+  "title": "Resolving sensitivity, specificity and signal contamination in Xenium spatial transcriptomics",
+  "authors": "Bilous, Buszta, Bac, \u2026 Peters, Homicsko, Gottardo",
+  "journal": "Nature Methods",
+  "date": "2026-06-17",
+  "section": "Innovations in Bioinformatics",
+  "doi": "https://doi.org/10.1038/s41592-026-03089-8",
+  "keys": "Xenium spatial transcriptomics SPLIT transcript spillover contamination snRNA-seq segmentation T-cell exhaustion benchmark breast lung tumor",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p10",
+  "title": "A human induced pluripotent stem cell model for the holistic study of epithelial-to-mesenchymal transitions",
+  "authors": "Hookway, Borensztejn, Harris, \u2026 Theriot, Gunawardane, Rafelski",
+  "journal": "Nature Methods",
+  "date": "2026-06-17",
+  "section": "Innovations in Bioinformatics",
+  "doi": "https://doi.org/10.1038/s41592-026-03096-9",
+  "keys": "hiPSC EMT epithelial mesenchymal transition lumenoid 2D 3D imaging migration basement membrane cell junction live-cell framework",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
+ },
+ {
+  "id": "p11",
+  "title": "Purine bias in bacterial genes is driven by runaway transcription",
+  "authors": "Dierksheide, Taggart, Johnson & Li",
+  "journal": "Nature Microbiology",
+  "date": "2026-06-17",
+  "section": "Innovations in Bioinformatics",
+  "doi": "https://doi.org/10.1038/s41564-026-02389-1",
+  "keys": "purine bias bacterial gene Rho termination runaway transcription Bacillus subtilis codon usage antisense genome evolution reporter assay",
+  "digest": "2026-06-17",
+  "permalink": "2026-06-17.html"
  }
 ]
